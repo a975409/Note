@@ -1,0 +1,252 @@
+{
+  "main": {
+    "id": "c94d6871df7f463e",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9d1534f125194c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2533579043b1bacf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/使用XML註解.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "使用XML註解"
+            }
+          },
+          {
+            "id": "b34c512521d375d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/RESTful API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RESTful API"
+            }
+          },
+          {
+            "id": "5233e415ea05fb6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/使用XML註解.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "使用XML註解"
+            }
+          },
+          {
+            "id": "e20b2be9bcce0110",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/Web API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web API"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5199401c8da6a84d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0e113565cb488c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e1973547c031b6b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "bd63007a232096b5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "7d667d7870eee2a9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "47d7d8c82bb20ecf",
+    "type": "split",
+    "children": [
+      {
+        "id": "aea12d13cf75d6ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "283a38160e0a9acc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "API Controllers.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "API Controllers 的反向連結"
+            }
+          },
+          {
+            "id": "2e59885f43ae7fb1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "API Controllers.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "API Controllers 的對外連結"
+            }
+          },
+          {
+            "id": "7666ba26a841b119",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "d8277ab26fa5d3e2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "API Controllers.md"
+              },
+              "icon": "lucide-list",
+              "title": "API Controllers 的大綱"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false
+    }
+  },
+  "active": "2533579043b1bacf",
+  "lastOpenFiles": [
+    "永久筆記/Web API.md",
+    "永久筆記/ProducesResponseType.md",
+    "永久筆記/RESTful API.md",
+    "永久筆記/MVC專案傳統路由.md",
+    "永久筆記/使用XML註解.md",
+    "永久筆記/驗證與授權.md",
+    "永久筆記/Swagger OpenAPI.md",
+    "永久筆記/路由.md",
+    "永久筆記/屬性路由.md",
+    "Pasted image 20241020231250.png",
+    "Pasted image 20241020231218.png",
+    "永久筆記/Minimal API.md",
+    "永久筆記/ASP.NET Core 6.md",
+    "永久筆記/API Controllers.md",
+    "永久筆記/預設 BadRequest 回應(模型驗證失敗).md",
+    "永久筆記/Entity Framework (EF) Core.md",
+    "永久筆記/LINQ.md",
+    "永久筆記/ASP.NET Core 應用程式專案架構.md",
+    "永久筆記/ASP.NET Core 應用程式的執行流程.md",
+    "永久筆記/解決刪除資料時無法刪除底下子資料的問題.md",
+    "永久筆記/資料庫存取環境建置.md",
+    "永久筆記/演繹.md",
+    "永久筆記/數學帶我們走出認知的盲區.md",
+    "永久筆記/線性規劃.md",
+    "API.md",
+    "Pasted image 20240917223426.png",
+    "永久筆記/命題.md",
+    "永久筆記/手動設定資料庫物件.md",
+    "永久筆記/CodeFirst.md",
+    "Untitled 5.png",
+    "Untitled 4.png",
+    "Untitled 3.png",
+    "Untitled 2.png",
+    "Untitled 1.png",
+    "Untitled.png",
+    "Pasted image 20240917194718.png",
+    "靈感筆記",
+    "文獻筆記",
+    "永久筆記",
+    "未命名 1.canvas",
+    "未命名.canvas"
+  ]
+}

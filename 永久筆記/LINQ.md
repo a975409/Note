@@ -1,0 +1,5 @@
+[mrkt 的程式學習筆記: LINQPad - 好用到爆炸、.NET開發人員必備的好用工具 (kevintsengtw.blogspot.com)](https://kevintsengtw.blogspot.com/2011/09/linqpad-net.html)
+[分享幾個 LINQ to SQL 執行各種 Join 查詢的技巧 | The Will Will Web (miniasp.com)](https://blog.miniasp.com/post/2010/10/14/LINQ-to-SQL-Query-Tips-INNER-JOIN-and-LEFT-JOIN)
+[C#的利器LINQ-GroupBy的應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10196181)
+[SelectMany的應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10195017)
+[查看LINQ Expression編譯後的SQL語法 | 我的Coding之路 - 點部落 (dotblogs.com.tw)](https://dotblogs.com.tw/lastsecret/2010/04/05/14409)
