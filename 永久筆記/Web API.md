@@ -8,3 +8,4 @@ RESTful API：
 [[API Controllers]]
 [[Swagger OpenAPI]]
 [MinimalAPI](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0)
+[[Web API 專案路由設定]]

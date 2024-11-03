@@ -8,62 +8,63 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2533579043b1bacf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/使用XML註解.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "使用XML註解"
-            }
-          },
-          {
-            "id": "b34c512521d375d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/RESTful API.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RESTful API"
-            }
-          },
-          {
-            "id": "5233e415ea05fb6c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/使用XML註解.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "使用XML註解"
-            }
-          },
-          {
             "id": "e20b2be9bcce0110",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "永久筆記/Web API.md",
+                "file": "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web API"
+              "title": "自訂模型資料驗證標籤ValidationAttribute"
+            }
+          },
+          {
+            "id": "b0dacb7dcae800ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/ASP.NET Core.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ASP.NET Core"
+            }
+          },
+          {
+            "id": "98fd93be42ecb756",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/部分類別(2).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "部分類別(2)"
+            }
+          },
+          {
+            "id": "57b4b5d1fccc52a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/部分類別(3).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "部分類別(3)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,44 +206,44 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "2533579043b1bacf",
+  "active": "b0dacb7dcae800ec",
   "lastOpenFiles": [
+    "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
+    "未命名.md",
+    "永久筆記/URL重寫 與 URL重新導向.md",
+    "永久筆記/模型驗證.md",
+    "永久筆記/部分類別(1).md",
+    "永久筆記/部分類別(3).md",
+    "永久筆記/部分類別(2).md",
+    "Pasted image 20241103172337.png",
+    "永久筆記/ASP.NET Core.md",
+    "永久筆記/路由.md",
+    "Pasted image 20241103171538.png",
+    "Pasted image 20241103171429.png",
+    "永久筆記/Model內自訂屬性資料驗證IValidatableObject.md",
+    "永久筆記/模型繫結.md",
+    "永久筆記/FromFrom.md",
+    "永久筆記/FromBody.md",
+    "Pasted image 20241103161410.png",
+    "Pasted image 20241103161403.png",
+    "Pasted image 20241103161208.png",
+    "Pasted image 20241103161009.png",
+    "Pasted image 20241103160944.png",
+    "Pasted image 20241103160939.png",
+    "永久筆記/API Controllers.md",
+    "永久筆記/MVC專案路由設定.md",
     "永久筆記/Web API.md",
-    "永久筆記/ProducesResponseType.md",
+    "永久筆記/Web API 專案路由設定.md",
+    "Pasted image 20241103154701.png",
+    "永久筆記/Entity Framework (EF) Core.md",
+    "永久筆記/CodeFirst.md",
+    "永久筆記/Minimal API.md",
     "永久筆記/RESTful API.md",
-    "永久筆記/MVC專案傳統路由.md",
     "永久筆記/使用XML註解.md",
+    "永久筆記/ProducesResponseType.md",
     "永久筆記/驗證與授權.md",
     "永久筆記/Swagger OpenAPI.md",
-    "永久筆記/路由.md",
-    "永久筆記/屬性路由.md",
-    "Pasted image 20241020231250.png",
-    "Pasted image 20241020231218.png",
-    "永久筆記/Minimal API.md",
-    "永久筆記/ASP.NET Core 6.md",
-    "永久筆記/API Controllers.md",
     "永久筆記/預設 BadRequest 回應(模型驗證失敗).md",
-    "永久筆記/Entity Framework (EF) Core.md",
-    "永久筆記/LINQ.md",
-    "永久筆記/ASP.NET Core 應用程式專案架構.md",
-    "永久筆記/ASP.NET Core 應用程式的執行流程.md",
-    "永久筆記/解決刪除資料時無法刪除底下子資料的問題.md",
-    "永久筆記/資料庫存取環境建置.md",
-    "永久筆記/演繹.md",
-    "永久筆記/數學帶我們走出認知的盲區.md",
-    "永久筆記/線性規劃.md",
-    "API.md",
-    "Pasted image 20240917223426.png",
-    "永久筆記/命題.md",
-    "永久筆記/手動設定資料庫物件.md",
-    "永久筆記/CodeFirst.md",
-    "Untitled 5.png",
-    "Untitled 4.png",
-    "Untitled 3.png",
-    "Untitled 2.png",
-    "Untitled 1.png",
-    "Untitled.png",
-    "Pasted image 20240917194718.png",
     "靈感筆記",
     "文獻筆記",
     "永久筆記",
