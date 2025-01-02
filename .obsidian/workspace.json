@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f9d1534f125194c5",
+        "id": "0b1c560c5576c010",
         "type": "tabs",
         "children": [
           {
-            "id": "e20b2be9bcce0110",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "自訂模型資料驗證標籤ValidationAttribute"
-            }
-          },
-          {
-            "id": "b0dacb7dcae800ec",
+            "id": "bf596413b4bbad01",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,37 +20,8 @@
               "icon": "lucide-file",
               "title": "ASP.NET Core"
             }
-          },
-          {
-            "id": "98fd93be42ecb756",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/部分類別(2).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "部分類別(2)"
-            }
-          },
-          {
-            "id": "57b4b5d1fccc52a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/部分類別(3).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "部分類別(3)"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,44 +163,44 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "b0dacb7dcae800ec",
+  "active": "bf596413b4bbad01",
   "lastOpenFiles": [
-    "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
-    "未命名.md",
-    "永久筆記/URL重寫 與 URL重新導向.md",
-    "永久筆記/模型驗證.md",
-    "永久筆記/部分類別(1).md",
-    "永久筆記/部分類別(3).md",
-    "永久筆記/部分類別(2).md",
-    "Pasted image 20241103172337.png",
+    "永久筆記/(Cookie 驗證)ValidatePrincipal 事件.md",
+    "永久筆記/驗證與授權.md",
+    "永久筆記/驗證與授權.md",
+    "永久筆記/自訂例外事件處理 Exception Handler.md",
+    "2024-07-27.md",
     "永久筆記/ASP.NET Core.md",
+    "[ASP.NET.md",
+    "永久筆記/JWT驗證(適用Web API).md",
+    "永久筆記/JWT(JSON Web Token) — 原理介紹.md",
+    "永久筆記/Cookie驗證.md",
+    "永久筆記/cookie 和 session.md",
+    "永久筆記/cookie 驗證.md",
+    "永久筆記/跨網站偽造要求 (XSRF or CSRF).md",
+    "Pasted image 20250102201504.png",
+    "Pasted image 20250102201010.png",
+    "永久筆記/JavaScript、AJAX 和 Spa 設定方式.md",
+    "Pasted image 20250102183932.png",
+    "永久筆記/跨網站指令碼(XSS).md",
+    "Pasted image 20250102182433.png",
+    "Pasted image 20250102182417.png",
+    "Pasted image 20250102182351.png",
+    "Pasted image 20250102182337.png",
+    "永久筆記/Logging 日誌記錄.md",
+    "Pasted image 20250102181431.png",
+    "Pasted image 20250102181415.png",
+    "永久筆記/使用Action Filter 修改例外事件發生後的Response.md",
+    "Pasted image 20250102180203.png",
+    "永久筆記/例外事件處理.md",
+    "永久筆記/自訂Middleware處理例外狀況.md",
+    "永久筆記/Middleware.md",
+    "永久筆記/Model Binding 模型繫結.md",
+    "永久筆記/Filters 篩選條件.md",
     "永久筆記/路由.md",
-    "Pasted image 20241103171538.png",
-    "Pasted image 20241103171429.png",
-    "永久筆記/Model內自訂屬性資料驗證IValidatableObject.md",
     "永久筆記/模型繫結.md",
     "永久筆記/FromFrom.md",
     "永久筆記/FromBody.md",
-    "Pasted image 20241103161410.png",
-    "Pasted image 20241103161403.png",
-    "Pasted image 20241103161208.png",
-    "Pasted image 20241103161009.png",
-    "Pasted image 20241103160944.png",
-    "Pasted image 20241103160939.png",
-    "永久筆記/API Controllers.md",
-    "永久筆記/MVC專案路由設定.md",
-    "永久筆記/Web API.md",
-    "永久筆記/Web API 專案路由設定.md",
-    "Pasted image 20241103154701.png",
-    "永久筆記/Entity Framework (EF) Core.md",
-    "永久筆記/CodeFirst.md",
-    "永久筆記/Minimal API.md",
-    "永久筆記/RESTful API.md",
-    "永久筆記/使用XML註解.md",
-    "永久筆記/ProducesResponseType.md",
-    "永久筆記/驗證與授權.md",
-    "永久筆記/Swagger OpenAPI.md",
-    "永久筆記/預設 BadRequest 回應(模型驗證失敗).md",
     "靈感筆記",
     "文獻筆記",
     "永久筆記",

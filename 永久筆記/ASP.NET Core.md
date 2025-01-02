@@ -8,5 +8,12 @@
 [[Web API]]
 [[路由]]
 [[URL重寫 與 URL重新導向]]
-[[模型驗證]]
+[[Model Binding 模型繫結]]
 [在 ASP.NET Core 中啟用跨原始來源要求 (CORS) | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0)
+[[Filters 篩選條件]]
+[[例外事件處理]]
+[[Logging 日誌記錄]]
+[[跨網站指令碼(XSS)]]
+[[跨網站偽造要求 (XSRF or CSRF)]]
+[[cookie 和 session]]
+[[驗證與授權]]

@@ -16,3 +16,4 @@
 [[Map]]
 [[Middleware 3種定義格式]]
 [ASP.NET Core 中介軟體 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/middleware/?view=aspnetcore-6.0#built-in-middleware-1)
+[[自訂Middleware處理例外狀況]]
