@@ -17,7 +17,5 @@ public void ConfigureServices(IServiceCollection services)
 3. Transient：每次注入時都會建立物件
 
 [[在Controller內使用DI有以下三種作法]]
-[[在 Controller或View 以外使用 HttpContext]]
-
 [ASP.NET Core 檢視中的相依性插入 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/dependency-injection?view=aspnetcore-8.0#service-injection)
 [筆記 - 不可不知的 ASP.NET Core 依賴注入-黑暗執行緒 (darkthread.net)](https://blog.darkthread.net/blog/aspnet-core-di-notes/)

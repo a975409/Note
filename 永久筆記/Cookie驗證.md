@@ -1,7 +1,7 @@
 [1.新增cookie驗證](https://learn.microsoft.com/zh-tw/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0#add-cookie-authentication)
 可在 [AddCookie](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.extensions.dependencyinjection.cookieextensions.addcookie) 方法中設定 [CookieAuthenticationOptions](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions)：
 ```C#
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) .AddCookie(options => { options.ExpireTimeSpan = TimeSpan.FromMinutes(20); options.SlidingExpiration = true; options.AccessDeniedPath = "/Forbidden/"; });
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => { options.ExpireTimeSpan = TimeSpan.FromMinutes(20); options.SlidingExpiration = true; options.AccessDeniedPath = "/Forbidden/"; });
 ```
 
 [2.建立cookie驗證(登入)](https://learn.microsoft.com/zh-tw/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0#create-an-authentication-cookie)

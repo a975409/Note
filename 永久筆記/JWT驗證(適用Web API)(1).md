@@ -1,4 +1,4 @@
-
+[開發者必備知識 - HTTP認證（HTTP Authentication）](https://carsonwah.github.io/http-authentication.html)
 JWT原理說明：[[JWT(JSON Web Token) — 原理介紹]]
 
 [安裝Nuget套件](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer)
