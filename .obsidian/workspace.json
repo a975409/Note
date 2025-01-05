@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8f02016d191f2f0d",
+        "id": "cdc04eb6f1f7915b",
         "type": "tabs",
         "children": [
           {
-            "id": "e6f81ef69f23da79",
+            "id": "ed2aa4594b96b8f5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/ASP.NET Core.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ASP.NET Core"
-            }
-          },
-          {
-            "id": "154ed17d65b2e797",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "永久筆記/ASP.NET Core.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ASP.NET Core"
+              "title": "新分頁"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,35 +159,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "154ed17d65b2e797",
+  "active": "ed2aa4594b96b8f5",
   "lastOpenFiles": [
+    "永久筆記/Data Protection API 保護敏感資料.md",
+    "永久筆記/在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更.md",
+    "永久筆記/Entity Framework (EF) Core.md",
     "永久筆記/ASP.NET Core.md",
-    "永久筆記/URL 重寫 & URL重新導向.md",
-    "永久筆記/ViewData、ViewBag、TempData.md",
-    "永久筆記/回應壓縮.md",
-    "永久筆記/Model Binding 模型繫結.md",
-    "永久筆記/FromBody vs FromFrom.md",
-    "永久筆記/FromFrom 1.md",
-    "永久筆記/FromBody 1.md",
-    "永久筆記/SignalR.md",
-    "永久筆記/群組概念與使用.md",
-    "永久筆記/伺服器端(ASP.NET Core)與用戶端(WinForm)互相通訊.md",
-    "永久筆記/Swagger和OpenAPI.md",
-    "永久筆記/驗證與授權.md",
-    "永久筆記/Cookie驗證.md",
-    "永久筆記/Authorize 和 AllowAnonymous 設定方式.md",
-    "永久筆記/自訂Session驗證.md",
-    "永久筆記/取得登入者資訊.md",
-    "永久筆記/JWT驗證(適用Web API)(1).md",
-    "永久筆記/Newtonsoft.Json序列化相關設定.md",
-    "永久筆記/JWT驗證(適用Web API)(2).md",
-    "Pasted image 20250104184634.png",
-    "永久筆記/模型驗證.md",
-    "永久筆記/DI依賴注入之生命週期.md",
-    "永久筆記/在 Controller或View 以外使用 HttpContext.md",
-    "永久筆記/在Controller內使用DI有以下三種作法.md",
-    "永久筆記/在controller的action內，如何呼叫cache取得資料.md",
+    "永久筆記/資料庫存取環境建置.md",
+    "永久筆記/CodeFirst.md",
+    "永久筆記/DBFirst.md",
     "永久筆記/Response 快取.md",
+    "永久筆記/設定HTTPS.md",
+    "永久筆記/設定HSTS標頭.md",
+    "永久筆記/禁用指定的Action的Response 快取.md",
+    "永久筆記/其他注入類型防範.md",
+    "永久筆記/修復過時的TLS版本.md",
+    "永久筆記/Model Binding 模型繫結.md",
+    "永久筆記/模型驗證.md",
+    "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
+    "永久筆記/使用User Secret安全存放開發應用程式密鑰.md",
+    "永久筆記/跨網站偽造要求 (XSRF or CSRF).md",
+    "永久筆記/JavaScript、AJAX 和 Spa 設定方式.md",
+    "永久筆記/跨網站指令碼(XSS).md",
+    "永久筆記/使用HtmlSanitizer防止XSS攻击.md",
+    "永久筆記/檔案上傳.md",
+    "永久筆記/建立上傳檔案的API.md",
+    "永久筆記/檔案驗證標籤屬性UploadFileValid.md",
+    "永久筆記/路由.md",
+    "永久筆記/使用AutoMapper一行指令自動匹配DTO欄位資料.md",
+    "Pasted image 20250104184634.png",
     "Pasted image 20250104092802.png",
     "Pasted image 20250104092741.png",
     "Pasted image 20250104025752.png",

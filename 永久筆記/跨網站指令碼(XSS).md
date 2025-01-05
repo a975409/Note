@@ -8,3 +8,5 @@
 ```C#
 builder.Services.AddAuthentication().AddCookie(c => c.Cookie.HttpOnly = true);
 ```
+
+[[使用HtmlSanitizer防止XSS攻击]]

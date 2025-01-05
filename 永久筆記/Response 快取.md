@@ -1,6 +1,6 @@
 [[Response 設定Middleware快取]]
 [[HTTP 型的Response快取]]
-
+[[禁用指定的Action的Response 快取]]
 
 回應快取選項：
 
