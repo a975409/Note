@@ -8,16 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ed2aa4594b96b8f5",
+            "id": "9b3687774a78ea91",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "設定 JSON 伺服器.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "設定 JSON 伺服器"
+            }
+          },
+          {
+            "id": "83f93dfa23070775",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "永久筆記/Angular 19.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Angular 19"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -36,7 +55,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "檔案瀏覽器"
@@ -159,34 +179,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "ed2aa4594b96b8f5",
+  "active": "83f93dfa23070775",
   "lastOpenFiles": [
-    "永久筆記/Data Protection API 保護敏感資料.md",
-    "永久筆記/在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更.md",
-    "永久筆記/Entity Framework (EF) Core.md",
-    "永久筆記/ASP.NET Core.md",
-    "永久筆記/資料庫存取環境建置.md",
-    "永久筆記/CodeFirst.md",
-    "永久筆記/DBFirst.md",
-    "永久筆記/Response 快取.md",
-    "永久筆記/設定HTTPS.md",
-    "永久筆記/設定HSTS標頭.md",
-    "永久筆記/禁用指定的Action的Response 快取.md",
-    "永久筆記/其他注入類型防範.md",
-    "永久筆記/修復過時的TLS版本.md",
-    "永久筆記/Model Binding 模型繫結.md",
-    "永久筆記/模型驗證.md",
-    "永久筆記/自訂模型資料驗證標籤ValidationAttribute.md",
-    "永久筆記/使用User Secret安全存放開發應用程式密鑰.md",
-    "永久筆記/跨網站偽造要求 (XSRF or CSRF).md",
-    "永久筆記/JavaScript、AJAX 和 Spa 設定方式.md",
-    "永久筆記/跨網站指令碼(XSS).md",
-    "永久筆記/使用HtmlSanitizer防止XSS攻击.md",
-    "永久筆記/檔案上傳.md",
-    "永久筆記/建立上傳檔案的API.md",
-    "永久筆記/檔案驗證標籤屬性UploadFileValid.md",
-    "永久筆記/路由.md",
-    "永久筆記/使用AutoMapper一行指令自動匹配DTO欄位資料.md",
+    "永久筆記/Angular 使用 HttpClient 發出http request(NgModule開發架構).md",
+    "永久筆記/Angular 19.md",
+    "Angular NgModule開發架構.md",
+    "設定 JSON 伺服器.md",
+    "Angular 建立Form表單並取得使用者輸入(NgModule開發架構).md",
+    "Angular Standalone API開發架構.md",
+    "Angular 建立Form表單並取得使用者輸入.md",
+    "永久筆記/Angular 設定路由導向(NgModule開發架構).md",
+    "Angular 設定路由導向.md",
+    "Angular 元件(Component).md",
+    "永久筆記/Angular 將父元件的資料傳遞給子元件.md",
+    "永久筆記/Angular 將子元件資料傳遞到父元件.md",
+    "永久筆記/Angular 元件(Component)(NgModule開發架構).md",
+    "Angular 開發架構差異 Standalone API vs NgModule.md",
+    "Angular 環境安裝.md",
+    "Angular 本地執行專案.md",
+    "Angular 設定路由導向(NgModule開發架構).md",
+    "永久筆記/Angular 服務.md",
+    "永久筆記/Angular 依賴注入(針對注入服務Service使用).md",
+    "Angular 專案目錄.md",
+    "Angular 建立專案.md",
+    "Pasted image 20250131165656.png",
+    "Angular 發布專案.md",
+    "永久筆記/Angular 樣板(template).md",
+    "永久筆記/Web API 專案路由設定.md",
+    "永久筆記/MVC專案路由設定.md",
+    "永久筆記/Web API.md",
     "Pasted image 20250104184634.png",
     "Pasted image 20250104092802.png",
     "Pasted image 20250104092741.png",
@@ -196,7 +217,6 @@
     "Pasted image 20250102201010.png",
     "Pasted image 20250102183932.png",
     "Pasted image 20250102182433.png",
-    "Pasted image 20250102182417.png",
     "靈感筆記",
     "文獻筆記",
     "永久筆記",

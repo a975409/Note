@@ -12,8 +12,9 @@ public class Person
 }
 ```
 
-http请求:contentType:application/x-www-form-urlencoded;
-
+http请求：
+contentType：application/x-www-form-urlencoded
+> 等同於 From HTML標籤
 ```html
 <button class="add">提交</button>
 <script src="~/lib/jquery/dist/jquery.js"></script>

@@ -1,5 +1,4 @@
 Model：
-
 ```csharp
 public class Test
    {
@@ -30,10 +29,11 @@ public void Get([FromBody]Test test)
 }
 ```
 
-http请求:contentType:application/json;
-```JSON
+http请求：
+contentType：application/json;
 raw:
-{
+```JSON
+{ 　　
 	id:1, 　　
 	Name:'呵呵', 　　
 	images:["aaaa","vvvvv","cccc"], 　　
