@@ -12,7 +12,7 @@
 [[Angular 本地執行專案]]
 [[設定 JSON 伺服器]]
 [[Angular 使用 HttpClient 發出http request(NgModule開發架構)]]
-
+[[ngModel 雙向綁定]]
 #### 參考連結
 [Angular 建立和託管你的應用](https://angular.tw/start/start-deployment#building-and-hosting-your-application)
 [API->ngFor](https://angular.tw/api/common/NgFor)
