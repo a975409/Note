@@ -35,8 +35,7 @@
               "title": "ngModel 雙向綁定"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,10 +178,10 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "2226b556aa22c7ef",
+  "active": "83f93dfa23070775",
   "lastOpenFiles": [
-    "永久筆記/Angular 19.md",
     "ngModel 雙向綁定.md",
+    "永久筆記/Angular 19.md",
     "永久筆記/Angular Standalone API開發架構.md",
     "永久筆記/Angular 設定路由導向.md",
     "永久筆記/Angular NgModule開發架構.md",
