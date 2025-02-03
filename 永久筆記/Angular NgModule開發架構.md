@@ -20,3 +20,4 @@ ng new NgModule-app --no-standalone --ssr=false --style=css
 [[Angular 元件(Component)(NgModule開發架構)]]
 [[Angular 設定路由導向(NgModule開發架構)]]
 [[Angular 建立Form表單並取得使用者輸入(NgModule開發架構)]]
+[[Angular 使用 HttpClient 發出http request(NgModule開發架構)]]
