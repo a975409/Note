@@ -13,17 +13,18 @@
 [[設定 JSON 伺服器]]
 [[Angular 新增HttpHeader]]
 [[ngModel 雙向綁定]]
+[[Observable 觀察者模式使用方式(類似Promise)]]
+[[Angular 身分驗證]]
 #### 參考連結
 [Angular 建立和託管你的應用](https://angular.tw/start/start-deployment#building-and-hosting-your-application)
 [API->ngFor](https://angular.tw/api/common/NgFor)
 [API->ngIf](https://angular.tw/api/common/NgIf)
-[HttpClient](https://angular.tw/api/common/http/HttpClient)
 [Angular 樣板變數](https://angular.tw/guide/template-reference-variables#syntax)
 [Angular CLI](https://angular.tw/guide/what-is-angular#angular-cli)
 [Angular 內建的函式庫](https://angular.tw/guide/what-is-angular#first-party-libraries)
-[防止未經授權的訪問](https://angular.tw/guide/router#preventing-unauthorized-access)
-[身份驗證](https://angular.tw/guide/router-tutorial-toh#canactivate-requiring-authentication)
 [處理未儲存的更改](https://angular.tw/guide/router-tutorial-toh#candeactivate-handling-unsaved-changes)
 [顯示 404 頁面](https://angular.tw/guide/router#displaying-a-404-page)
 [常見路由任務](https://angular.tw/guide/router#common-routing-tasks)
 [路由器教程](https://angular.tw/guide/router-tutorial-toh)
+
+

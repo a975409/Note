@@ -16,6 +16,8 @@ export class CartService {
 }
 ```
 
+> 建立的Service的依賴注入，是以單例注入的方式註冊，也就是說，只要在其中有引用的地方設定該Service的參數，其他地方有引用該Service所讀取到的參數是已被設定過的
+
 其他元件或服務，透過依賴注入的方式引用服務，以元件為例：
 ```typescript
 import { Component} from '@angular/core';

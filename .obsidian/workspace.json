@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "69833a4674487793",
+            "id": "f5e0382b47839b0d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "永久筆記/ngModel 雙向綁定.md",
+                "file": "永久筆記/Angular 19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ngModel 雙向綁定"
-            }
-          },
-          {
-            "id": "373b61d82eed004e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular 新增HttpHeader.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Angular 新增HttpHeader"
+              "title": "Angular 19"
             }
           }
         ]
@@ -154,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "永久筆記/ngModel 雙向綁定.md",
+                "file": "永久筆記/Angular 19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ngModel 雙向綁定 的大綱"
+              "title": "Angular 19 的大綱"
             }
           }
         ],
@@ -180,35 +166,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "4e1973547c031b6b",
+  "active": "f5e0382b47839b0d",
   "lastOpenFiles": [
-    "永久筆記/Angular 使用 HttpClient 發出http request.md",
+    "永久筆記/Angular Standalone API開發架構.md",
+    "永久筆記/Angular 建立Form表單並取得使用者輸入.md",
+    "Angular 使用 HttpClient 發出http request.md",
+    "永久筆記/Angular 19.md",
+    "Angular 新增HttpHeader.md",
+    "Angular 身分驗證.md",
+    "永久筆記/Angular 服務.md",
+    "Angular Guard.md",
+    "建立auth.Service開發登入登出功能.md",
+    "永久筆記/DI依賴注入之生命週期.md",
+    "Observable 觀察者模式使用方式(類似Promise).md",
+    "HTTPClient.md",
+    "永久筆記/Angular 將子元件資料傳遞到父元件.md",
+    "永久筆記/Angular 將父元件的資料傳遞給子元件.md",
+    "永久筆記/Angular 設定路由導向.md",
+    "永久筆記/Angular 元件(Component).md",
+    "永久筆記/Angular 環境安裝.md",
+    "永久筆記/Angular 開發架構差異 Standalone API vs NgModule.md",
+    "永久筆記/ASP.NET Core.md",
     "永久筆記/Angular NgModule開發架構.md",
     "永久筆記/Angular 使用 HttpClient 發出http request(NgModule開發架構).md",
-    "永久筆記/Angular 19.md",
-    "永久筆記/Angular Standalone API開發架構.md",
-    "永久筆記/ASP.NET Core.md",
-    "永久筆記/Angular 新增HttpHeader.md",
-    "永久筆記/Angular 設定路由導向.md",
-    "永久筆記/Angular 環境安裝.md",
-    "永久筆記/ngModel 雙向綁定.md",
+    "ngModel 雙向綁定.md",
     "永久筆記/Angular 建立Form表單並取得使用者輸入(NgModule開發架構).md",
-    "永久筆記/Angular 將父元件的資料傳遞給子元件.md",
-    "永久筆記/Angular 將子元件資料傳遞到父元件.md",
-    "永久筆記/Angular 建立Form表單並取得使用者輸入.md",
     "永久筆記/設定 JSON 伺服器.md",
-    "永久筆記/Angular 服務.md",
     "永久筆記/Angular 設定路由導向(NgModule開發架構).md",
-    "永久筆記/Angular 元件(Component).md",
     "永久筆記/Angular 元件(Component)(NgModule開發架構).md",
-    "永久筆記/Angular 開發架構差異 Standalone API vs NgModule.md",
-    "永久筆記/Angular 本地執行專案.md",
-    "Angular 設定路由導向(NgModule開發架構).md",
-    "永久筆記/Angular 依賴注入(針對注入服務Service使用).md",
-    "Angular 專案目錄.md",
-    "Angular 建立專案.md",
     "Pasted image 20250131165656.png",
-    "Angular 發布專案.md",
     "Pasted image 20250104184634.png",
     "Pasted image 20250104092802.png",
     "Pasted image 20250104092741.png",
