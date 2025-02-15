@@ -66,6 +66,8 @@ export class ShippingComponent implements OnInit {
 }
 ```
 
+[[Angular 樣板(template) 顯示非同步的資料]]
+
 shipping.json：
 ```JSON
 [

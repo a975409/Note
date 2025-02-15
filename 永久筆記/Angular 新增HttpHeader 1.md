@@ -29,7 +29,6 @@ export class AuthService {
   };
 
   login(username: string, password: string): Observable<any> {
-
     //呼叫HttpPost，帶入HttpHeader
     return this.http
       .post(`${environment.apiUrl}/Auth/login`, { username, password },this.httpOptions)
@@ -41,21 +40,6 @@ export class AuthService {
           return user;
         })
       );
-  }
-
-  checkAuth(): Observable<any> {
-    //呼叫HttpGet，帶入HttpHeader
-    return this.http.get(`${environment.apiUrl}/Auth/check-auth`,this.httpOptions).pipe(
-      map((response: any) => {
-        if (response.authenticated) {
-          this.currentUserSubject.next(response.user);
-          return response.user;
-        } else {
-          this.currentUserSubject.next(null);
-          return null;
-        }
-      })
-    );
   }
 }
 ```

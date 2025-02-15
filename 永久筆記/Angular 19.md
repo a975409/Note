@@ -11,10 +11,11 @@
 [[Angular 服務]]
 [[Angular 本地執行專案]]
 [[設定 JSON 伺服器]]
-[[Angular 新增HttpHeader]]
-[[ngModel 雙向綁定]]
+[[Angular 新增HttpHeader 1]]
+[[ngModel 雙向綁定 1]]
 [[Observable 觀察者模式使用方式(類似Promise)]]
 [[Angular 身分驗證]]
+[[RxJS]]
 #### 參考連結
 [Angular 建立和託管你的應用](https://angular.tw/start/start-deployment#building-and-hosting-your-application)
 [API->ngFor](https://angular.tw/api/common/NgFor)
@@ -26,5 +27,3 @@
 [顯示 404 頁面](https://angular.tw/guide/router#displaying-a-404-page)
 [常見路由任務](https://angular.tw/guide/router#common-routing-tasks)
 [路由器教程](https://angular.tw/guide/router-tutorial-toh)
-
-

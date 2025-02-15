@@ -55,6 +55,53 @@ export class ApiService {
 }
 ```
 
+> 如果有2個或以上的 Observable 會依序執行，則可將map替換為switchMap
+
+switchMap應用情境：
+```typescript
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError, switchMap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
+import { HttpOptionService } from './http-option.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ApiService {
+  constructor(
+    private http: HttpClient,
+    private httpOptionService: HttpOptionService
+  ) {}
+
+  httpOptions = {};
+
+  httpGet(subUrl: string, errorMsg: string = ''): Observable<any> {
+    
+    return this.http
+      .get(`${environment.versionAPI}`, { responseType: 'text' })
+      .pipe(
+        switchMap((version: string) => {
+          this.httpOptions = this.httpOptionService.getCommonHttpOption();
+          let apiUrl = `${environment.apiUrl}/${version}/${subUrl}`;
+
+		  //執行另一個http.get，一樣回傳Observable
+          return this.http.get<any>(apiUrl, this.httpOptions);
+        }),
+        catchError((error) => {
+          console.error(error);
+          return throwError(
+            () => new Error(errorMsg || '發生錯誤，請稍後再試。')
+          );
+        })
+      );
+  }
+}
+
+```
+
+
 如何呼叫：
 ```typescript
 this.apiService.getDomainAPIUrl().subscribe({
@@ -68,4 +115,3 @@ this.apiService.getDomainAPIUrl().subscribe({
 ```
 
 > 建立`Observable`類後，需呼叫`.subscribe()`，這個`Observable`類才會執行；並且在`.subscribe()`內可設定`next`接收回傳的參數，以及`error`接收錯誤訊息
-

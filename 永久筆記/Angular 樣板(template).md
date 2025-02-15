@@ -1,5 +1,7 @@
 > 每個[[Angular 元件(Component)(NgModule開發架構)]]都有一個 HTML 樣板，用於宣告該組件的渲染方式。你可以行內它或用檔案路徑定義此樣板。
 
+[[Angular 樣板(template) 顯示非同步的資料]]
+
 HTML 樣板：
 ```html
 <p>{{ message }}</p>
@@ -77,41 +79,5 @@ export class HelloWorldBindingsComponent {
   }
 }
 ```
-#### *ngIF指令
-```html
-<h2>Hello World: ngIf!</h2>
 
-<button type="button" (click)="onEditClick()">Make text editable!</button>
-
-<div *ngIf="canEdit; else noEdit">
-    <p>You can edit the following paragraph.</p>
-</div>
-
-<ng-template #noEdit>
-    <p>The following paragraph is read only. Try clicking the button!</p>
-</ng-template>
-
-<p [contentEditable]="canEdit">{{ message }}</p>
-```
-
-```typescript
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'hello-world-ngif',
-  templateUrl: './hello-world-ngif.component.html'
-})
-export class HelloWorldNgIfComponent {
-  message = "I'm read only!";
-  canEdit = false;
-
-  onEditClick() {
-    this.canEdit = !this.canEdit;
-    if (this.canEdit) {
-      this.message = 'You can edit me!';
-    } else {
-      this.message = "I'm read only!";
-    }
-  }
-}
-```
+[[Angular ngIF]]
