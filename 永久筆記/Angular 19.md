@@ -6,6 +6,8 @@
 [[Angular 開發架構差異 Standalone API vs NgModule]]
 [[Angular Standalone API開發架構]]
 [[Angular NgModule開發架構]]
+[[Angular 樣板(template)]]
+[[Angular 表單]]
 [[Angular 將父元件的資料傳遞給子元件]]
 [[Angular 將子元件資料傳遞到父元件]]
 [[Angular 服務]]
@@ -27,3 +29,7 @@
 [顯示 404 頁面](https://angular.tw/guide/router#displaying-a-404-page)
 [常見路由任務](https://angular.tw/guide/router#common-routing-tasks)
 [路由器教程](https://angular.tw/guide/router-tutorial-toh)
+[元件生命週期](https://angular.tw/guide/lifecycle-hooks)
+
+
+

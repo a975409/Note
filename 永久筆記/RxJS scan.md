@@ -1,4 +1,9 @@
 https://cn.rx.js.org/class/es6/Observable.js~Observable.html#instance-method-scan
+
+angular專案引用方式如下：
+```typescript
+import { scan } from 'rxjs';
+```
 #### scan參數：
 ![[Pasted image 20250215192825.png]]
 
@@ -27,3 +32,17 @@ Rx.Observable.fromEvent(button, 'click')
 >  - 回傳累加後的`R`值，也就是`count`，並會帶入下一次的`R`做累加
 > 
 > `seed`=>0，設定`R`的初始值，也就是`count`
+
+執行`scan`後產生結果如下，代表`scan`會逐項列出每筆累加後的值：
+```
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+```

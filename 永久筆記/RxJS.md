@@ -24,3 +24,6 @@ Rx.Observable.fromEvent(button, 'click')
 [[RxJS 純淨性 (Purity)]]
 [[RxJS 流動性 (Flow)]]
 [[RxJS 值 (Values)]]
+
+[[RxJS scan]]
+[[RxJS reduce]]
