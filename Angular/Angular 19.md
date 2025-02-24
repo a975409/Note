@@ -3,6 +3,8 @@
 
 #### 開發參考筆記
 [[Angular 環境安裝]]
+[[Angular 引用外部CSS]]
+[[Angular 引用外部JS]]
 [[Angular 開發架構差異 Standalone API vs NgModule]]
 [[Angular Standalone API開發架構]]
 [[Angular NgModule開發架構]]
@@ -14,7 +16,7 @@
 [[Angular 本地執行專案]]
 [[設定 JSON 伺服器]]
 [[Angular 新增HttpHeader 1]]
-[[ngModel 雙向綁定 1]]
+[[ngModel 雙向綁定]]
 [[Observable 觀察者模式使用方式(類似Promise)]]
 [[Angular 身分驗證]]
 [[RxJS]]
@@ -30,6 +32,3 @@
 [常見路由任務](https://angular.tw/guide/router#common-routing-tasks)
 [路由器教程](https://angular.tw/guide/router-tutorial-toh)
 [元件生命週期](https://angular.tw/guide/lifecycle-hooks)
-
-
-

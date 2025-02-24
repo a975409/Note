@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "c1d339e22bb34503",
+        "id": "f00742cc245001b7",
         "type": "tabs",
         "children": [
           {
-            "id": "8239ef0af5deaed5",
+            "id": "e2f14f74fbdfcf3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular 表單.md",
+                "file": "Angular/Angular 引用外部CSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Angular 表單"
+              "title": "Angular 引用外部CSS"
+            }
+          },
+          {
+            "id": "ccbf4eae1edca8ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Angular 引用外部JS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Angular 引用外部JS"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 522.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -140,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular 表單.md",
+                "file": "Angular/Angular 引用外部JS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Angular 表單 的大綱"
+              "title": "Angular 引用外部JS 的大綱"
             }
           }
         ],
@@ -166,35 +181,37 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "8239ef0af5deaed5",
+  "active": "4e1973547c031b6b",
   "lastOpenFiles": [
-    "Angular 回應式表單.md",
-    "Angular 表單.md",
-    "永久筆記/Angular 19.md",
-    "Angular 表單驗證.md",
-    "Angular FormArray 應用方式.md",
-    "永久筆記/Angular 建立Form表單並取得使用者輸入(NgModule開發架構).md",
-    "永久筆記/Angular 建立Form表單並取得使用者輸入.md",
-    "永久筆記/Angular Standalone API開發架構.md",
-    "永久筆記/Angular 將子元件資料傳遞到父元件.md",
-    "永久筆記/Angular NgModule開發架構.md",
-    "永久筆記/Angular 將父元件的資料傳遞給子元件.md",
-    "RxJS reduce.md",
-    "永久筆記/RxJS.md",
-    "永久筆記/RxJS 流動性 (Flow).md",
-    "永久筆記/RxJS 純淨性 (Purity).md",
-    "永久筆記/RxJS scan.md",
-    "永久筆記/RxJS 值 (Values).md",
+    "Angular/Angular 引用外部CSS.md",
+    "Angular/Angular 19.md",
+    "Angular/Angular 環境安裝.md",
+    "Angular/Angular 引用外部JS.md",
+    "Angular/Angular 回應式表單.md",
+    "Angular/Angular 表單.md",
+    "Angular/Angular 表單驗證.md",
+    "Angular/Angular 指定要上傳的檔案(不使用input type=file).md",
+    "Angular/Angular NgModule開發架構.md",
+    "Angular/Angular 建立Form表單並取得使用者輸入(NgModule開發架構).md",
+    "Angular/Angular 使用 HttpClient 發出http request.md",
+    "Angular/Angular 使用 HttpClient 發出http request.md",
+    "Angular/Angular Standalone API開發架構.md",
+    "Angular/Angular 建立Form表單並取得使用者輸入.md",
+    "Angular/Angular 多個相同name的input組成一個FormArray.md",
+    "Angular/Angular 指定要上傳的檔案.md",
+    "Angular/ngModel 雙向綁定.md",
+    "Angular/建立auth.Service開發登入登出功能.md",
+    "永久筆記/RxJS reduce.md",
+    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
+    "永久筆記/DOM 事件.md",
+    "永久筆記/RESTful API.md",
+    "ASP.NET Core/SignalR.md",
+    "ASP.NET Core/URL重寫 與 URL重新導向.md",
+    "ASP.NET Core/Use.md",
+    "永久筆記/URL 重寫 & URL重新導向.md",
+    "ASP.NET Core",
+    "Angular",
     "Pasted image 20250215192825.png",
-    "永久筆記/Angular 服務.md",
-    "永久筆記/建立auth.Service開發登入登出功能.md",
-    "永久筆記/Angular ngIF.md",
-    "永久筆記/Angular 樣板(template).md",
-    "永久筆記/Angular 元件(Component).md",
-    "永久筆記/Angular 樣板(template) 顯示非同步的資料.md",
-    "永久筆記/Angular 使用 HttpClient 發出http request(NgModule開發架構).md",
-    "永久筆記/Angular 使用 HttpClient 發出http request 1.md",
-    "永久筆記/Angular 元件(Component)(NgModule開發架構).md",
     "Pasted image 20250215182727.png",
     "Pasted image 20250131165656.png",
     "Pasted image 20250104184634.png",

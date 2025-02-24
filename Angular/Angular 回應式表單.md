@@ -4,12 +4,14 @@
 | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | [FormControl](https://angular.tw/api/forms/FormControl)                   | 追蹤單個表單控制元件的值和驗證狀態。                                                                       | 單一input或select欄位<br>`<input type="email" name="userEmail" id="userEmail" formControlName="userEmail" placeholder="電子信箱"/>` |
 | [FormGroup](https://angular.tw/api/forms/FormGroup)                       | 追蹤一個表單控制元件群組的值和狀態。                                                                       | 對應一個HTML form表單<br>`<form [formGroup]="applyForm" (ngSubmit)="submitSignUp()"></form>`                                     |
-| [FormArray](https://angular.tw/api/forms/FormArray)                       | 追蹤表單控制元件陣列的值和狀態。<br>(多個[FormControl](https://angular.tw/api/forms/FormControl) )         | 存放多個HTML的input或select<br>[[Angular FormArray 應用方式]]                                                                       |
+| [FormArray](https://angular.tw/api/forms/FormArray)                       | 追蹤表單控制元件陣列的值和狀態。<br>(多個[FormControl](https://angular.tw/api/forms/FormControl) )         | 存放多個HTML的input或select<br>[[Angular 多個相同name的input組成一個FormArray]]                                                                       |
 | [ControlValueAccessor](https://angular.tw/api/forms/ControlValueAccessor) | 在 Angular 的 [FormControl](https://angular.tw/api/forms/FormControl) 實例和內建 DOM 元素之間建立一個橋樑 |                                                                                                                            |
 |                                                                           |                                                                                          |                                                                                                                            |
 > HTML屬性：`formControlName` 或 `[formControl]`，與根據名字將現有 [FormGroup](https://angular.tw/api/forms/FormGroup) 中的 [FormControl](https://angular.tw/api/forms/FormControl) 與一個表單控制元件進行同步。
 
 [[Angular 表單驗證]]
+[[Angular 指定要上傳的檔案]]
+[[Angular 指定要上傳的檔案(不使用input type=file)]]
 
 建立回應式表單：
 component：
@@ -92,10 +94,12 @@ updatefavoriteColor() {
 
 取得`FormControl`的設定值：
 ```typescript
-this.favoriteColorControl.value;
+this.favoriteColorControl.value ?? '';
 <!--或從formgroup.value取得設定值-->
-this.applyForm.value.favoriteColorControl;
+this.applyForm.value.favoriteColorControl ?? '';
 ```
+
+> FormControl 可能會回傳 null。如果值為 null，此程式碼使用空值合併運算符 ?? 將其預設為空字串。
 
 FormGroup：
 [建立巢狀的表單組](https://angular.tw/guide/reactive-forms#creating-nested-form-groups)
@@ -118,7 +122,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ProfileEditorComponent {
   profileForm = this.fb.group({
-    firstName: [''],
+    firstName: this.fb.control(''),
     lastName: [''],
     address: this.fb.group({
       street: [''],
