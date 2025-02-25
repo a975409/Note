@@ -15,7 +15,7 @@
 [[Angular 服務]]
 [[Angular 本地執行專案]]
 [[設定 JSON 伺服器]]
-[[Angular 新增HttpHeader 1]]
+[[Angular 新增HttpHeader]]
 [[ngModel 雙向綁定]]
 [[Observable 觀察者模式使用方式(類似Promise)]]
 [[Angular 身分驗證]]
