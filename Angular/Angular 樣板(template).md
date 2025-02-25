@@ -27,12 +27,19 @@ export class HelloWorldInterpolationComponent {
 
 #### 支援屬性繫結，可設定 HTML 元素的 Property 和 Attribute 的值：
 [[HTML Attribute與Property的差別]]
+
+Property繫結：
 ```html
 <p
   [id]="sayHelloId"
   [style.color]="fontColor">
   You can set my color in the component!
 </p>
+```
+
+Attribute繫結(前面須加上attr.)：
+```html
+<p [attr.attribute-you-are-targeting]="expression"></p>
 ```
 
 >方括號：可在[[Angular 元件(Component)(NgModule開發架構)]]中設定 HTML Property 或 Attribute 的值。
@@ -60,9 +67,8 @@ export class HelloWorldBindingsComponent {
 </button>
 ```
 
->括號：可在[[Angular 元件(Component)(NgModule開發架構)]]中設定觸發事件後所執行的function
+>括號：可在Component中設定觸發事件後所執行的function
 
-sayMessage()是在[[Angular 元件(Component)(NgModule開發架構)]]中定義的：
 ```typescript
 import { Component } from '@angular/core';
 
@@ -78,6 +84,27 @@ export class HelloWorldBindingsComponent {
     alert(this.message);
   }
 }
+```
+
+#### ngModel 雙向繫結：
+component需引入：
+```typescript
+import {FormsModule} from '@angular/forms'
+
+export class Hero {
+
+  constructor(
+    public id: number,
+    public name: string,
+    public power: string,
+    public alterEgo?: string
+  ) {  }
+}
+```
+
+搭配HTML input 使用：
+```html
+<input type="text" class="form-control" id="name" ([ngModel])="model.name" name="name">
 ```
 
 [[Angular ngIF]]
