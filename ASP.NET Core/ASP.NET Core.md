@@ -26,7 +26,6 @@
 [ASP.NET Core 中的Layout.cshtml](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/layout?view=aspnetcore-7.0)
 [ASP.NET Core 最佳做法 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/best-practices?view=aspnetcore-7.0#compress-responses)
 [[回應壓縮]]
-[[URL 重寫 & URL重新導向]]
 [[開放靜態目錄存取的功能]]
 [[在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更]]
 [[使用AutoMapper一行指令自動匹配DTO欄位資料]]
