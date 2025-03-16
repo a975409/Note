@@ -64,3 +64,30 @@ export class ProductListComponent {
   }
 }
 ```
+
+#### 如果有輸入參數的話
+子元件(Component)：
+```typescript
+export class PageComponent{
+@Output() pageChange = new EventEmitter<number>();
+pageChanged(page: number): void {
+    this.pageChange.emit(page);
+  }
+}
+```
+
+父元件(Component)
+component：
+```typescript
+selectPageSearchForm(page: number) {
+    this.page.page = page;
+    this.getResultdata();
+  }
+```
+
+Html：
+```html
+<app-page
+  (pageChange)="selectPageSearchForm($event)">
+</app-page>
+```
