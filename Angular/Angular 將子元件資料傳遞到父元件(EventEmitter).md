@@ -76,6 +76,11 @@ pageChanged(page: number): void {
 }
 ```
 
+子元件(Html)：
+```html
+<a class="page-link" href="javascript:void(0)" (click)="pageChanged(page)"></a>
+```
+
 父元件(Component)
 component：
 ```typescript

@@ -21,6 +21,8 @@
 [[Angular 身分驗證]]
 [[RxJS]]
 [[完整的 Angular 元件生命週期]]
+[[Angular 常用外部套件安裝方式]]
+[[在Angular 設定window全域變數]]
 #### 參考連結
 [Angular 建立和託管你的應用](https://angular.tw/start/start-deployment#building-and-hosting-your-application)
 [API->ngFor](https://angular.tw/api/common/NgFor)
