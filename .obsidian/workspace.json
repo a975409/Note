@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ccbf4eae1edca8ae",
+            "id": "43a793df2151ccf6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/建立auth.Service開發登入登出功能.md",
+                "file": "Angular/Angular 19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "建立auth.Service開發登入登出功能"
-            }
-          },
-          {
-            "id": "d73d11f1c1308c7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/在Angular 設定window全域變數.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "在Angular 設定window全域變數"
+              "title": "Angular 19"
             }
           }
         ]
@@ -154,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/建立auth.Service開發登入登出功能.md",
+                "file": "Angular/Angular 19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "建立auth.Service開發登入登出功能 的大綱"
+              "title": "Angular 19 的大綱"
             }
           }
         ],
@@ -180,36 +166,36 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "ccbf4eae1edca8ae",
+  "active": "43a793df2151ccf6",
   "lastOpenFiles": [
-    "Angular/Angular 19.md",
-    "Angular/安裝Bootstrap套件.md",
     "Angular/在Angular 設定window全域變數.md",
+    "Angular/Angular 19.md",
+    "Angular/Angular Standalone API開發架構.md",
+    "Angular/Angular 使用 HttpClient 發出http request.md",
+    "Angular/Angular 設定路由導向(傳遞物件或陣列資料).md",
+    "Angular/Angular 元件(Component).md",
+    "Angular/Angular 設定路由導向(網址附帶參數).md",
+    "Angular/Angular 回應式表單.md",
+    "Angular/Angular 表單.md",
+    "Angular/Angular 表單驗證.md",
+    "Angular/FormArray.md",
+    "Angular/FormArray元素為FormGroup.md",
+    "Angular/FormArray元素為FormControl.md",
+    "Angular/建立auth.Service開發登入登出功能.md",
+    "Angular/安裝Bootstrap套件.md",
     "2024-07-27.md",
     "2024-07-26.md",
     "Angular/Angular 將子元件資料傳遞到父元件(EventEmitter).md",
-    "Angular/Angular Standalone API開發架構.md",
-    "Angular/Angular 使用 HttpClient 發出http request.md",
     "Angular/Observable 觀察者模式使用方式(類似Promise).md",
     "Angular/Angular 身分驗證.md",
-    "Angular/建立auth.Service開發登入登出功能.md",
-    "Angular/Angular 表單.md",
-    "Angular/Angular 回應式表單.md",
     "Angular/Angular 指定要上傳的檔案(不使用input type=file).md",
     "Angular/Angular 指定要上傳的檔案.md",
     "Angular/Angular 常用外部套件安裝方式.md",
     "Angular/安裝sweetalert2套件.md",
     "Angular/完整的 Angular 元件生命週期.md",
     "Angular/安裝jQuery套件.md",
-    "Angular/ngModel 雙向綁定.md",
-    "Angular/ngOnChanges().md",
     "Pasted image 20250317003146.png",
     "Pasted image 20250317003113.png",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/驗證與授權.md",
-    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
-    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
-    "ASP.NET Core/Cookie驗證.md",
     "ASP.NET Core",
     "Angular",
     "Pasted image 20250215192825.png",

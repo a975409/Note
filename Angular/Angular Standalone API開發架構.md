@@ -40,5 +40,4 @@ ng new StandaloneAPI-app --ssr=false --style=css
 
 #### 其他開發筆記
 [[Angular 元件(Component)]]
-[[Angular 設定路由導向]]
 [[Angular 使用 HttpClient 發出http request]]

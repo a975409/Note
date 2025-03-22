@@ -2,7 +2,7 @@
 [Validators：如何動態更新表單驗證器](https://hackmd.io/@Heidi-Liu/angular-validators)
 [angular內建的驗證器](https://angular.tw/api/forms/Validators)
 
-#### 使用內建的驗證器：
+#### 使用內建的驗證器
 ```typescript
 this.userTel = new FormControl('', [Validators.required]);
 ```
@@ -136,3 +136,33 @@ export function passwordValidator(): ValidatorFn {
 </p>
 </li>
 ```
+
+#### 更新現有`FormControl`驗證器
+```typescript
+PAYAT: FormControl;
+this.PAYAT.clearValidators();
+this.PAYAT.reset();
+if (this.userType.value == UserType.報關行) {
+  this.PAYAT.addValidators(Validators.required);
+}
+
+// 在設定完驗證規則後，需更新驗證器
+this.PAYAT.updateValueAndValidity();
+
+//觸發該欄位的驗證器，這樣就會立即顯示錯誤訊息
+this.PAYAT.markAsTouched();
+```
+
+#### 觸發`FormGroup`底下所有`FormControl`的驗證器，會立即顯示所有輸入欄位的錯誤訊息
+```typescript
+this.searchDto = this.fb.array([]);
+this.applyForm = this.fb.group({ DataList: this.searchDto });
+
+//觸發`FormGroup`底下所有`FormControl`的驗證器，會立即顯示所有輸入欄位的錯誤訊息
+//this.applyForm.invalid=>檢查底下所有FormControl是否通過驗證，未通過則回傳true
+ if (this.applyForm.invalid) {
+      this.applyForm.markAllAsTouched();
+      return;
+ }
+```
+
