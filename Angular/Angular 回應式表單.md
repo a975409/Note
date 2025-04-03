@@ -99,6 +99,19 @@ this.favoriteColorControl.value ?? '';
 this.applyForm.value.favoriteColorControl ?? '';
 ```
 
+從`FormGroup`下取得`FormControl` 或 `FormArray`：
+```typescript
+this.applyForm:FormGroup;
+
+this.applyForm = this.fb.group({
+      CarNo: this.fb.array<FormControl>([]),
+      ElectronicSeal: this.fb.control<File | null>(null),
+    });
+
+let electronicSealControl = this.applyForm.get('ElectronicSeal') as FormControl;
+let CarNo = this.applyForm.get('CarNo') as FormArray;
+```
+
 > FormControl 可能會回傳 null。如果值為 null，此程式碼使用空值合併運算符 ?? 將其預設為空字串。
 
 FormGroup：

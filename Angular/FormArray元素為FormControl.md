@@ -40,7 +40,7 @@ export class SignupComponent {
 
   /**取得多筆已輸入的車牌欄位 */
   get carNoArray() {
-    return (this.applyForm.get('CarNolist') as FormArray).controls;
+    return this.applyForm.get('CarNolist') as FormArray;
   }
 
   /**新增車牌欄位 */
@@ -76,7 +76,7 @@ HTML 模板：
 <ul>
   <li formArrayName="CarNolist">
 	<div *ngFor="
-		let carNo of carNoArray;
+		let carNo of carNoArray.controls;
 		let i = index
 	  ">
 	  <input

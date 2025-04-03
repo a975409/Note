@@ -101,8 +101,45 @@ export class ApiService {
 
 ```
 
+> map、switchMap 取得值之後，可將取得的值做個轉換，到最後還是要將值傳遞下去(傳遞給下一個switchMap或tap)，tap則只有單純取得值而已
 
-如何呼叫：
+tap範例如下：
+```typescript
+private getApiVersion(): Observable<string> {
+    if (this.apiVersion) {
+      return of(this.apiVersion);
+    } else {
+      return this.http
+        .get(${environment.versionAPI}, { responseType: 'text' })
+        .pipe(
+          map((version: string) => {
+            this.apiVersion = version;
+            return this.apiVersion;
+          })
+        );
+    }
+
+this.getApiVersion()
+        .pipe(
+          switchMap((version) => {
+            this.httpOptions = this.httpOptionService.getCommonHttpOption();
+            let apiUrl = `${environment.apiUrl}/${version}/${subUrl}`;
+            return this.http.post<any>(
+              apiUrl,
+              my.clone({}, data),
+              this.httpOptions
+            );
+          }),
+          tap((response: DefaultResponseContract) => {
+            if (response.unauth == 1) {
+            }
+          }),
+          finalize(() => {
+          })
+        )
+```
+
+呼叫`subscribe`執行`Observable`：
 ```typescript
 this.apiService.getDomainAPIUrl().subscribe({
   next: apiUrl => {

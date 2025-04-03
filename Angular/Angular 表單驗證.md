@@ -45,6 +45,11 @@ export function passwordValidator(): ValidatorFn {
     //取得輸入值
     const value: string = control.value || '';
 
+	// 如果欄位為空，不進行驗證（可以搭配 required 驗證器）
+    if (!value) {
+      return null;
+    }
+
     // 定義驗證規則
     const minLength = 8;
     const maxLength = 30;
