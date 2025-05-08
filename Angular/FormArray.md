@@ -42,7 +42,7 @@ get carNoArray() {
     return this.applyForm.get('CarNolist') as FormArray;
   }
 
-carNoArray.controls.foreach((item,index)=>{})
+carNoArray.controls.forEach((item,index)=>{})
 
 //或是從formgroup取得CarNolist的值，會直接取得陣列資料
 this.applyForm.value.CarNolist

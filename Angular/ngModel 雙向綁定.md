@@ -73,3 +73,40 @@ app.component.html：
 ```
 
 > 在 `<form></form>` 裡面用 `[(ngModel)]` 這個雙向綁定的 Directive 的話，input 的欄位上就要有 `name` 的屬性，或是加上 `[ngModelOptions]="{standalone: true}"` 也可以
+
+#### 偵測`NgModel`的值變更事件
+```html
+<div class="md-radio md-radio-inline">
+<input
+  id="pass"
+  type="radio"
+  name="Review_results"
+  [value]="1"
+  [(ngModel)]="reviewPass"
+  (ngModelChange)="onReviewPassChange($event)"
+/>
+<label for="pass">通過</label>
+</div>
+<div class="md-radio md-radio-inline">
+<input
+  id="notPass"
+  type="radio"
+  name="Review_results"
+  [value]="2"
+  [(ngModel)]="reviewPass"
+  (ngModelChange)="onReviewPassChange($event)"
+/>
+<label for="notPass">不通過</label>
+</div>
+```
+
+```typescript
+/**當帳號批核狀態指定通過時，需清除不通過原因  */
+  onReviewPassChange(newValue: number) {
+    if (newValue == 1) {
+      this.reason = '';
+    }
+  }
+```
+
+[[ngModel 驗證輸入]]

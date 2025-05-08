@@ -9,7 +9,8 @@
 |                                                                           |                                                                                          |                                                                                                                            |
 > HTML屬性：`formControlName` 或 `[formControl]`，與根據名字將現有 [FormGroup](https://angular.tw/api/forms/FormGroup) 中的 [FormControl](https://angular.tw/api/forms/FormControl) 與一個表單控制元件進行同步。
 
-[[Angular 表單驗證]]
+[[Angular 表單驗證(一)]]
+[[Angular 表單驗證(二) - FormGroup套用驗證器]]
 [[Angular 指定要上傳的檔案]]
 [[Angular 指定要上傳的檔案(不使用input type=file)]]
 
@@ -84,6 +85,7 @@ HTML：
 </form>
 ```
 
+#### FormControl
 設定`FormControl`的設定值：
 ```typescript
 updatefavoriteColor() {
@@ -95,9 +97,12 @@ updatefavoriteColor() {
 取得`FormControl`的設定值：
 ```typescript
 this.favoriteColorControl.value ?? '';
+
 <!--或從formgroup.value取得設定值-->
 this.applyForm.value.favoriteColorControl ?? '';
 ```
+
+> FormControl 可能會回傳 null。如果值為 null，此程式碼使用空值合併運算符 ?? 將其預設為空字串。
 
 從`FormGroup`下取得`FormControl` 或 `FormArray`：
 ```typescript
@@ -112,9 +117,19 @@ let electronicSealControl = this.applyForm.get('ElectronicSeal') as FormControl;
 let CarNo = this.applyForm.get('CarNo') as FormArray;
 ```
 
-> FormControl 可能會回傳 null。如果值為 null，此程式碼使用空值合併運算符 ?? 將其預設為空字串。
+FormControl 訂閱值變更事件：
+```typescript
+let active = this.applyForm.get('active') as FormControl;
+    //emitEvent: false=>代表設定值之後，不要觸發任何事件
+	active.setValue(DataList.locked == 0, { emitEvent: false });
 
-FormGroup：
+    //訂閱值變更事件
+    active.valueChanges.subscribe((value) => {
+      if (this.canUpdateUserInfo()) this.lockedChange(value);
+      else active.setValue(DataList.locked == 0, { emitEvent: false });
+    });
+```
+#### FormGroup
 [建立巢狀的表單組](https://angular.tw/guide/reactive-forms#creating-nested-form-groups)
 [更新部分資料模型](https://angular.tw/guide/reactive-forms#updating-parts-of-the-data-model)
 
@@ -136,7 +151,7 @@ import { FormBuilder } from '@angular/forms';
 export class ProfileEditorComponent {
   profileForm = this.fb.group({
     firstName: this.fb.control(''),
-    lastName: [''],
+    lastName: this.fb.array([]),
     address: this.fb.group({
       street: [''],
       city: [''],
@@ -147,4 +162,15 @@ export class ProfileEditorComponent {
 
   constructor(private fb: FormBuilder) { }
 }
+```
+
+指定`FormGroup`底下的`FormControl`或`FormArray`
+```typescript
+
+//`FormControl`
+this.profileForm.get('firstName') as FormControl
+
+//`FormArray`
+this.profileForm.get('lastName') as FormArray
+
 ```
