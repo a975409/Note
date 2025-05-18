@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "378e70163ce4dd70",
+        "id": "dac0edd6a714ed71",
         "type": "tabs",
         "children": [
           {
-            "id": "65768795e6feb305",
+            "id": "e1b5e853f2de4af9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Angular 表單驗證(一).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Angular 表單驗證(一)"
-            }
-          },
-          {
-            "id": "d88a573888b05efd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular 表單驗證(二) - FormGroup套用驗證器.md",
+                "file": "Angular/Angular 表單驗證(二) - FormGroup套用驗證器.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Angular 表單驗證(二) - FormGroup套用驗證器"
             }
-          },
-          {
-            "id": "859684b7e3bafd11",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Angular 回應式表單.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Angular 回應式表單"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "API Controllers.md",
+                "file": "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "API Controllers 的反向連結"
+              "title": "JWT(JSON Web Token) — 原理介紹 的反向連結"
             }
           },
           {
@@ -142,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "API Controllers.md",
+                "file": "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "API Controllers 的對外連結"
+              "title": "JWT(JSON Web Token) — 原理介紹 的對外連結"
             }
           },
           {
@@ -169,21 +140,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular 表單驗證(二) - FormGroup套用驗證器.md",
+                "file": "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Angular 表單驗證(二) - FormGroup套用驗證器 的大綱"
+              "title": "JWT(JSON Web Token) — 原理介紹 的大綱"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,34 +167,34 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "d88a573888b05efd",
+  "active": "4e1973547c031b6b",
   "lastOpenFiles": [
-    "Angular/Angular 表單驗證(一).md",
-    "Angular 表單驗證(二) - FormGroup套用驗證器.md",
+    "ASP.NET Core/CodeFirst.md",
+    "ASP.NET Core/使用 新增sacffold項目快速建立資料庫物件(推薦作法).md",
+    "ASP.NET Core/手動設定資料庫物件.md",
+    "ASP.NET Core/新增初始資料.md",
+    "ASP.NET Core/解決刪除資料時無法刪除底下子資料的問題.md",
+    "ASP.NET Core/Entity Framework (EF) Core.md",
+    "ASP.NET Core/DBFirst.md",
+    "ASP.NET Core/資料庫存取環境建置.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/路由.md",
+    "ASP.NET Core/Web API.md",
+    "ASP.NET Core/記憶體快取.md",
+    "ASP.NET Core/群組概念與使用.md",
+    "ASP.NET Core/部分類別(1).md",
+    "ASP.NET Core/建立上傳檔案的API.md",
+    "ASP.NET Core/檔案上傳.md",
+    "ASP.NET Core/檔案驗證標籤屬性UploadFileValid.md",
+    "ASP.NET Core/Web API 專案路由設定.md",
+    "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
+    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+    "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
     "Angular/Angular 回應式表單.md",
-    "Angular/ngModel 雙向綁定.md",
-    "ngModel 驗證輸入.md",
-    "Angular/Angular 19.md",
-    "Angular/Angular 表單.md",
-    "Angular/FormArray.md",
-    "Angular/完整的 Angular 元件生命週期.md",
-    "Angular/在Angular 設定window全域變數.md",
-    "Angular/Angular 設定路由導向(傳遞物件或陣列資料).md",
-    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
-    "Angular/ngOnChanges().md",
-    "Angular/Angular 樣板(template).md",
-    "ASP.NET Core/HTML Attribute與Property的差別.md",
-    "Angular/Angular 常用外部套件安裝方式.md",
-    "Angular/安裝jQuery套件.md",
-    "Angular/FormArray元素為FormGroup.md",
-    "Angular/FormArray元素為FormControl.md",
-    "Angular/Angular 設定路由導向(網址附帶參數).md",
-    "Component 路由導向方式.md",
-    "Angular/建立auth.Service開發登入登出功能.md",
-    "Angular/Angular 身分驗證.md",
-    "Angular/Angular Guard.md",
-    "Angular/安裝Bootstrap套件.md",
-    "Angular/Angular Standalone API開發架構.md",
+    "Angular/Angular 表單驗證(一).md",
+    "ASP.NET Core/取得登入者資訊.md",
+    "ASP.NET Core/驗證與授權.md",
     "Pasted image 20250317003146.png",
     "Pasted image 20250317003113.png",
     "ASP.NET Core",

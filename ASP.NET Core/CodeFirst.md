@@ -84,12 +84,7 @@
 	  {
 
 	    public BlogContext() {}
-
-
-
 	    public BlogContext(DbContextOptions<BlogContext> options) : base(options){}
-
-
 
 	    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	    {
@@ -106,9 +101,7 @@
 	    }
 
 	    public virtual DbSet<Article> Articles { get; set; }
-
 	    public virtual DbSet<User> Users { get; set; }
-
 	  }
 	}
 ```

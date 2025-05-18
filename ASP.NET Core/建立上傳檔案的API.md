@@ -1,4 +1,7 @@
-後端程式碼：
+
+#### 後端程式碼：
+> 單一檔案：`IFormFile`   
+   複數檔案：`IFormFileCollection`、`IEnumerable<IFormFile>`、`List<IFormFile>`、`ICollection<IFormFile>`
 
 ```csharp
 [HttpPost("api/Register")]
@@ -41,12 +44,26 @@ public IActionResult Register([FromForm] RegisterUser registerUser, [UploadFileV
 ```
 
 後端開發注意如下：
-
 1. 如果API會接受上傳檔案和其他參數，記得參數的部分要標記FromForm
 2. 參考資料：[msdn](https://docs.microsoft.com/zh-tw/aspnet/core/mvc/models/file-uploads?view=aspnetcore-6.0#file-upload-scenarios)、[# 415 unsupported media [type错误解决.net](http://xn--type-y38f2980a18ch6y.net/) core API]
 
-前端程式碼(axios & Vue)：
+#### 前端HTML `<form>`標籤
+首先先在View中加入上傳檔案的input
+> 如果要上傳多個檔案，就要在`input type="file"`標記 multiple
+```html
+<div class="form-group">
+    <label for="Files" class="control-label">Files</label>
+    <input name="Files" type="file" multiple class="form-control" />
+</div>
+```
 
+另外上面的from要多加一段宣告`enctype="multipart/form-data"`，才能夠接收到檔案
+```html
+<form method="post" action="/News2/Create" enctype="multipart/form-data">
+```
+
+#### 前端呼叫API (axios & Vue)：
+> 記得在header標記 "Content-Type": "multipart/form-data"
 ```jsx
 var RegisterApp = new Vue({
 	el: '#Register',
@@ -103,9 +120,5 @@ var RegisterApp = new Vue({
 });
 
 ```
-
-前端開發注意如下：
-
-1. 記得在header標記 "Content-Type": "multipart/form-data"
 
 參考文件 [https://docs.microsoft.com/zh-tw/aspnet/core/mvc/models/file-uploads?view=aspnetcore-6.0#file-upload-scenarios](https://docs.microsoft.com/zh-tw/aspnet/core/mvc/models/file-uploads?view=aspnetcore-6.0#file-upload-scenarios)

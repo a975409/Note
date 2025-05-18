@@ -53,7 +53,20 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
 
 ```
 
-資料庫物件服務註冊(Program.cs)
+資料庫物件服務註冊`DbContext`：
+Startup.cs 新增下列程式碼(ASP.NET Core 5.x)：
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AddControllersWithViews();
+
+	//新增這段程式碼，MvcMovieContext就是指在 appsettings.json 設定的連線字串
+	services.AddDbContext<MvcMovieContext>(options =>
+			options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
+}
+```
+
+如果是(ASP.NET Core 6.x以上)，則在(Program.cs)設定如下：
 ```C#
 var builder = WebApplication.CreateBuilder(args);
 
