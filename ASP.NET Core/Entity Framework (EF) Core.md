@@ -1,5 +1,5 @@
 [[EF Core攔截與紀錄]]
 [[EF Core 防止使用者同時更新同一筆資料]]
 [[資料庫存取環境建置]]
-[[CodeFirst]]
+[[CodeFirst(一)]]
 [[DBFirst]]

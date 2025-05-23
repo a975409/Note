@@ -1,17 +1,29 @@
 
-[https://blog.darkthread.net/blog/ef-core-notes-2/](https://blog.darkthread.net/blog/ef-core-notes-2/)[https://blog.darkthread.net/blog/ef-core-notes-3/](https://blog.darkthread.net/blog/ef-core-notes-3/)
-[程序代碼第一個數據批註 - EF6 | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/ef6/modeling/code-first/data-annotations)
-
-以下為第一種方式的完整步驟：
-步驟一(以下二選一)：
-[[手動設定資料庫物件]]
-[[使用 新增sacffold項目快速建立資料庫物件(推薦作法)]]
-
-步驟二：
-[[新增初始資料]]
-
-以下為第二種方式的完整步驟：
+#### 初次建立資料庫：
 1. 建立Model和DBContext： 
+	User.cs
+	```C#
+	using System.ComponentModel.DataAnnotations;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Threading.Tasks;
+	
+	namespace SampleCodeFirst.Models;
+	
+	public partial class User
+	{
+	  [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+	  public Guid Id { get; set; }
+	
+	  [Required]
+	  [MaxLength(15)]
+	  public string UserName { get; set; }
+	
+	  public virtual ICollection<Article> Articles { get; set; }
+	}
+	```
+
 	Article.cs
 	```C#
 	using System.ComponentModel.DataAnnotations;
@@ -44,29 +56,6 @@
 	
 	```
 
-	User.cs
-	```C#
-	using System.ComponentModel.DataAnnotations;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Threading.Tasks;
-	
-	namespace SampleCodeFirst.Models;
-	
-	public partial class User
-	{
-	  [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-	  public Guid Id { get; set; }
-	
-	  [Required]
-	  [MaxLength(15)]
-	  public string UserName { get; set; }
-	
-	  public virtual ICollection<Article> Articles { get; set; }
-	}
-	```
-
 	BlogContext.cs
 ```C#
 	using System;
@@ -97,6 +86,7 @@
 
 	    protected override void OnModelCreating(ModelBuilder modelBuilder)
 	    {
+	      //呼叫新增測試資料的方法
 	      modelBuilder.Seed();
 	    }
 
@@ -106,7 +96,32 @@
 	}
 ```
 
-2. 建立範例資料
+2. 將初次建立的Model更新到資料庫
+```C#
+//init 代表產生的 migration 的檔名
+dotnet ef migrations add init --context BlogContext
+
+//更新資料庫
+dotnet ef database update --context BlogContext
+```
+
+![[Pasted image 20250523203237.png]]
+
+#### 修改資料庫模型並更新資料庫
+1. 在 `Articles.cs`中加入：
+```C#
+public DateTime PostTime { get; set; }
+```
+2. 輸入以下指令：
+```C#
+//Add_PostTime代表產生的 migration 的檔名
+dotnet ef migrations add Add_PostTime --context BlogContext
+
+//更新資料庫
+dotnet ef database update --context BlogContext
+```
+
+#### 建立範例資料
 ```C#
 	using System;
 	using System.Collections.Generic;
@@ -144,17 +159,10 @@
 	    }
 	  }
 	}
-
 ```
 
+接著執行以下指令：
 ```C#
-
-//依據 Model 和 DBContext 的設定產生 migration 的檔案
-dotnet ef migrations add Add_PostTime --context BlogContext
-
 //更新資料庫
 dotnet ef database update --context BlogContext
-
 ```
-
-[[解決刪除資料時無法刪除底下子資料的問題]]

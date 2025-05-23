@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "186857f40998f93f",
+        "id": "e8e920f6f5f26545",
         "type": "tabs",
         "children": [
           {
-            "id": "bb2c6097df029457",
+            "id": "c0d526396c75c47a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Observable 觀察者模式使用方式(類似Promise).md",
+                "file": "ASP.NET Core/CodeFirst(二).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Observable 觀察者模式使用方式(類似Promise)"
+              "title": "CodeFirst(二)"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Observable 觀察者模式使用方式(類似Promise).md",
+                "file": "ASP.NET Core/CodeFirst(二).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Observable 觀察者模式使用方式(類似Promise) 的反向連結"
+              "title": "CodeFirst(二) 的反向連結"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Observable 觀察者模式使用方式(類似Promise).md",
+                "file": "ASP.NET Core/CodeFirst(二).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Observable 觀察者模式使用方式(類似Promise) 的對外連結"
+              "title": "CodeFirst(二) 的對外連結"
             }
           },
           {
@@ -165,8 +165,18 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "bb2c6097df029457",
+  "active": "c0d526396c75c47a",
   "lastOpenFiles": [
+    "ASP.NET Core/資料庫存取環境建置.md",
+    "ASP.NET Core/CodeFirst(一).md",
+    "ASP.NET Core/新增初始資料.md",
+    "ASP.NET Core/使用 新增sacffold項目快速建立資料庫物件(推薦作法).md",
+    "ASP.NET Core/CodeFirst(二).md",
+    "ASP.NET Core/解決刪除資料時無法刪除底下子資料的問題.md",
+    "Pasted image 20250523203237.png",
+    "ASP.NET Core/手動設定資料庫物件.md",
+    "ASP.NET Core/DBFirst.md",
+    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
     "Angular/Angular 19.md",
     "Angular/Angular 樣板(template).md",
     "Angular/Angular 表單驗證(一).md",
@@ -176,23 +186,13 @@
     "Angular/Component 路由導向方式.md",
     "Angular/ngModel 驗證輸入.md",
     "Angular/Angular 表單驗證(二) - FormGroup套用驗證器.md",
-    "ASP.NET Core/CodeFirst.md",
-    "ASP.NET Core/使用 新增sacffold項目快速建立資料庫物件(推薦作法).md",
-    "ASP.NET Core/手動設定資料庫物件.md",
-    "ASP.NET Core/新增初始資料.md",
-    "ASP.NET Core/解決刪除資料時無法刪除底下子資料的問題.md",
     "ASP.NET Core/Entity Framework (EF) Core.md",
-    "ASP.NET Core/DBFirst.md",
-    "ASP.NET Core/資料庫存取環境建置.md",
     "ASP.NET Core/ASP.NET Core.md",
     "ASP.NET Core/路由.md",
     "ASP.NET Core/Web API.md",
     "ASP.NET Core/記憶體快取.md",
     "ASP.NET Core/群組概念與使用.md",
     "ASP.NET Core/部分類別(1).md",
-    "ASP.NET Core/建立上傳檔案的API.md",
-    "ASP.NET Core/檔案上傳.md",
-    "ASP.NET Core/檔案驗證標籤屬性UploadFileValid.md",
     "Pasted image 20250317003146.png",
     "Pasted image 20250317003113.png",
     "ASP.NET Core",
@@ -204,7 +204,6 @@
     "Pasted image 20250104092802.png",
     "Pasted image 20250104092741.png",
     "Pasted image 20250104025752.png",
-    "Pasted image 20250104025346.png",
     "靈感筆記",
     "文獻筆記",
     "永久筆記",
