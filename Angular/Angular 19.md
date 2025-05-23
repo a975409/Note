@@ -25,7 +25,7 @@
 [[在Angular 設定window全域變數]]
 [[Angular 設定路由導向(網址附帶參數)]]
 [[Angular 設定路由導向(傳遞物件或陣列資料)]]
-
+[[Component 路由導向方式]]
 #### 參考連結
 [Angular 建立和託管你的應用](https://angular.tw/start/start-deployment#building-and-hosting-your-application)
 [API->ngFor](https://angular.tw/api/common/NgFor)

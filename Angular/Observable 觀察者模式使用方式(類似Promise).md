@@ -152,3 +152,74 @@ this.apiService.getDomainAPIUrl().subscribe({
 ```
 
 > 建立`Observable`類後，需呼叫`.subscribe()`，這個`Observable`類才會執行；並且在`.subscribe()`內可設定`next`接收回傳的參數，以及`error`接收錯誤訊息
+
+`forkJoin`可一次性呼叫多個`Observable`，然後統一處理所有的執行結果：
+```typescript
+//設定批次呼叫多個API的執行方式
+const apiCalls = submitData.map((item) => {
+  return this.apiService
+	.httpPost('ITT/Eways_ITTFEPickupData_AssignDriver', {
+	  ITTNo: item.ITTNo,
+	  DataList: item.DataList,
+	})
+	.pipe(
+	  map((response: DefaultResponseContract) => {
+		if (response.status == 1) {
+		  return {
+			status: 1,
+			ITTNo: item.ITTNo,
+			ErrorDescription: '',
+		  };
+		} else {
+		  return {
+			status: 0,
+			ITTNo: item.ITTNo,
+			ErrorDescription: response.ErrorDescription,
+		  };
+		}
+	  })
+	);
+});
+
+//呼叫subscribe才會批次呼叫API
+if (apiCalls.length > 0) {
+  forkJoin(apiCalls).subscribe({
+	next: (results) => {
+
+	  //取得每一個API，map回傳的執行狀態
+	  const errors = results.filter(
+		(result) => result && result.status != 1
+	  );
+
+	  if (errors.length > 0) {
+		let errorITTNo = '';
+		errors.forEach((error) => {
+		  errorITTNo += error.ITTNo + '<br>';
+		});
+
+		// 有錯誤發生
+		this.openAlert({
+		  title: '錯誤',
+		  message: `有以下ITT領櫃編號重新指派失敗，請檢查後重試：<br>${errorITTNo}`,
+		});
+	  } else {
+		// 全部成功
+		this.openAlert({
+		  title: '成功',
+		  message: '所有勾選的資料已成功重新指派司機',
+		});
+	  }
+
+	  // 所有請求都已完成，可以處理結果
+	  this.getResultdata();
+	},
+	error: (error) => {
+	  // 處理錯誤情況
+	  this.openAlert({
+		title: '錯誤',
+		message: '指派司機時發生錯誤',
+	  });
+	},
+  });
+}
+```

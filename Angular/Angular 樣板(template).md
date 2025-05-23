@@ -56,6 +56,27 @@ export class HelloWorldBindingsComponent {
 }
 ```
 
+`ngClass`
+```html
+<td
+  [ngClass]="{
+	txt_red_EW:
+	  ApplyApprovedBKGInfo.Imdg ||
+	  ApplyApprovedBKGInfo.Unno ||
+	  ApplyApprovedBKGInfo.Subsidiary ||
+	  ApplyApprovedBKGInfo.MP
+  }"
+>
+  {{
+	ApplyApprovedBKGInfo.Imdg ||
+	ApplyApprovedBKGInfo.Unno ||
+	ApplyApprovedBKGInfo.Subsidiary ||
+	ApplyApprovedBKGInfo.MP
+	  ? "Y"
+	  : "N"
+  }}
+</td>
+```
 #### 設定監聽事件
 [[DOM 事件]]
 ```html

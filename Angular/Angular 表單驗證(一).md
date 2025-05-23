@@ -171,3 +171,19 @@ this.applyForm = this.fb.group({ DataList: this.searchDto });
  }
 ```
 
+#### 清除指定的欄位驗證失敗的錯誤訊息
+```typescript
+const dataListArray = this.applyForm.get('DataList') as FormArray;
+dataListArray.controls.forEach((group, index) => {
+  const cntrNoControl = group.get('cntrNo') as FormControl;
+
+  //檢查錯誤訊息是否符合以下條件
+  if (
+	cntrNoControl.errors?.['invalidFormat'] ||
+	cntrNoControl.errors?.['invalidCheckDigit']
+  ) {
+    //清除該欄位錯誤訊息，需設為null
+	cntrNoControl.setErrors(null);
+  }
+});
+```
