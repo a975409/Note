@@ -11,10 +11,14 @@
             "id": "e6f0ef77a31944e1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ASP.NET/ASP.NET.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "ASP.NET"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ASP.NET/ASP.NET.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向連結"
+              "title": "ASP.NET 的反向連結"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ASP.NET/ASP.NET.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "對外連結"
+              "title": "ASP.NET 的對外連結"
             }
           },
           {
@@ -161,8 +167,10 @@
   },
   "active": "e6f0ef77a31944e1",
   "lastOpenFiles": [
-    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET/驗證與授權.md",
     "ASP.NET Core/取得登入者資訊.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Authorize 和 AllowAnonymous 設定方式.md",
     "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
     "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
     "ASP.NET/PagedList分頁套件.md",
@@ -185,8 +193,6 @@
     "ASP.NET Core/DI依賴注入之生命週期.md",
     "ASP.NET Core MVC.md",
     "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
-    "ASP.NET Core/在Action或View上取得Route的資料.md",
-    "ASP.NET Core/CodeFirst(二)(推薦).md",
     "ASP.NET",
     "Pasted image 20250524102145.png",
     "Pasted image 20250524102056.png",

@@ -15,7 +15,7 @@
 [[例外事件處理]]
 [[Logging 日誌記錄]]
 [[cookie 和 session]]
-[[驗證與授權]]
+[[ASP.NET Core/驗證與授權]]
 [[Cache 快取]]
 [[Response 快取]]
 [[SignalR]]

@@ -4,6 +4,7 @@
 [不使用 HttpPostedFileBase 處理檔案上傳](https://kevintsengtw.blogspot.com/2013/03/aspnet-mvc-httppostedfilebase.html)
 [[PagedList分頁套件]]
 [[ASP.NET/跨網站偽造要求 (XSRF or CSRF)]]
+[[ASP.NET/驗證與授權|驗證與授權]]
 #### MSDN
 [System.Web.Mvc 命名空間](https://learn.microsoft.com/zh-tw/dotnet/api/system.web.mvc?view=aspnet-mvc-5.2)
 [Controller 類別](https://learn.microsoft.com/zh-tw/dotnet/api/system.web.mvc.controller?view=aspnet-mvc-5.2)
