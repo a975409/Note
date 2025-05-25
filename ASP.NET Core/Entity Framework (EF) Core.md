@@ -2,7 +2,7 @@
 [[EF Core 防止使用者同時更新同一筆資料]]
 [[資料庫存取環境建置]]
 [[CodeFirst(一)]]
-[[CodeFirst(二)]]
+[[CodeFirst(二)(推薦)]]
 [[DBFirst]]
 
 

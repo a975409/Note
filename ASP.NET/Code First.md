@@ -1,3 +1,6 @@
+參考資料：
+https://sdwh.dev/posts/2022/12/ASPNET-MVC-Code-First/
+https://andyyou.github.io/2013/03/12/asp-net-mvc-migrations/
 ### 安裝 Entity Framework
 
 ```powershell

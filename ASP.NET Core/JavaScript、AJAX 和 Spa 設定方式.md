@@ -1,3 +1,51 @@
+
+# 第一種設定方式(推薦)
+
+> 在View呼叫建立`TOKEN`的`function`，然後將產生的`TOKEN`帶入到底下AJAX的`header`
+
+```HTML
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+    ViewData["Title"] = "JavaScript";
+    var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+<input id="RequestVerificationToken" type="hidden" value="@requestToken" />
+
+<button id="button" class="btn btn-primary">Submit with Token</button>
+<div id="result" class="mt-2"></div>
+
+@section Scripts {
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const resultElement = document.getElementById("result");
+
+        document.getElementById("button").addEventListener("click", async () => {
+
+            const response = await fetch("@Url.Action("FetchEndpoint")", {
+                method: "POST",
+                headers: {
+                    RequestVerificationToken:
+                        document.getElementById("RequestVerificationToken").value
+                }
+            });
+
+            if (response.ok) {
+                resultElement.innerText = await response.text();
+            } else {
+                resultElement.innerText = `Request Failed: ${response.status}`
+            }
+        });
+    });
+</script>
+}
+```
+
+
+# 第二種設定方式(與axios搭配)
+
+> 在`Program.cs`建立`TOKEN`的`function`，並且自訂存放`TOKEN`的`reponse cookie`和`request header`的存取名稱
+
 參考網址： [https://ithelp.ithome.com.tw/articles/10248847](https://ithelp.ithome.com.tw/articles/10248847)
 
 > 前端呼叫後端API的套件axios，他有預設cookie='XSRF-TOKEN'、Request Header='X-XSRF-TOKEN'，所以不用在前端另外設定cookie和Header

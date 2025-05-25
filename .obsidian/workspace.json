@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dcf087f47aa949f0",
+        "id": "618a88044c0b4f65",
         "type": "tabs",
         "children": [
           {
-            "id": "2739f159f382695d",
+            "id": "e6f0ef77a31944e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Entity Framework 6 (EF6).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Entity Framework 6 (EF6)"
+              "title": "新分頁"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 522.5,
-    "collapsed": true
+    "width": 522.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -95,17 +90,16 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Entity Framework 6 (EF6).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Entity Framework 6 (EF6) 的反向連結"
+              "title": "反向連結"
             }
           },
           {
@@ -114,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Entity Framework 6 (EF6).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Entity Framework 6 (EF6) 的對外連結"
+              "title": "對外連結"
             }
           },
           {
@@ -154,8 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5,
-    "collapsed": true
+    "width": 278.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,37 +159,37 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "2739f159f382695d",
+  "active": "e6f0ef77a31944e1",
   "lastOpenFiles": [
-    "Code First.md",
-    "Entity Framework 6 (EF6).md",
-    "ASP.NET/ASP.NET.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/組態.md",
-    "ASP.NET Core/FromBody vs FromFrom.md",
-    "ASP.NET Core/Entity Framework (EF) Core.md",
-    "ASP.NET Core/URL重寫 與 URL重新導向.md",
-    "ASP.NET Core/Middleware.md",
-    "ASP.NET Core/Web API.md",
     "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/取得登入者資訊.md",
+    "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
+    "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
+    "ASP.NET/PagedList分頁套件.md",
+    "ASP.NET/ASP.NET.md",
+    "ASP.NET/Entity Framework 6 (EF6).md",
+    "ASP.NET/MVC專案路由設定.md",
+    "ASP.NET/路由.md",
+    "ASP.NET/跨網站偽造要求 (XSRF or CSRF).md",
+    "ASP.NET Core/ASP.NET Core.md",
     "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "ASP.NET Core/Model Binding 模型繫結.md",
+    "ASP.NET Core/模型驗證.md",
+    "ASP.NET Core/檔案上傳.md",
+    "檔案上傳.md",
+    "ASP.NET Core/建立上傳檔案的API.md",
+    "ASP.NET Core/檔案驗證標籤屬性UploadFileValid.md",
+    "ASP.NET Core/路由.md",
+    "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
+    "ASP.NET Core/DI依賴注入之生命週期.md",
+    "ASP.NET Core MVC.md",
     "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
+    "ASP.NET Core/在Action或View上取得Route的資料.md",
+    "ASP.NET Core/CodeFirst(二)(推薦).md",
     "ASP.NET",
-    "ASP.NET Core/DBFirst.md",
-    "ASP.NET Core/(Cookie 驗證)ValidatePrincipal 事件.md",
-    "ASP.NET Core/Proto.md",
-    "ASP.NET Core/指令說明.md",
-    "ASP.NET Core/LINQ AsEnumerable() 說明.md",
-    "ASP.NET Core/gRPC.md",
-    "ASP.NET Core/Client.md",
-    "ASP.NET Core/Server.md",
     "Pasted image 20250524102145.png",
-    "ASP.NET Core/FileProviders.md",
     "Pasted image 20250524102056.png",
-    "ASP.NET Core/監控檔案的變化.md",
-    "ASP.NET Core/讀取檔案內容.md",
-    "ASP.NET Core/樹狀層級結構.md",
-    "ASP.NET Core/CICD.md",
     "Pasted image 20250523203237.png",
     "Pasted image 20250317003146.png",
     "Pasted image 20250317003113.png",
