@@ -2,7 +2,7 @@
 ### 常用表單基礎類
 | 基底類別Base classes                                                          | 詳情                                                                                       | HTML應用情境                                                                                                                   |
 | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [FormControl](https://angular.tw/api/forms/FormControl)                   | 追蹤單個表單控制元件的值和驗證狀態。                                                                       | 單一input或select欄位<br>`<input type="email" name="userEmail" id="userEmail" formControlName="userEmail" placeholder="電子信箱"/>` |
+| [[FormControl]]                                                           | 追蹤單個表單控制元件的值和驗證狀態。                                                                       | 單一input或select欄位<br>`<input type="email" name="userEmail" id="userEmail" formControlName="userEmail" placeholder="電子信箱"/>` |
 | [FormGroup](https://angular.tw/api/forms/FormGroup)                       | 追蹤一個表單控制元件群組的值和狀態。                                                                       | 1.通常會對應一個HTML form表單<br>`<form [formGroup]="applyForm" (ngSubmit)="submitSignUp()"></form>`<br><br>2.將多個輸入欄位組成一個群組         |
 | [[FormArray]]                                                             | 追蹤表單控制元件陣列的值和狀態。<br>(多個[FormControl](https://angular.tw/api/forms/FormControl) )         | 存放多個HTML的input或select<br>                                                                                                  |
 | [ControlValueAccessor](https://angular.tw/api/forms/ControlValueAccessor) | 在 Angular 的 [FormControl](https://angular.tw/api/forms/FormControl) 實例和內建 DOM 元素之間建立一個橋樑 |                                                                                                                            |
@@ -85,50 +85,6 @@ HTML：
 </form>
 ```
 
-#### FormControl
-設定`FormControl`的設定值：
-```typescript
-updatefavoriteColor() {
-  //this.favoriteColorControl:FormControl;
-  this.favoriteColorControl.setValue('Nancy');
-}
-```
-
-取得`FormControl`的設定值：
-```typescript
-this.favoriteColorControl.value ?? '';
-
-<!--或從formgroup.value取得設定值-->
-this.applyForm.value.favoriteColorControl ?? '';
-```
-
-> FormControl 可能會回傳 null。如果值為 null，此程式碼使用空值合併運算符 ?? 將其預設為空字串。
-
-從`FormGroup`下取得`FormControl` 或 `FormArray`：
-```typescript
-this.applyForm:FormGroup;
-
-this.applyForm = this.fb.group({
-      CarNo: this.fb.array<FormControl>([]),
-      ElectronicSeal: this.fb.control<File | null>(null),
-    });
-
-let electronicSealControl = this.applyForm.get('ElectronicSeal') as FormControl;
-let CarNo = this.applyForm.get('CarNo') as FormArray;
-```
-
-FormControl 訂閱值變更事件：
-```typescript
-let active = this.applyForm.get('active') as FormControl;
-    //emitEvent: false=>代表設定值之後，不要觸發任何事件
-	active.setValue(DataList.locked == 0, { emitEvent: false });
-
-    //訂閱值變更事件
-    active.valueChanges.subscribe((value) => {
-      if (this.canUpdateUserInfo()) this.lockedChange(value);
-      else active.setValue(DataList.locked == 0, { emitEvent: false });
-    });
-```
 #### FormGroup
 [建立巢狀的表單組](https://angular.tw/guide/reactive-forms#creating-nested-form-groups)
 [更新部分資料模型](https://angular.tw/guide/reactive-forms#updating-parts-of-the-data-model)
@@ -174,3 +130,4 @@ this.profileForm.get('firstName') as FormControl
 this.profileForm.get('lastName') as FormArray
 
 ```
+

@@ -80,10 +80,9 @@
 	      if (!optionsBuilder.IsConfigured)
 	      {
 	        //以下這段要刪除，連線字串放到appsettings.json
-	        optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=tutorial_database;Database=Blog;Integrated Security=True");
+	        optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=tutorial_database;Database=Blog;Integrated Security=True;Trust Server Certificate=True");
 	      }
 	    }
-
 	    protected override void OnModelCreating(ModelBuilder modelBuilder)
 	    {
 	      //呼叫新增測試資料的方法
