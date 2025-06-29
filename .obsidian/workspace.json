@@ -4,39 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "f48c9c2a29b42e31",
+        "id": "7a33af8ceb4153fe",
         "type": "tabs",
         "children": [
           {
-            "id": "34a52a5052ef3a99",
+            "id": "59f2f7b203a290d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSSQL.md",
+                "file": "JavaScript/JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MSSQL"
+              "title": "JavaScript"
             }
           },
           {
-            "id": "22c9d46c476cd676",
+            "id": "c9cd07032b91129a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/安裝 Pikaday 日期套件.md",
+                "file": "JavaScript/this 是指當下的執行者是誰.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "安裝 Pikaday 日期套件"
+              "title": "this 是指當下的執行者是誰"
+            }
+          },
+          {
+            "id": "d59a199e7cb09109",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/this 是指當下的執行者是誰.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "this 是指當下的執行者是誰"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -109,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/安裝 Pikaday 日期套件.md",
+                "file": "JavaScript/this 是指當下的執行者是誰.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "安裝 Pikaday 日期套件 的反向連結"
+              "title": "this 是指當下的執行者是誰 的反向連結"
             }
           },
           {
@@ -168,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 273.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,34 +194,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "22c9d46c476cd676",
+  "active": "4e1973547c031b6b",
   "lastOpenFiles": [
-    "Angular/Angular 常用外部套件安裝方式.md",
-    "Angular/安裝 Pikaday 日期套件.md",
-    "MSSQL.md",
-    "Angular/安裝jQuery套件.md",
+    "JavaScript/window 瀏覽器操作.md",
+    "JavaScript/this 是指當下的執行者是誰.md",
+    "JavaScript/非同步 Promise.md",
+    "JavaScript/object物件.md",
+    "JavaScript/JavaScript.md",
+    "JavaScript/function.md",
+    "JavaScript",
+    "JavaScript/原型繼承.md",
+    "Document.md",
+    "JavaScript/Document DOM操作.md",
+    "JavaScript/(ES6)Class繼承.md",
+    "JavaScript/AJAX - XMLHttpRequest 上傳檔案.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
+    "JavaScript/AJAX - XMLHttpRequest 事件.md",
     "Angular/Angular 19.md",
-    "Angular/Angular 回應式表單.md",
-    "Angular/FormControl.md",
-    "Angular/Angular 表單.md",
-    "ASP.NET Core/DBFirst.md",
-    "ASP.NET Core/資料庫存取環境建置.md",
-    "ASP.NET Core/Entity Framework (EF) Core.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/檔案驗證標籤屬性UploadFileValid.md",
-    "ASP.NET Core/檔案上傳.md",
-    "ASP.NET Core/建立上傳檔案的API.md",
-    "ASP.NET Core/讀取檔案內容.md",
-    "Angular/Angular 指定要上傳的檔案.md",
-    "ASP.NET Core/EF Core攔截與紀錄.md",
-    "Angular/Angular 指定要上傳的檔案(不使用input type=file).md",
+    "永久筆記/RxJS.md",
+    "Angular/完整的 Angular 元件生命週期.md",
+    "ASP.NET Core/Filters 篩選條件.md",
+    "ASP.NET Core/使用HtmlSanitizer防止XSS攻击.md",
+    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
     "Angular/Angular 將子元件資料傳遞到父元件(EventEmitter).md",
-    "ASP.NET Core/CodeFirst(二)(推薦).md",
-    "ASP.NET Core/cookie 和 session.md",
-    "ASP.NET Core/CICD.md",
-    "ASP.NET Core/設定HSTS標頭.md",
-    "Angular/Angular 表單驗證(二) - FormGroup套用驗證器.md",
-    "ASP.NET Core/CodeFirst(一).md",
+    "ASP.NET Core/跨網站指令碼(XSS).md",
+    "Angular/FormControl.md",
+    "Angular 1/建立auth.Service開發登入登出功能.md",
+    "Angular 1/完整的 Angular 元件生命週期.md",
+    "Angular 1/安裝sweetalert2套件.md",
+    "Angular 1",
     "ASP.NET",
     "Pasted image 20250524102145.png",
     "Pasted image 20250524102056.png",
