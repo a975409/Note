@@ -35,6 +35,7 @@
 [[FileProviders]]
 [[gRPC]]
 [[PagedList分頁套件]]
+[[使用 HttpClient 類別提出 HTTP 要求]]
 
 #### 安全性
 [[跨網站指令碼(XSS)]]
@@ -49,3 +50,5 @@
 [ControllerBase 類別  (適用於Web API)](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-8.0#methods)
 [HttpStatusCode 列舉 (System.Net) | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.httpstatuscode?view=net-5.0)
 [ASP.NET 核心內建標籤協助程式](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-9.0)
+
+[System.Net.Http](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.http?view=net-8.0)
