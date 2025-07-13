@@ -1,7 +1,6 @@
 在`app.routes.ts`設定路由：
 ```typescript
 import { Routes } from '@angular/router';
-
 import { CYFullPickupDataApplyQueryComponent } from './businessComponents/cyfull-pickup-data-apply-query/cyfull-pickup-data-apply-query.component';
 import { CYFullPickupDataApplySubmitComponent } from './businessComponents/cyfull-pickup-data-apply-submit/cyfull-pickup-data-apply-submit.component';
 
@@ -20,7 +19,7 @@ export const routes: Routes = [
 ];
 ```
 
-cyfull-pickup-data-apply-query.component.ts：
+cyfull-pickup-data-apply-query.component.ts，將`searchFormData`傳遞至`CYFullPickupDataApplySubmit`：
 ```typescript
 import { GetCYFullPickupSearchRequest } from '../../Contracts/RequestDto/get-cyfull-pickup-search-request';
 
@@ -49,7 +48,7 @@ constructor(private router: Router) {}
 }
 ```
 
-cyfull-pickup-data-apply-submit.component.ts：
+cyfull-pickup-data-apply-submit.component.ts，接收傳遞進來的`dataList`的值：
 ```typescript
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { GetCYFullPickupSearchRequest } from '../../Contracts/RequestDto/get-cyfull-pickup-search-request';
@@ -72,4 +71,18 @@ export class CYFullPickupDataApplySubmitComponent
       ] as GetCYFullPickupSearchRequest[];
     }
   }
+```
+
+如何判斷是否有接收到指定的`state`值，範例如下：
+```typescript
+const navigation = this.router.getCurrentNavigation();
+
+if (navigation?.extras.state 
+	&& 'responseData' in navigation.extras.state) {
+  this.responseData = navigation.extras.state[
+	'responseData'
+  ] as ExportInspectionFeeGetCtnrListResponse;
+} else {
+  this.getData();
+}
 ```

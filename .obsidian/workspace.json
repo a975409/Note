@@ -4,21 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "474503eda093c1fd",
+        "id": "d798f13cc39e8c4d",
         "type": "tabs",
         "children": [
           {
-            "id": "ea8c74e8627cc330",
+            "id": "9ccfd84fb1d6c080",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
+                "file": "簡單工廠模式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "使用 HttpClient 類別提出 HTTP 要求"
+              "title": "簡單工廠模式"
+            }
+          },
+          {
+            "id": "8c285ea15b7e27b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工廠方法模式.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "工廠方法模式"
+            }
+          },
+          {
+            "id": "79d9d52dec93a9d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "抽象工廠模式.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "抽象工廠模式"
             }
           }
         ]
@@ -94,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
+                "file": "簡單工廠模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "使用 HttpClient 類別提出 HTTP 要求 的反向連結"
+              "title": "簡單工廠模式 的反向連結"
             }
           },
           {
@@ -165,35 +193,36 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "ea8c74e8627cc330",
+  "active": "9ccfd84fb1d6c080",
   "lastOpenFiles": [
-    "ASP.NET Core/ASP.NET Core.md",
+    "CSS Box.md",
+    "設計模式.md",
+    "單一職責原則.md",
+    "簡單工廠模式.md",
+    "工廠方法模式.md",
+    "抽象工廠模式.md",
+    "工廠抽象模式.md",
+    "設計模式",
+    "Angular/Angular 身分驗證.md",
+    "針對多個component設定多個權限.md",
+    "Angular/Angular Guard.md",
+    "Angular/Angular 19.md",
+    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
+    "Angular/Angular 設定路由導向(網址附帶參數).md",
+    "Angular/Component 路由導向方式.md",
+    "Angular/Angular 設定路由導向(傳遞物件或陣列資料).md",
+    "Angular/在Angular 設定window全域變數.md",
     "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
+    "ASP.NET Core/ASP.NET Core.md",
     "ASP.NET Core/HTML Attribute與Property的差別.md",
     "Angular/Angular 環境安裝.md",
-    "Angular/Angular 19.md",
     "Angular/Angular 樣板(template).md",
     "Angular/Angular 元件(Component).md",
     "ASP.NET Core/驗證與授權.md",
     "ASP.NET Core/Cookie驗證(適用MVC).md",
     "ASP.NET Core/取得登入者資訊.md",
     "JavaScript/非同步 Promise.md",
-    "Angular/HTTPClient.md",
-    "ASP.NET Core/HTTP 型的Response快取.md",
-    "ASP.NET Core/HttpClient 1.md",
-    "ASP.NET/PagedList分頁套件.md",
-    "ASP.NET/Entity Framework 6 (EF6).md",
-    "ASP.NET/ASP.NET.md",
-    "ASP.NET/路由.md",
-    "ASP.NET/跨網站偽造要求 (XSRF or CSRF).md",
-    "JavaScript/JavaScript.md",
-    "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
-    "JavaScript/輕鬆理解JS 原型、原型鏈.md",
     "Pasted image 20250629220134.png",
-    "JavaScript/原型繼承.md",
-    "JavaScript/this 是指當下的執行者是誰.md",
-    "JavaScript/window 瀏覽器操作.md",
-    "JavaScript/object物件.md",
     "JavaScript",
     "Angular 1",
     "ASP.NET",
