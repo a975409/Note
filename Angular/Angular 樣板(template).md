@@ -107,25 +107,6 @@ export class HelloWorldBindingsComponent {
 }
 ```
 
-#### ngModel 雙向繫結：
-component需引入：
-```typescript
-import {FormsModule} from '@angular/forms'
-
-export class Hero {
-
-  constructor(
-    public id: number,
-    public name: string,
-    public power: string,
-    public alterEgo?: string
-  ) {  }
-}
-```
-
-搭配HTML input 使用：
-```html
-<input type="text" class="form-control" id="name" ([ngModel])="model.name" name="name">
-```
-
 [[Angular ngIF]]
+[[ViewChild 與 ViewChildren]]
+[認識 ng-container](https://ithelp.ithome.com.tw/articles/10206099)

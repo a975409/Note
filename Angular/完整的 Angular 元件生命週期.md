@@ -17,4 +17,5 @@
 最新版angular生命週期順序：
 https://angular.dev/guide/components/lifecycle#execution-order
 
+[淺談 Angular 元件生命週期](https://hackmd.io/@Heidi-Liu/angular-lifecycle)
 [元件生命週期(V16)](https://angular.tw/guide/lifecycle-hooks)

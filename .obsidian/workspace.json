@@ -4,52 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "d798f13cc39e8c4d",
+        "id": "8d1d2279c9fccf82",
         "type": "tabs",
         "children": [
           {
-            "id": "9ccfd84fb1d6c080",
+            "id": "e8c36cadd793302e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "簡單工廠模式.md",
+                "file": "Angular/Angular 19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "簡單工廠模式"
+              "title": "Angular 19"
             }
           },
           {
-            "id": "8c285ea15b7e27b5",
+            "id": "5a8e71f70b9233d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工廠方法模式.md",
+                "file": "Compodoc 產生專案架構說明文件.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "工廠方法模式"
-            }
-          },
-          {
-            "id": "79d9d52dec93a9d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "抽象工廠模式.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "抽象工廠模式"
+              "title": "Compodoc 產生專案架構說明文件"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,17 +109,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "簡單工廠模式.md",
+                "file": "Angular/ngModel 雙向綁定.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "簡單工廠模式 的反向連結"
+              "title": "ngModel 雙向綁定 的反向連結"
             }
           },
           {
@@ -181,7 +168,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.5
+    "width": 273.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,35 +181,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "9ccfd84fb1d6c080",
+  "active": "5a8e71f70b9233d2",
   "lastOpenFiles": [
-    "CSS Box.md",
-    "設計模式.md",
-    "單一職責原則.md",
-    "簡單工廠模式.md",
-    "工廠方法模式.md",
-    "抽象工廠模式.md",
-    "工廠抽象模式.md",
-    "設計模式",
-    "Angular/Angular 身分驗證.md",
-    "針對多個component設定多個權限.md",
-    "Angular/Angular Guard.md",
     "Angular/Angular 19.md",
-    "Angular/Observable 觀察者模式使用方式(類似Promise).md",
-    "Angular/Angular 設定路由導向(網址附帶參數).md",
-    "Angular/Component 路由導向方式.md",
-    "Angular/Angular 設定路由導向(傳遞物件或陣列資料).md",
-    "Angular/在Angular 設定window全域變數.md",
-    "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/HTML Attribute與Property的差別.md",
+    "Angular/Angular 開發架構差異 Standalone API vs NgModule.md",
+    "Compodoc 產生專案架構說明文件.md",
     "Angular/Angular 環境安裝.md",
+    "Angular/ngModel 雙向綁定.md",
+    "Angular/ngModel 驗證輸入.md",
+    "Angular/安裝 Pikaday 日期套件.md",
+    "Angular/在Angular 設定window全域變數.md",
+    "Angular/(NgNodel驗證)NgForm套用自訂的驗證器.md",
+    "Angular/(NgNodel驗證)HTML input 直接使用 required.md",
+    "Angular/(NgNodel驗證)自訂驗證事件.md",
     "Angular/Angular 樣板(template).md",
-    "Angular/Angular 元件(Component).md",
-    "ASP.NET Core/驗證與授權.md",
-    "ASP.NET Core/Cookie驗證(適用MVC).md",
-    "ASP.NET Core/取得登入者資訊.md",
-    "JavaScript/非同步 Promise.md",
+    "Angular/ViewChild 與 ViewChildren.md",
+    "永久筆記/DOM 事件.md",
+    "Angular/Angular 樣板(template) 顯示非同步的資料.md",
+    "Angular/Angular 表單.md",
+    "Angular/Angular 身分驗證.md",
+    "Angular/Angular Guard.md",
+    "Angular/Angular 設定路由導向(網址附帶參數).md",
+    "Angular/Angular 回應式表單.md",
+    "Angular/Angular 表單驗證(一).md",
+    "Angular/完整的 Angular 元件生命週期.md",
+    "Angular/ngOnChanges().md",
+    "Angular/Angular 表單驗證(二) - FormGroup套用驗證器.md",
+    "JavaScript/JavaScript.md",
+    "Angular/Angular 表單驗證.md",
+    "Pasted image 20250707105454.png",
     "Pasted image 20250629220134.png",
     "JavaScript",
     "Angular 1",
@@ -236,7 +224,6 @@
     "Pasted image 20250215192825.png",
     "Pasted image 20250215182727.png",
     "Pasted image 20250131165656.png",
-    "Pasted image 20250104184634.png",
     "靈感筆記",
     "文獻筆記",
     "永久筆記",

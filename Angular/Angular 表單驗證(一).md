@@ -182,8 +182,11 @@ dataListArray.controls.forEach((group, index) => {
 	cntrNoControl.errors?.['invalidFormat'] ||
 	cntrNoControl.errors?.['invalidCheckDigit']
   ) {
-    //清除該欄位錯誤訊息，需設為null
+    //清除該欄位錯誤訊息，需設為null，但會導致驗證器無法起作用
 	cntrNoControl.setErrors(null);
+
+	//重設輸入值後，會重置驗證結果，驗證器也還有效
+	cntrNoControl.reset('');
   }
 });
 ```
