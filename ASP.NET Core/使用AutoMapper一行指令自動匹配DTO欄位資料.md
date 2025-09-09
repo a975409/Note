@@ -66,4 +66,5 @@ public class TodoListProfile : Profile
 
 ```
 
-影片教學： [https://youtu.be/k-1BvDWDMEA](https://youtu.be/k-1BvDWDMEA)
+[影片教學](https://www.youtube.com/watch?v=Zrziyw-LN7I)
+[教學文章](https://blog.talllkai.com/ASPNETCore/2021/04/30/DtoUseAutoMapper)

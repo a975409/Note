@@ -9,6 +9,7 @@
 [[Web API]]
 [[ASP.NET Core/路由]]
 [[URL重寫 與 URL重新導向]]
+[[Model Validation 模型驗證]]
 [[Model Binding 模型繫結]]
 [[FromBody vs FromFrom]]
 [[Filters 篩選條件]]
@@ -41,8 +42,7 @@
 [[跨網站指令碼(XSS)]]
 [[ASP.NET Core/跨網站偽造要求 (XSRF or CSRF)]]
 [[使用User Secret安全存放開發應用程式密鑰]]
-[在 ASP.NET Core 中啟用跨原始來源要求 (CORS) | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0)
-[[其他注入類型防範]]
+[在 ASP.NET Core 中啟用跨原始來源要求 (CORS) | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0)[[其他注入類型防範]]
 [[設定HTTPS]]
 [[Data Protection API 保護敏感資料]]
 #### MSDN
@@ -50,5 +50,5 @@
 [ControllerBase 類別  (適用於Web API)](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-8.0#methods)
 [HttpStatusCode 列舉 (System.Net) | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.httpstatuscode?view=net-5.0)
 [ASP.NET 核心內建標籤協助程式](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-9.0)
-
 [System.Net.Http](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.http?view=net-8.0)
+[HttpRequest 類別](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-8.0)

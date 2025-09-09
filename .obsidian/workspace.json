@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8d1d2279c9fccf82",
+        "id": "463fd781116ce3bd",
         "type": "tabs",
         "children": [
           {
-            "id": "e8c36cadd793302e",
+            "id": "ba2d4f21f8222bdf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "設計模式/設計模式.md",
+                "file": "JavaScript/JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "設計模式"
+              "title": "JavaScript"
             }
           }
         ]
@@ -94,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/ngModel 雙向綁定.md",
+                "file": "JavaScript/JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ngModel 雙向綁定 的反向連結"
+              "title": "JavaScript 的反向連結"
             }
           },
           {
@@ -153,11 +153,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.5,
-    "collapsed": true
+    "width": 273.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:建立新的 base": false,
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
       "canvas:建立新畫布": false,
@@ -166,36 +166,36 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "4e1973547c031b6b",
+  "active": "ba2d4f21f8222bdf",
   "lastOpenFiles": [
-    "Angular/Angular 19.md",
-    "設計模式/設計模式.md",
-    "設計模式/抽象工廠模式.md",
-    "設計模式/工廠方法模式.md",
-    "設計模式/單一職責原則.md",
-    "未命名",
-    "Angular/Compodoc 產生專案架構說明文件.md",
-    "Angular/Angular 開發架構差異 Standalone API vs NgModule.md",
-    "Angular/Angular 環境安裝.md",
-    "Angular/ngModel 雙向綁定.md",
-    "Angular/ngModel 驗證輸入.md",
-    "Angular/安裝 Pikaday 日期套件.md",
-    "Angular/在Angular 設定window全域變數.md",
-    "Angular/(NgNodel驗證)NgForm套用自訂的驗證器.md",
-    "Angular/(NgNodel驗證)HTML input 直接使用 required.md",
-    "Angular/(NgNodel驗證)自訂驗證事件.md",
-    "Angular/Angular 樣板(template).md",
-    "Angular/ViewChild 與 ViewChildren.md",
-    "永久筆記/DOM 事件.md",
-    "Angular/Angular 樣板(template) 顯示非同步的資料.md",
-    "Angular/Angular 表單.md",
-    "Angular/Angular 身分驗證.md",
-    "Angular/Angular Guard.md",
-    "Angular/Angular 設定路由導向(網址附帶參數).md",
-    "Angular/Angular 回應式表單.md",
-    "Angular/Angular 表單驗證(一).md",
-    "Angular/完整的 Angular 元件生命週期.md",
-    "Pasted image 20250707105454.png",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/Newtonsoft.Json序列化相關設定.md",
+    "ASP.NET Core/CICD.md",
+    "ASP.NET Core/例外事件處理.md",
+    "ASP.NET Core/自訂Middleware處理例外狀況.md",
+    "ASP.NET Core/自訂例外事件處理 Exception Handler.md",
+    "ASP.NET Core/cookie 和 session.md",
+    "ASP.NET Core/Response 快取.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "ASP.NET Core/Middleware.md",
+    "ASP.NET Core/Use.md",
+    "ASP.NET Core/記錄http request、response 擴充方法範例.md",
+    "ASP.NET Core/Entity Framework (EF) Core.md",
+    "ASP.NET Core/引用DI注入服務.md",
+    "ASP.NET/Entity Framework 6 (EF6).md",
+    "ASP.NET/Code First.md",
+    "永久筆記/RESTful API.md",
+    "ASP.NET Core/MSSQL.md",
+    "ASP.NET Core/EF Core 防止使用者同時更新同一筆資料.md",
+    "ASP.NET Core/MSSQL 1.md",
+    "ASP.NET Core/資料庫存取環境建置.md",
+    "ASP.NET Core/DBFirst.md",
+    "ASP.NET Core/EF Core攔截與紀錄.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
+    "ASP.NET Core/FromBody vs FromFrom.md",
+    "Pasted image 20250904111432.png",
+    "設計模式",
     "Pasted image 20250629220134.png",
     "JavaScript",
     "Angular 1",

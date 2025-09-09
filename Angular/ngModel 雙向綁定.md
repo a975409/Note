@@ -109,4 +109,31 @@ app.component.html：
   }
 ```
 
+
+![[Pasted image 20250904111432.png]]
+> 當觸發ngModelChange事件，執行對應的function要取得原本的設定值時，只要將(ngModelChange)放到(ngModel)前面即可，但要記得將取得的newValue值寫回至對應的變數
+
+```html
+<select
+	id="search_type"
+	name="search_type"
+	class="form_control_EW"
+	(ngModelChange)="ctnrNoNumChange($event)"
+	[(ngModel)]="ctnrNoNum"
+	>
+	<option value="1">1</option>
+	<option value="2">2</option>
+</select>
+
+<script>
+ctnrNoNumChange(newValue: number) {
+	console.log('原始值：', this.ctnrNoNum);
+	console.log('變更後的值：', newValue);
+
+	//要寫入新值，這樣介面上的值才會變
+	this.ctnrNoNum = newValue;
+}
+</script>
+```
+
 [[ngModel 驗證輸入]]

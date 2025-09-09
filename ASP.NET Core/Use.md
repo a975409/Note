@@ -26,6 +26,7 @@ app.Run(async (context) =>
         $"CurrentCulture.DisplayName: {CultureInfo.CurrentCulture.DisplayName}");
 });
 
+//最後一定要有這段就對了
 app.Run();
 ```
 
@@ -42,6 +43,7 @@ await next(context);
 ```
 
 [[建立擴充方法]]
+[[記錄http request、response 擴充方法範例]]
 [[引用DI注入服務]]
 [[UseWhen 也會依據指定述詞的結果將要求管線分支]]
 [撰寫自訂的 ASP.NET Core 中介軟體 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/middleware/write?view=aspnetcore-6.0)

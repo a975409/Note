@@ -3,3 +3,4 @@
 [[安裝Bootstrap套件]]
 [[安裝 Pikaday 日期套件]]
 [[Quill 網頁編輯器套件和使用方式]]
+[[fancybox 圖片放大燈箱套件]]

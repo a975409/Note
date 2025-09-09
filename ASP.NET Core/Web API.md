@@ -5,7 +5,6 @@ RESTful API：
 
 [HTTP 回應狀態碼 - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status)
 [HttpStatusCode 列舉 (System.Net) | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.httpstatuscode?view=net-5.0)
-[[API Controllers]]
-[[Swagger OpenAPI]]
 [MinimalAPI](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0)
 [[Web API 專案路由設定]]
+[[Swagger(OpenAPI)]]

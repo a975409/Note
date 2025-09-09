@@ -7,8 +7,10 @@
  - 是否將Request傳送到下一個 Middleware
  - 下一個 Middleware 的前後執行工作(直接 Response 回用戶端)
 
-而在 Request 中經過的 Middleware，會在 Response 的時候以相反的順序繼續執行，如圖 3-1 所示：
+而在 Request 中經過的`Middleware`，會在 Response 的時候會以相反順序執行`Middleware`，然後每個`Middleware`會從執行到的`next()`開始往下繼續執行，如圖 3-1 所示：
 ![[Pasted image 20240917194718.png]]
+
+> 當`http request`跑到最後一段`Run()`，才會繼續往下跑`Filter`
 
 以下是 Middleware 的擴充方法：
 [[Use]]

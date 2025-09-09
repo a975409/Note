@@ -22,3 +22,5 @@ app.UseSession();
 ```C#
 HttpContext.Session.SetString("SessionKey", "SessionValue");
 ```
+
+https://ithelp.ithome.com.tw/articles/10249151

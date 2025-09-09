@@ -13,6 +13,8 @@ dotnet-ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated
 ![[Untitled 1.png]]
 ![[Untitled 2.png]]
 
+[目標目錄和命名空間](https://learn.microsoft.com/zh-tw/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli#target-directories-and-namespaces)
+
 第二種：
 ```C#
 Scaffold-DbContext "Server=伺服器位置;Database=資料庫;Trusted_Connection=True;User ID=帳號;Password=密碼" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force -context 資料庫名稱

@@ -16,6 +16,7 @@ app.Run(async context =>
     await context.Response.WriteAsync("Hello from non-Map delegate.");
 });
 
+//最後一定要有這段就對了
 app.Run();
 
 static void HandleMapTest1(IApplicationBuilder app)

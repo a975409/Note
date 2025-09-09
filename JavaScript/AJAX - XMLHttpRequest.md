@@ -74,9 +74,9 @@ xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=
 ```
 
 傳送資料常用`Content-type`：
-- application/json： JSON資料格式
-- multipart/form-data ： 需要在表单中进行文件上传时，就需要使用该格式
-- application/x-www-form-urlencoded ： `<form encType=””>`中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）
+- application/json(Request Body)： JSON資料格式
+- multipart/form-data(Request Form) ： 需要在表单中进行文件上传时，就需要使用该格式
+- application/x-www-form-urlencoded(Request Form) ： `<form encType=””>`中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）
 - 其他常用[HTTP content-type](https://www.runoob.com/http/http-content-type.html)
 
 
