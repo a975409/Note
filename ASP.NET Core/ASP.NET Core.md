@@ -1,4 +1,9 @@
 
+在`visual studio`執行`PowerShell`，切換到專案資料夾下執行以下指令：
+> wt -d . powershell -NoExit -Command "dotnet watch"
+
+此時會出現以下`PowerShell`畫面，當程式碼有修改時，會自動帶入變更並執行編譯
+
 [[ASP.NET Core 應用程式的執行流程]]
 [[ASP.NET Core 應用程式專案架構]]
 [[Middleware]]
@@ -53,5 +58,6 @@
 [System.Net.Http](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.http?view=net-8.0)
 [HttpRequest 類別](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-8.0)
 
-其他
+排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)
+[在 ASP.NET Core 網站執行定時排程-黑暗執行緒](https://blog.darkthread.net/blog/aspnet-core-background-task/)

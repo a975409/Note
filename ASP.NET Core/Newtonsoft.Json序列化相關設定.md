@@ -19,6 +19,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ```
 
-參考資料： [asp.net core 3.0 MVC JSON 全局配置 - wzh0717 - 博客园 (cnblogs.com)](https://www.cnblogs.com/lenovo_tiger_love/p/12054253.html)[.NET Core 处理 WebAPI JSON 返回烦人的null为空 - Crazy Struggle - 博客园 (cnblogs.com)](https://www.cnblogs.com/1312mn/p/14262985.html)
-
+參考資料：
+[asp.net core 3.0 MVC JSON 全局配置 - wzh0717 - 博客园 (cnblogs.com)](https://www.cnblogs.com/lenovo_tiger_love/p/12054253.html)
+[.NET Core 处理 WebAPI JSON 返回烦人的null为空 - Crazy Struggle - 博客园 (cnblogs.com)](https://www.cnblogs.com/1312mn/p/14262985.html)
 [從 Newtonsoft.Json 移轉至 System.Text.Json](https://learn.microsoft.com/zh-tw/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft?pivots=dotnet-9-0#use-ai-to-migrate)

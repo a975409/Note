@@ -1,3 +1,6 @@
+
+[ASP.NET MVC教程八：_ViewStart.cshtml - .NET开发菜鸟 - 博客园](https://www.cnblogs.com/dotnet261010/p/11427931.html)
+
 #### View
 區段(section)：
 一般來說主頁面`Layout.cshtml`會有以下指令：

@@ -9,7 +9,6 @@
     "Issuer": "todo.com",
     "Audience": "my"
 }
-
 ```
 
 1. 在 Startup.cs 新增以下程式碼：
@@ -28,6 +27,7 @@
     				ValidAudience = Configuration["Jwt:Audience"],
     				ValidateLifetime = true,//逾期後是否要將其登出
     				ClockSkew= TimeSpan.Zero,//設定登入狀態逾期後的緩衝時間
+    				ValidateIssuerSigningKey = true, // 驗證簽署金鑰
     				IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:KEY"]))
     		};
     	});

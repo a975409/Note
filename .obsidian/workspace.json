@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "463fd781116ce3bd",
+        "id": "d770a4aaa54f993a",
         "type": "tabs",
         "children": [
           {
-            "id": "ba2d4f21f8222bdf",
+            "id": "811ba206d79bcf36",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASP.NET Core/ASP.NET Core.md",
+                "file": "ASP.NET Core/MVC專案路由設定.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ASP.NET Core"
+              "title": "MVC專案路由設定"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 522.5
+    "width": 284.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASP.NET Core/ASP.NET Core.md",
+                "file": "ASP.NET Core/MVC專案路由設定.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ASP.NET Core 的反向連結"
+              "title": "MVC專案路由設定 的反向連結"
             }
           },
           {
@@ -166,34 +166,44 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "ba2d4f21f8222bdf",
+  "active": "811ba206d79bcf36",
   "lastOpenFiles": [
-    "ASP.NET Core/Entity Framework (EF) Core.md",
+    "ASP.NET Core/路由.md",
+    "ASP.NET Core/Web API 專案路由設定.md",
+    "ASP.NET Core/MVC專案路由設定.md",
     "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/LINQ.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
+    "ASP.NET Core/檔案上傳.md",
+    "ASP.NET Core/Entity Framework (EF) Core.md",
+    "ASP.NET Core/資料庫存取環境建置.md",
+    "CodeFirst.md",
     "ASP.NET Core/DI依賴注入之生命週期.md",
-    "ASP.NET Core/Middleware.md",
-    "ASP.NET Core/自訂Middleware處理例外狀況.md",
-    "ASP.NET Core/Use.md",
-    "ASP.NET Core/建立擴充方法.md",
-    "ASP.NET Core/UseWhen 也會依據指定述詞的結果將要求管線分支.md",
-    "ASP.NET Core/引用DI注入服務.md",
-    "ASP.NET Core/透過 IMiddleware 介面實作.md",
-    "ASP.NET Core/記錄http request、response 擴充方法範例.md",
-    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
-    "ASP.NET Core/ASP.NET Core 應用程式的執行流程.md",
+    "ASP.NET Core/CodeFirst(二)(推薦).md",
+    "ASP.NET Core/CodeFirst(一).md",
+    "ASP.NET Core/解決刪除資料時無法刪除底下子資料的問題.md",
+    "ASP.NET Core/Model Validation 模型驗證.md",
     "ASP.NET Core/Model Binding 模型繫結.md",
-    "ASP.NET Core/Newtonsoft.Json序列化相關設定.md",
-    "ASP.NET Core/使用AutoMapper一行指令自動匹配DTO欄位資料.md",
-    "ASP.NET Core/單例物件實作方式.md",
-    "ASP.NET Core/Authorize 和 AllowAnonymous 設定方式.md",
-    "未命名.md",
+    "ASP.NET Core/模型繫結.md",
+    "ASP.NET Core/FromBody.md",
+    "ASP.NET Core/(Cookie 驗證)ValidatePrincipal 事件.md",
     "JavaScript/JavaScript.md",
-    "ASP.NET Core/CICD.md",
-    "ASP.NET Core/例外事件處理.md",
-    "ASP.NET Core/自訂例外事件處理 Exception Handler.md",
-    "ASP.NET Core/cookie 和 session.md",
-    "ASP.NET Core/Response 快取.md",
+    "ASP.NET Core/EF Core 防止使用者同時更新同一筆資料.md",
+    "ASP.NET Core/SignalR.md",
+    "ASP.NET Core/群組概念與使用.md",
+    "ASP.NET Core/伺服器端(ASP.NET Core)與用戶端(WinForm)互相通訊.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "JavaScript/原型繼承.md",
+    "Dapper",
+    "CSS",
+    "Pasted image 20250915162839.png",
+    "Pasted image 20250915160939.png",
+    "Pasted image 20250915160215.png",
+    "Pasted image 20250915160122.png",
+    "IIS",
+    "Pasted image 20250915153945.png",
+    "Pasted image 20250912111226.png",
+    "CSharp",
     "Pasted image 20250904111432.png",
     "設計模式",
     "Pasted image 20250629220134.png",
@@ -202,17 +212,8 @@
     "ASP.NET",
     "Pasted image 20250524102145.png",
     "Pasted image 20250524102056.png",
-    "Pasted image 20250523203237.png",
-    "Pasted image 20250317003146.png",
-    "Pasted image 20250317003113.png",
     "ASP.NET Core",
     "Angular",
-    "Pasted image 20250215192825.png",
-    "Pasted image 20250215182727.png",
-    "Pasted image 20250131165656.png",
-    "靈感筆記",
-    "文獻筆記",
-    "永久筆記",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

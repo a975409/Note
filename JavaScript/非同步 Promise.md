@@ -93,4 +93,4 @@ asyncProcess('AAANINNTOKUZIROU')])
 		console.log(`:${error}`)
 	}
 )
-```
+``` 

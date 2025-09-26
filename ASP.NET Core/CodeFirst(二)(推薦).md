@@ -160,6 +160,6 @@ public DateTime PostTime { get; set; }
 //Add_PostTime代表產生的 migration 的檔名
 dotnet ef migrations add Add_PostTime --context BlogContext
 
-//更新資料庫
+//將現有遷移版本更新至資料庫
 dotnet ef database update --context BlogContext
 ```

@@ -19,3 +19,9 @@ public void ConfigureServices(IServiceCollection services)
 [[在Controller內使用DI有以下三種作法]]
 [ASP.NET Core 檢視中的相依性插入 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/dependency-injection?view=aspnetcore-8.0#service-injection)
 [筆記 - 不可不知的 ASP.NET Core 依賴注入-黑暗執行緒 (darkthread.net)](https://blog.darkthread.net/blog/aspnet-core-di-notes/)
+
+> AddDbContext() 會註冊成 Scoped 生命週期(每個 Request 過程共用同一個 Instance)
+
+```C#
+public void ConfigureServices(IServiceCollection services) { services.AddDbContext<BloggingContext>(options => options.UseSqlite("Data Source=blog.db")); }
+```

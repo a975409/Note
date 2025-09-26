@@ -49,15 +49,13 @@ Http動作方法：
 
 [REST API 的屬性路由](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#attribute-routing-for-rest-apis)
 
-> 屬性路由有兩種設定方式，分別是 Route 和 HTTP Method
-> 
-> Controller建議標記為[ApiController]，這樣才能繫結各種來源參數
->
-> 如果Controller標記[ApiController]，那就要設定屬性路由[Route]
-> 而Controller上方就一定要標記為[ApiController, Route("[controller]")]，Action也要設定屬性路由[Route]
+1. 屬性路由有兩種設定方式，分別是 Route 和 HTTP Method
+2. Controller建議標記為[ApiController]，這樣才能繫結[[FromBody]]來源參數
+3. 承上點，如果Controller已標記[ApiController]，那Controller上方就一定要標記為[ApiController, Route("[controller]")]，Action也要設定屬性路由(`Route`或`HttpMethod`)
 
 ### 一、Route：可針對controller、action自定義路由原則，可設定多個路由原則
 ```C#
+[ApiController, Route("[controller]")]
 public class HomeController : Controller
 {
     [Route("")]
@@ -82,6 +80,7 @@ public class HomeController : Controller
 
 使用屬性路由時，除非使用[語彙基元取代](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#routing-token-replacement-templates-ref-label)，否則控制器和動作名稱不會發揮比對動作的作用。 下列範例會比對與上一個範例相同的 URL，並以 `action` 和 `controller` 的語彙基元取代：
 ```C#
+[ApiController, Route("[controller]")]
 public class HomeController : Controller
 {
     [Route("")]
@@ -103,10 +102,9 @@ public class HomeController : Controller
 ### 二、HTTP Method：可針對controller、action標記對應的HTTP Method
 [Http 指令動詞範本](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#http-verb-templates)
 
-使用範例如下：
+使用範例如下(以單純開發API Controller為例)：
 ```C#
-[Route("api/[controller]")]
-[ApiController]
+[ApiController,Route("api/[controller]")]
 public class Test2Controller : ControllerBase
 {
     [HttpGet]   // GET /api/test2
@@ -136,3 +134,18 @@ public class Test2Controller : ControllerBase
 ```
 
 >Controller繼承ControllerBase，所以也可在MVC專案開發API
+
+設定`Area`路徑：
+Program.cs：
+```C#
+app.MapControllerRoute(
+	name: "RoutineWork",
+	pattern: "{area:xxx}/{controller=e_xxx}/{action=Index}/{id?}");
+```
+
+controller指定`Area`：
+```C#
+[Area("RoutineWork")]
+public class e_ShouldOpenController : Controller
+```
+

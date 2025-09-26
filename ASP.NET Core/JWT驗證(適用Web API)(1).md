@@ -8,10 +8,10 @@ JWT原理說明：[[JWT(JSON Web Token) — 原理介紹]]
 {
   "JwtSettings": {
     "Issuer": "JwtAuthDemo",
+    "Audience": "my",
     "SignKey": "01234567890123456789012345678901"
   }
 }
-
 ```
 
 新增 `JwtHelpers` 輔助類別：
@@ -34,6 +34,7 @@ public class JwtHelpers
     public string GenerateToken(string userName, int expireMinutes = 30)
     {
         var issuer = Configuration.GetValue<string>("JwtSettings:Issuer");
+        var audience = Configuration.GetValue<string>("JwtSettings:Audience");
         var signKey = Configuration.GetValue<string>("JwtSettings:SignKey");
 
         // Configuring "Claims" to your JWT Token
@@ -42,7 +43,7 @@ public class JwtHelpers
         // In RFC 7519 (Section#4), there are defined 7 built-in Claims, but we mostly use 2 of them.
         //claims.Add(new Claim(JwtRegisteredClaimNames.Iss, issuer));
         claims.Add(new Claim(JwtRegisteredClaimNames.Sub, userName)); // User.Identity.Name
-        //claims.Add(new Claim(JwtRegisteredClaimNames.Aud, "The Audience"));
+        //claims.Add(new Claim(JwtRegisteredClaimNames.Aud, audience));
         //claims.Add(new Claim(JwtRegisteredClaimNames.Exp, DateTimeOffset.UtcNow.AddMinutes(30).ToUnixTimeSeconds().ToString()));
         //claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString())); // 必須為數字
         //claims.Add(new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString())); // 必須為數字
@@ -71,7 +72,7 @@ public class JwtHelpers
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Issuer = issuer,
-            //Audience = issuer, // Sometimes you don't have to define Audience.
+            //Audience = audience, // Sometimes you don't have to define Audience.
             //NotBefore = DateTime.Now, // Default is DateTime.Now
             //IssuedAt = DateTime.Now, // Default is DateTime.Now
             Subject = userClaimsIdentity,
@@ -105,21 +106,24 @@ builder.Services
             // 透過這項宣告，就可以從 "roles" 取值，並可讓 [Authorize] 判斷角色
             RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
 
-            // 一般我們都會驗證 Issuer
+            // 驗證 Issuer(簽發者)
             ValidateIssuer = true,
             ValidIssuer = builder.Configuration.GetValue<string>("JwtSettings:Issuer"),
 
-            // 通常不太需要驗證 Audience
-            ValidateAudience = false,
-            //ValidAudience = "JwtAuthDemo", // 不驗證就不需要填寫
+            // 驗證 Audience(接收者)
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration.GetValue<string>("JwtSettings:Audience"), 
 
-            // 一般我們都會驗證 Token 的有效期間
+            // 驗證 Token 是否過期
             ValidateLifetime = true,
+            
+            //設定登入狀態逾期後的緩衝時間
+            ClockSkew= TimeSpan.Zero,
 
-            // 如果 Token 中包含 key 才需要驗證，一般都只有簽章而已
-            ValidateIssuerSigningKey = false,
+			// 驗證簽署金鑰
+            ValidateIssuerSigningKey = true,
 
-            // "1234567890123456" 應該從 IConfiguration 取得
+            // 設定用於驗證簽章的密鑰
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("JwtSettings:SignKey")))
         };
     });
@@ -237,3 +241,7 @@ namespace WEBMVC.Controllers
 https://www.jasperstudy.com/2023/04/aspnet-core-6-token-based-jwt.html#31-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B0%88%E6%A1%88
 https://eandev.com/post/security/aspnet-core-authenticaiton-jwt/#%E4%BD%BF%E7%94%A8-jwt-authentication
 https://blog.miniasp.com/post/2022/02/13/How-to-use-JWT-token-based-auth-in-aspnet-core-60
+[ASP.NET Core 使用 JWT 驗證 | Cash Wu Geek](https://blog.cashwu.com/blog/asp-net-core-jwt-authentication)
+
+如果要通過驗證，就在Headers新增 Authorization 這個Key值，對應的value則設定為：bearer+"空格”+JWT Token
+    ![[Pasted image 20250104184634.png]]
