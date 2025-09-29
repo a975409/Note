@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+                "file": "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Entity Framework (EF) Core"
+              "title": "解決刪除資料時無法刪除底下子資料的問題"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+                "file": "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Entity Framework (EF) Core 的反向連結"
+              "title": "解決刪除資料時無法刪除底下子資料的問題 的反向連結"
             }
           },
           {
@@ -168,12 +168,13 @@
   },
   "active": "4cd566471320e30e",
   "lastOpenFiles": [
+    "Entity Framework (EF) Core/CodeFirst.md",
+    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+    "Entity Framework (EF) Core/EF Core攔截與紀錄.md",
     "Entity Framework (EF) Core/手動設定資料庫物件.md",
     "Entity Framework (EF) Core/CodeFirst(一).md",
-    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
     "Entity Framework (EF) Core/資料庫存取環境建置.md",
     "ASP.NET Core/DBFirst.md",
-    "Entity Framework (EF) Core/CodeFirst.md",
     "ASP.NET Core/ASP.NET Core.md",
     "ASP.NET Core/MSBuild.md",
     "ASP.NET Core/MVC(ASP.NET Core).md",
@@ -194,7 +195,6 @@
     "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
     "Entity Framework (EF) Core/CodeFirst - Model 主鍵(PrimaryKey)設定.md",
     "行內盒子(inline boxes).md",
-    "針對多個component設定多個權限.md",
     "未命名.base",
     "新增 文字文件.txt",
     "Dapper",
