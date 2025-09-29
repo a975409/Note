@@ -1,5 +1,9 @@
 [[CodeFirst(一)]]
 [[CodeFirst(二)(推薦)]]
+
+[[CodeFirst - Model 設計]]
+[[CodeFirst - Model 屬性]]
+
 [[解決刪除資料時無法刪除底下子資料的問題]]
 
 ### 遷移指令：
@@ -21,9 +25,3 @@ dotnet ef migrations remove --context BlogContext
 //確認有多少遷移還未套用至資料庫
 dotnet ef migrations list --context BlogContext
 ```
-
-### Model設計：
-[EF Core 筆記 2 - Model 設計](https://blog.darkthread.net/blog/ef-core-notes-2/)
-[EF Core 筆記 3 - Model 關聯設計](https://blog.darkthread.net/blog/ef-core-notes-3/)
-[程序代碼第一個數據批註 - EF6 | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/ef6/modeling/code-first/data-annotations)
-
