@@ -27,11 +27,3 @@ dotnet ef migrations list --context BlogContext
 [EF Core 筆記 3 - Model 關聯設計](https://blog.darkthread.net/blog/ef-core-notes-3/)
 [程序代碼第一個數據批註 - EF6 | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/ef6/modeling/code-first/data-annotations)
 
-### Primary key 設定：
-如果你的primary key的屬性是Guid,你想讓它自加序號,就加上這個 [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
-如果你的primary key的屬性是int,你不想讓它自加序號,就加上這個 [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
-另外有一種是 [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-
-若加上這個表示property的值是透過計算得來,它是不會儲存實際的值到資料庫內的.
