@@ -4,49 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "10135ec49b7a1343",
+        "id": "34bd568f18a39957",
         "type": "tabs",
         "children": [
           {
-            "id": "eb74bf03c611947b",
+            "id": "4cd566471320e30e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASP.NET Core/CodeFirst(二)(推薦).md",
+                "file": "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CodeFirst(二)(推薦)"
-            }
-          },
-          {
-            "id": "580627657959a682",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CodeFirst - Model 屬性.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CodeFirst - Model 屬性"
-            }
-          },
-          {
-            "id": "f3d188d95fcd85ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CodeFirst - 自動產生日期時間值.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CodeFirst - 自動產生日期時間值"
+              "title": "Entity Framework (EF) Core"
             }
           }
         ]
@@ -106,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -123,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASP.NET Core/CodeFirst(二)(推薦).md",
+                "file": "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "CodeFirst(二)(推薦) 的反向連結"
+              "title": "Entity Framework (EF) Core 的反向連結"
             }
           },
           {
@@ -195,36 +166,37 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "eb74bf03c611947b",
+  "active": "4cd566471320e30e",
   "lastOpenFiles": [
-    "CodeFirst.md",
-    "CodeFirst - Model 設計.md",
-    "CodeFirst - Model 屬性.md",
-    "ASP.NET Core/CodeFirst(二)(推薦).md",
-    "ASP.NET Core/Entity Framework (EF) Core.md",
-    "CodeFirst - Model 主鍵(PrimaryKey)設定.md",
-    "CodeFirst - 自動產生日期時間值.md",
-    "未命名.base",
-    "CodeFirst - 屬性值 DatabaseGenerated 設定.md",
-    "ASP.NET Core/資料庫存取環境建置.md",
-    "ASP.NET Core/CodeFirst(一).md",
-    "ASP.NET Core/手動設定資料庫物件.md",
-    "ASP.NET Core/LINQ AsEnumerable() 說明.md",
+    "Entity Framework (EF) Core/手動設定資料庫物件.md",
+    "Entity Framework (EF) Core/CodeFirst(一).md",
+    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+    "Entity Framework (EF) Core/資料庫存取環境建置.md",
     "ASP.NET Core/DBFirst.md",
-    "ASP.NET Core/新增初始資料.md",
-    "ASP.NET Core/使用 新增sacffold項目快速建立資料庫物件(推薦作法).md",
-    "ASP.NET Core/Model Validation 模型驗證.md",
-    "新增 文字文件.txt",
+    "Entity Framework (EF) Core/CodeFirst.md",
     "ASP.NET Core/ASP.NET Core.md",
-    "未命名.md",
-    "ASP.NET Core/驗證與授權.md",
-    "ASP.NET Core/Cookie驗證(適用MVC).md",
-    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
-    "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
-    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
-    "ASP.NET Core/(Cookie 驗證)ValidatePrincipal 事件.md",
-    "IIS.md",
+    "ASP.NET Core/MSBuild.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
     "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/ProducesResponseType.md",
+    "ASP.NET Core/Logging 日誌記錄.md",
+    "ASP.NET Core/LINQ AsEnumerable() 說明.md",
+    "ASP.NET Core/LINQ.md",
+    "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
+    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
+    "ASP.NET Core/單例物件實作方式.md",
+    "ASP.NET Core/部分類別(2).md",
+    "ASP.NET Core/部分類別(1).md",
+    "Entity Framework (EF) Core/本機端SQL連線字串.md",
+    "ASP.NET Core/引用DI注入服務.md",
+    "Entity Framework (EF) Core",
+    "Entity Framework (EF) Core/CodeFirst - Model 屬性.md",
+    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
+    "Entity Framework (EF) Core/CodeFirst - Model 主鍵(PrimaryKey)設定.md",
+    "行內盒子(inline boxes).md",
+    "針對多個component設定多個權限.md",
+    "未命名.base",
+    "新增 文字文件.txt",
     "Dapper",
     "CSS",
     "Pasted image 20250915162839.png",
@@ -240,7 +212,6 @@
     "Pasted image 20250629220134.png",
     "JavaScript",
     "Angular 1",
-    "ASP.NET",
     "Pasted image 20250524102145.png",
     "Pasted image 20250524102056.png",
     "未命名 1.canvas",

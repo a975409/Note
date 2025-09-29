@@ -1,9 +1,9 @@
-[[EF Core攔截與紀錄]]
-[[EF Core 防止使用者同時更新同一筆資料]]
-[[ASP.NET Core/MSSQL]]
+
 [[資料庫存取環境建置]]
 [[DBFirst]]
 [[CodeFirst]]
+
+[[EF Core攔截與紀錄]]
 [GUID Primary Key資料庫避雷守則](https://blog.darkthread.net/blog/guid-as-pk-on-db/)
 [自行擴充DbContext之ExecSQL用法功能(僅限EF Core，用原始SQL語法)](https://youtu.be/uelo5mbdckc)
 [關於IQueryable特性的小實驗](https://blog.darkthread.net/blog/iqueryable-experiment/)

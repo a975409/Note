@@ -4,6 +4,7 @@
 [[CodeFirst - Model 主鍵(PrimaryKey)設定]]
 [[CodeFirst - 屬性值 DatabaseGenerated 設定]]
 [[CodeFirst - 自動產生日期時間值]]
+
 #### 排除屬性的設定方式
 1. Data Annotation(資料註解)：
 ```C#
@@ -25,6 +26,30 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         .Ignore(b => b.LoadedFromDatabase);
 }
 ```
+
+#### 設定`RowVersion`用於避免資料更新衝突
+1. Data Annotation(資料註解)：
+```C#
+public class YourEntity { 
+	public int Id { get; set; } 
+	
+	[Timestamp] // 標示為 rowversion 欄位，用於併發控制 
+	public byte[] RowVersion { get; set; } 
+}
+```
+
+2. Fluent API：
+```C#
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    // Fluent API 方式設定 rowversion（非必要，因為已用 [Timestamp]） 
+    modelBuilder.Entity<YourEntity>()
+	    .Property(e => e.RowVersion)
+	    .IsRowVersion();
+}
+```
+
+> 如果使用者同時更新同一筆資料，就會觸發`DbUpdateConcurrencyException`例外錯誤，就代表發生並行衝突，該筆資料在更新前已被異動
 
 #### 設定欄位名稱
 1. Data Annotation(資料註解)：

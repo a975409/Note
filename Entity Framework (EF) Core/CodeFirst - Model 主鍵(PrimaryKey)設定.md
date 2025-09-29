@@ -71,30 +71,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 #### 主鍵值自動產生規則
 
+`DatabaseGeneratedOption.None`、`DatabaseGeneratedOption.Identity`設定說明請參考：
 [[CodeFirst - 屬性值 DatabaseGenerated 設定]]
-
-依慣例，當 Primary Key 為 short、int、long 或 Guid 時預設為新增時自動給值，如下：
-[DatabaseGenerated(DatabaseGeneratedOption.None)] 取消自動產生。
- - 對應的Fluent API：
-```C#
-protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    modelBuilder.Entity<Blog>()
-        .Property(b => b.BlogId)
-        .ValueGeneratedNever();
-}
-```
-
-[DatabaseGenerated(DatabaseGeneratedOption.Identity)] 可宣告屬性為新增時自動給值，
- - 對應的Fluent API：
-```C#
-protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    modelBuilder.Entity<Blog>()
-        .Property(b => b.Inserted)
-        .ValueGeneratedOnAdd();
-}
-```
 
 #### 替代主鍵
 
