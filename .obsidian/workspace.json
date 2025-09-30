@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "34bd568f18a39957",
+        "id": "d73423135ca4209a",
         "type": "tabs",
         "children": [
           {
-            "id": "4cd566471320e30e",
+            "id": "0dc1e68cbb0f5656",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
+                "file": "Angular/Angular 身分驗證.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "解決刪除資料時無法刪除底下子資料的問題"
+              "title": "Angular 身分驗證"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 421.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
+                "file": "Angular/Angular 身分驗證.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "解決刪除資料時無法刪除底下子資料的問題 的反向連結"
+              "title": "Angular 身分驗證 的反向連結"
             }
           },
           {
@@ -166,8 +166,20 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "4cd566471320e30e",
+  "active": "0dc1e68cbb0f5656",
   "lastOpenFiles": [
+    "Angular/Angular Guard.md",
+    "Angular/Angular 身分驗證.md",
+    "Angular/Component 路由導向方式.md",
+    "Angular/針對多個component設定多個權限.md",
+    "Angular/Angular 19.md",
+    "行內盒子(inline boxes).md",
+    "Angular/針對多個component設定多個權限 1.md",
+    "Angular/針對多個component設定多個權限 2.md",
+    "針對多個component設定多個權限.md",
+    "未命名.base",
+    "未命名.md",
+    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
     "Entity Framework (EF) Core/CodeFirst.md",
     "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
     "Entity Framework (EF) Core/EF Core攔截與紀錄.md",
@@ -183,19 +195,7 @@
     "ASP.NET Core/Logging 日誌記錄.md",
     "ASP.NET Core/LINQ AsEnumerable() 說明.md",
     "ASP.NET Core/LINQ.md",
-    "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
-    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
-    "ASP.NET Core/單例物件實作方式.md",
-    "ASP.NET Core/部分類別(2).md",
-    "ASP.NET Core/部分類別(1).md",
-    "Entity Framework (EF) Core/本機端SQL連線字串.md",
-    "ASP.NET Core/引用DI注入服務.md",
     "Entity Framework (EF) Core",
-    "Entity Framework (EF) Core/CodeFirst - Model 屬性.md",
-    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
-    "Entity Framework (EF) Core/CodeFirst - Model 主鍵(PrimaryKey)設定.md",
-    "行內盒子(inline boxes).md",
-    "未命名.base",
     "新增 文字文件.txt",
     "Dapper",
     "CSS",

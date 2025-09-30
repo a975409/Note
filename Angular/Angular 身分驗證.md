@@ -2,3 +2,5 @@
 
 1. [[建立auth.Service開發登入登出功能]]
 2. [[Angular Guard]]
+
+[[針對多個component設定多個權限]]
