@@ -3,3 +3,16 @@
 [C#的利器LINQ-GroupBy的應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10196181)
 [SelectMany的應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10195017)
 [查看LINQ Expression編譯後的SQL語法 | 我的Coding之路 - 點部落 (dotblogs.com.tw)](https://dotblogs.com.tw/lastsecret/2010/04/05/14409)
+
+
+如何查看LINQ轉換成的SQL指令：
+```C#
+var temp = from p in _context.t_Process
+           join ps in _context.t_ProcessStep on p.Id equals ps.ProcessEventId
+           where p.AccidentId == AccidentId
+           orderby p.Id
+           select ps;
+
+//就是這段
+temp.ToQueryString();
+```

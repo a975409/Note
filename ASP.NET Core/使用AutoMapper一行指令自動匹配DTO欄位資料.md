@@ -1,13 +1,18 @@
 1. 下載NuGet套件 AutoMapper.Extensions.Microsoft.DependencyInjection (for core版本)
     
-2. 在Startup.cs裡面新增以下指令：
+2. 在Startup.cs裡面新增以下指令(.net 5.0)：
     ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
     	services.AddAutoMapper(typeof(Startup));
     }
-    
     ```
+
+.net 6.0以上要這樣設定：
+```C#
+//找到所有profile
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+```
     
 3. 建立Profiles資料夾
 4. 在Profiles資料夾內建立類別，並繼承Profile類別：
