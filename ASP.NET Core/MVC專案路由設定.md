@@ -30,7 +30,6 @@ public static void Main(string[] args)
 
 	//設定方式二：慣例路由
 	app.MapDefaultControllerRoute();
-
     app.Run();
 }
 ```
@@ -45,17 +44,15 @@ public static void Main(string[] args)
 
 Http動作方法：
 ![[Pasted image 20241103154701.png]]
-# 屬性路由
 
-[REST API 的屬性路由](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#attribute-routing-for-rest-apis)
+# 屬性路由(避免跟API搞混，建議不要用)
 
-1. 屬性路由有兩種設定方式，分別是 Route 和 HTTP Method
-2. Controller建議標記為[ApiController]，這樣才能繫結[[FromBody]]來源參數
-3. 承上點，如果Controller已標記[ApiController]，那Controller上方就一定要標記為[ApiController, Route("[controller]")]，Action也要設定屬性路由(`Route`或`HttpMethod`)
+> `Route`只是用來自訂路由路徑，`Http Method`只是用來標記該`Action`只能採用哪種方法呼叫
+> 如果要開發API，請參考[[Web API 專案路由設定]]，並且要另外新增一個繼承`ControllerBase`的controller
+> `Program.cs`不用加上`app.MapControllers();`
 
 ### 一、Route：可針對controller、action自定義路由原則，可設定多個路由原則
 ```C#
-[ApiController, Route("[controller]")]
 public class HomeController : Controller
 {
     [Route("")]
@@ -80,7 +77,6 @@ public class HomeController : Controller
 
 使用屬性路由時，除非使用[語彙基元取代](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#routing-token-replacement-templates-ref-label)，否則控制器和動作名稱不會發揮比對動作的作用。 下列範例會比對與上一個範例相同的 URL，並以 `action` 和 `controller` 的語彙基元取代：
 ```C#
-[ApiController, Route("[controller]")]
 public class HomeController : Controller
 {
     [Route("")]
@@ -102,30 +98,29 @@ public class HomeController : Controller
 ### 二、HTTP Method：可針對controller、action標記對應的HTTP Method
 [Http 指令動詞範本](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#http-verb-templates)
 
-使用範例如下(以單純開發API Controller為例)：
+使用範例如下：
 ```C#
-[ApiController,Route("api/[controller]")]
-public class Test2Controller : ControllerBase
+public class Test2Controller : Controller
 {
-    [HttpGet]   // GET /api/test2
+    [HttpGet]   // GET /test2
     public IActionResult ListProducts()
     {
         return ControllerContext.MyDisplayRouteInfo();
     }
 
-    [HttpGet("{id}")]   // GET /api/test2/xyz
+    [HttpGet("{id}")]   // GET /test2/xyz
     public IActionResult GetProduct(string id)
     {
        return ControllerContext.MyDisplayRouteInfo(id);
     }
 
-    [HttpGet("int/{id:int}")] // GET /api/test2/int/3
+    [HttpGet("int/{id:int}")] // GET /test2/int/3
     public IActionResult GetIntProduct(int id)
     {
         return ControllerContext.MyDisplayRouteInfo(id);
     }
 
-    [HttpGet("int2/{id}")]  // GET /api/test2/int2/3
+    [HttpGet("int2/{id}")]  // GET /test2/int2/3
     public IActionResult GetInt2Product(int id)
     {
         return ControllerContext.MyDisplayRouteInfo(id);
@@ -133,9 +128,7 @@ public class Test2Controller : ControllerBase
 }
 ```
 
->Controller繼承ControllerBase，所以也可在MVC專案開發API
-
-設定`Area`路徑：
+# 設定`Area`路徑：
 Program.cs：
 ```C#
 app.MapControllerRoute(

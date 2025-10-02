@@ -4,21 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "d73423135ca4209a",
+        "id": "bb6ea414e8d5e797",
         "type": "tabs",
         "children": [
           {
-            "id": "0dc1e68cbb0f5656",
+            "id": "fdb44a5d13ac0db4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Angular 身分驗證.md",
+                "file": "ASP.NET Core/MVC專案路由設定.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Angular 身分驗證"
+              "title": "MVC專案路由設定"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0778b394e9f44b26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "927a8753ffb7bdd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ASP.NET Core/Web API 專案路由設定.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web API 專案路由設定"
             }
           }
         ]
@@ -78,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 421.5
+    "width": 421.5,
+    "collapsed": true
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -94,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Angular 身分驗證.md",
+                "file": "ASP.NET Core/MVC專案路由設定.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +125,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Angular 身分驗證 的反向連結"
+              "title": "MVC專案路由設定 的反向連結"
             }
           },
           {
@@ -166,35 +187,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "0dc1e68cbb0f5656",
+  "active": "fdb44a5d13ac0db4",
   "lastOpenFiles": [
-    "Angular/Angular Guard.md",
-    "Angular/Angular 身分驗證.md",
-    "Angular/Component 路由導向方式.md",
-    "Angular/針對多個component設定多個權限.md",
-    "Angular/Angular 19.md",
-    "行內盒子(inline boxes).md",
-    "Angular/針對多個component設定多個權限 1.md",
-    "Angular/針對多個component設定多個權限 2.md",
-    "針對多個component設定多個權限.md",
-    "未命名.base",
-    "未命名.md",
-    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
-    "Entity Framework (EF) Core/CodeFirst.md",
+    "ASP.NET Core/Web API 專案路由設定.md",
+    "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/路由.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/FileProviders.md",
+    "ASP.NET Core/監控檔案的變化.md",
+    "Entity Framework (EF) Core/CodeFirst - Model 屬性.md",
+    "ASP.NET Core/Web API.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
+    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
+    "ASP.NET Core/ASP.NET Core 應用程式的執行流程.md",
+    "ASP.NET Core/Middleware.md",
     "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
-    "Entity Framework (EF) Core/EF Core攔截與紀錄.md",
-    "Entity Framework (EF) Core/手動設定資料庫物件.md",
-    "Entity Framework (EF) Core/CodeFirst(一).md",
+    "Entity Framework (EF) Core/CodeFirst.md",
+    "Entity Framework (EF) Core/CodeFirst - Model 設計.md",
+    "Entity Framework (EF) Core/CodeFirst - Model 主鍵(PrimaryKey)設定.md",
+    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
     "Entity Framework (EF) Core/資料庫存取環境建置.md",
     "ASP.NET Core/DBFirst.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/MSBuild.md",
-    "ASP.NET Core/MVC(ASP.NET Core).md",
-    "ASP.NET Core/MVC專案路由設定.md",
-    "ASP.NET Core/ProducesResponseType.md",
-    "ASP.NET Core/Logging 日誌記錄.md",
-    "ASP.NET Core/LINQ AsEnumerable() 說明.md",
-    "ASP.NET Core/LINQ.md",
+    "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
+    "Entity Framework (EF) Core/CodeFirst(一).md",
+    "Entity Framework (EF) Core/手動設定資料庫物件.md",
+    "ASP.NET Core/使用 新增sacffold項目快速建立資料庫物件(推薦作法).md",
+    "Angular/Angular 19.md",
+    "Angular/針對多個component設定多個權限.md",
+    "Angular/Angular 身分驗證.md",
+    "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",
     "Dapper",

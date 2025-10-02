@@ -1,4 +1,3 @@
-
 Program.cs：
 ```C#
 public static void Main(string[] args)
@@ -38,14 +37,28 @@ public static void Main(string[] args)
 ```
 
 > MapControllers 並沒有預設路由，所以需在controller、action上方設定屬性路由
+> Controller不一定要放在預設的`Controllers`資料夾內，也可放在其他資料夾，只要路由設定好就沒問題了
+
+`app.MapControllers()`等同如下：
+```C#
+// 是把應用程式內的 Url 匹配到這個中介，以及根據請求選擇最合適的端點去做匹配 => 個人認為可以想成 **匹配終端**
+app.UseRouting(); 
+
+//將匹配到的終端加入此中介 ，並執行與此匹配到的端點的關聯委派 (這個委派包含了處理請求的具體邏輯) => 個人認為可以想成 **執行終端**
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); 
+});
+```
 
 # 屬性路由
 
 [REST API 的屬性路由](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0#attribute-routing-for-rest-apis)
 
 1. 屬性路由有兩種設定方式，分別是 Route 和 HTTP Method
-2. Controller建議標記為[ApiController]，這樣才能繫結[[FromBody]]來源參數
-3. 承上點，如果Controller已標記[ApiController]，那Controller上方就一定要標記為[ApiController, Route("[api/controller]")]，Action也要設定屬性路由(`Route`或`HttpMethod`)
+2. Controller上方需標記為[ApiController, Route("[api/controller]")]
+	- Controller標記為[ApiController]，才能繫結[[FromBody]]來源參數
+	- Action也要設定屬性路由(`Route`或`HttpMethod`)
 
 ### 一、Route：可針對controller、action自定義路由原則，可設定多個路由原則
 ```C#
