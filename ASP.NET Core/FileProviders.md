@@ -8,7 +8,9 @@
     
 3. CompositeChangeToken：[CompositeChangeToken 類別 (Microsoft.Extensions.Primitives) | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.extensions.primitives.compositechangetoken?view=dotnet-plat-ext-7.0)
     
-    代表一或多個 [IChangeToken](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.extensions.primitives.ichangetoken?view=dotnet-plat-ext-7.0) 執行個體。 HasChanged 屬性：當任一 IChangeToken 發生改變，該值就會為 true ActiveChangeCallbacks 屬性：任一 IChangeToken 同名屬性發生改變，該值就會為 true
+    代表一或多個 [IChangeToken](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.extensions.primitives.ichangetoken?view=dotnet-plat-ext-7.0) 執行個體。 
+    HasChanged 屬性：當任一 IChangeToken 發生改變，該值就會為 true
+    ActiveChangeCallbacks 屬性：任一 IChangeToken 同名屬性發生改變，該值就會為 true
     
 4. 以下為繼承IFileProvider介面的類別：
     

@@ -61,3 +61,4 @@
 排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)
 [在 ASP.NET Core 網站執行定時排程-黑暗執行緒](https://blog.darkthread.net/blog/aspnet-core-background-task/)
+[背景服務執行計時工作 - 使用 BackgroundService 與 PeriodicTimer](https://www.dotblogs.com.tw/mrkt/2024/10/12/094028)
