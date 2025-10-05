@@ -1,9 +1,15 @@
 [實體屬性 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwith-nrt)
 [System.ComponentModel.DataAnnotations 命名空間 | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.componentmodel.dataannotations?view=net-5.0)
 [產生的值 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/core/modeling/generated-properties?tabs=data-annotations)
-[[CodeFirst - Model 主鍵(PrimaryKey)設定]]
+[設定索引器屬性](https://learn.microsoft.com/zh-tw/ef/core/modeling/shadow-properties#configuring-indexer-properties)
+[屬性包實體類型](https://learn.microsoft.com/zh-tw/ef/core/modeling/shadow-properties#property-bag-entity-types)
+[欄位自動跳號設定](https://learn.microsoft.com/zh-tw/ef/core/modeling/sequences)
+
+[[CodeFirst - Entity 主鍵(PrimaryKey)設定]]
 [[CodeFirst - 屬性值 DatabaseGenerated 設定]]
 [[CodeFirst - 自動產生日期時間值]]
+[[Shadow(陰影)屬性]]
+[[支援欄位]]
 
 #### 排除屬性的設定方式
 1. Data Annotation(資料註解)：
@@ -42,7 +48,7 @@ public class YourEntity {
 ```C#
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    // Fluent API 方式設定 rowversion（非必要，因為已用 [Timestamp]） 
+    // Fluent API 方式設定 rowversion
     modelBuilder.Entity<YourEntity>()
 	    .Property(e => e.RowVersion)
 	    .IsRowVersion();
@@ -73,7 +79,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 }
 ```
 
-#### 設定欄位數據類型
+#### 指定產生的資料表欄位數據類型
 1. Data Annotation(資料註解)：
 ```C#
 public class Blog
@@ -103,7 +109,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 #### 設定欄位最大長度
 
-> 長度上限僅適用於陣列資料類型，例如 `string` 和 `byte[]`，另外還可以設定`Model`驗證的錯誤訊息
+> 長度上限僅適用於陣列資料類型，例如 `string` 和 `byte[]`，另外還可以設定`Entity`驗證的錯誤訊息
 
 1. Data Annotation(資料註解)：
 ```C#
@@ -160,7 +166,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 #### 文字欄位設定為非Unicode
 
-> 文字屬性預設會設定為 Unicode。 您可以將資料行設定為非 Unicode，如下所示
+> 欄位文字屬性預設會設定為 Unicode。 您可以將資料行設定為非 Unicode，如下所示
 
 1. Data Annotation(資料註解)：
 ```C#
@@ -193,12 +199,28 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 3. 所有具有 .NET 實值型別的屬性（`int`、`decimal`、`bool`等）都設定為必要
 4. 所有具有可為 Null .NET 實值型別的屬性（`int?`、`decimal?`、`bool?`等）都會設定為選擇性。
 
-當專案未啟用C# [可為 Null 的參考型別 (nullable reference types, NRT)](https://learn.microsoft.com/zh-tw/dotnet/csharp/tutorials/nullable-reference-types) 功能時，則會依照慣例規則判斷該欄位是否可為 Null
 
-但如果有啟用[可為 Null 的參考型別 (nullable reference types, NRT)](https://learn.microsoft.com/zh-tw/dotnet/csharp/tutorials/nullable-reference-types) 功能時，則必須特別針對屬性值設定是否可為Null
+> 未啟用C# [可為 Null 的參考型別 (nullable reference types, NRT)](https://learn.microsoft.com/zh-tw/dotnet/csharp/tutorials/nullable-reference-types) 功能時，則會依照慣例規則判斷該欄位是否可為 Null
 
-以下為是否啟用`NRT`功能的差異：
-1. 啟用`NRT`=>屬性預設為不可設為`null`，需針對屬性的資料型態加上`?`符號，才會代表該屬性可設為`null`：
+停用`NRT`=>需針對屬性標記為`[Required]`，代表該屬性不可設為`null`：
+```C#
+public class CustomerWithoutNullableReferenceTypes
+{
+    public int Id { get; set; }
+
+    [Required] // Data annotations needed to configure as required
+    public string FirstName { get; set; }
+
+    [Required] // Data annotations needed to configure as required
+    public string LastName { get; set; }
+
+    public string MiddleName { get; set; } // Optional by convention
+}
+```
+
+> 當專案有啟用[可為 Null 的參考型別 (nullable reference types, NRT)](https://learn.microsoft.com/zh-tw/dotnet/csharp/tutorials/nullable-reference-types) 功能時，則必須特別針對屬性值設定是否可為Null
+
+啟用`NRT`=>屬性預設為不可設為`null`，需針對屬性的資料型態加上`?`符號，才會代表該屬性可設為`null`：
 ```C#
 public class Customer
 {
@@ -215,23 +237,6 @@ public class Customer
         LastName = lastName;
         MiddleName = middleName;
     }
-}
-```
-
-
-2. 停用`NRT`=>需針對屬性標記為`[Required]`，代表該屬性不可設為`null`：
-```C#
-public class CustomerWithoutNullableReferenceTypes
-{
-    public int Id { get; set; }
-
-    [Required] // Data annotations needed to configure as required
-    public string FirstName { get; set; }
-
-    [Required] // Data annotations needed to configure as required
-    public string LastName { get; set; }
-
-    public string MiddleName { get; set; } // Optional by convention
 }
 ```
 

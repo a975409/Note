@@ -31,8 +31,8 @@
 
 	```
 
-# Model 設計相關設定
-#### 在`Model`中包括`Class`，有以下三種包含設定方式
+# Entity 設計相關設定
+#### 在`Entity`中包括`Class`，有以下三種包含設定方式
 - `Blog` 包含，因為它會在內容上的 DbSet 屬性中公開。
 - `Post` 因為透過導覽屬性探索到 `Blog.Posts` 它，所以會包含它。
 - `AuditEntry`包含，因為它在 中 `OnModelCreating` 指定。
@@ -72,7 +72,7 @@ public class AuditEntry
 }
 ```
 
-#### 從Model排除Class的設定方式
+#### 排除`Entity`的設定方式
 1. Data Annotation(資料註解)：
 ```C#
 [NotMapped]//=>加上這段即可
@@ -90,7 +90,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 }
 ```
 
-##### 如果要將該`Class`排除移轉，但仍要保留至`Model`：
+##### 如果要將該`Entity`排除移轉，但仍要保留至`Entity`：
 ```C#
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
@@ -99,7 +99,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         .ToTable("AspNetUsers", t => t.ExcludeFromMigrations());
 }
 ```
-> 移轉時不會建立 `AspNetUsers` 資料表，但`IdentityUser` 仍包含在`Model`中，而且可以正常使用。
+> 移轉時不會建立 `AspNetUsers` 資料表，但`IdentityUser` 仍包含在`DBContext`中，而且可以正常使用。
 
 #### 設定資料表名稱
 1. Data Annotation(資料註解)：
@@ -179,7 +179,7 @@ modelBuilder.Entity<Blog>()
 ```
 
 #### 設定資料表值函式對應
-1. 建立一個`class`，無`PK值`：
+1. 建立一個`Entity`，無`PK值`：
 ```C#
 public class BlogWithMultiplePosts
 {
@@ -222,3 +222,27 @@ FROM [dbo].[BlogsWithMultiplePosts]() AS [b]
 WHERE [b].[PostCount] > 3
 ```
 
+#### 採用繼承方式設定`Entity`：
+```C#
+internal class MyContext : DbContext
+{
+    public DbSet<RssBlog> RssBlogs { get; set; }
+}
+
+public class Blog
+{
+    public int BlogId { get; set; }
+    public string Url { get; set; }
+}
+
+public class RssBlog : Blog
+{
+    public string RssUrl { get; set; }
+}
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+	//RssBlog指定繼承的Blog
+	modelBuilder.Entity<RssBlog>().HasBaseType<Blog>()
+}
+```

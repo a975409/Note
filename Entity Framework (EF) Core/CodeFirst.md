@@ -1,10 +1,14 @@
 [[CodeFirst(一)]]
 [[CodeFirst(二)(推薦)]]
 
-[[CodeFirst - Model 設計]]
-[[CodeFirst - Model 屬性]]
+### 建立Entity
+[[CodeFirst - Entity 設計]]
+[[CodeFirst - Entity 屬性]]
 [[CodeFirst - 關聯性設定]]
 
+[索引與條件約束](https://learn.microsoft.com/zh-tw/ef/core/modeling/indexes?tabs=data-annotations)
+[[值轉換器]]
+### 實際案例
 [[解決刪除資料時無法刪除底下子資料的問題]]
 
 ### 遷移指令：

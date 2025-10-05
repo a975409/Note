@@ -1,62 +1,61 @@
 
 #### 初次建立資料庫：
-1. 建立Model和DBContext： 
-	User.cs
-	```C#
-	using System.ComponentModel.DataAnnotations;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Threading.Tasks;
-	
-	namespace SampleCodeFirst.Models;
-	
-	public partial class User
-	{
-	  [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-	  public Guid Id { get; set; }
-	
-	  [Required]
-	  [MaxLength(15)]
-	  public string UserName { get; set; }
-	
-	  public virtual ICollection<Article> Articles { get; set; }
-	}
-	```
+1. 建立`Entity`： 
 
-	Article.cs
-	```C#
-	using System.ComponentModel.DataAnnotations;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Threading.Tasks;
-	
-	namespace SampleCodeFirst.Models;
-	
-	public partial class Article
-	{
-	
-	  [Key]
-	  public int Id { get; set; }
-	
-	  public string Title { get; set; }
-	
-	  public string? Content { get; set; }
-	
-	  public int Read { get; set; }
-	
-	  public Guid UserId { get; set; }
-	
-	  public DateTime PostTime { get; set; }
-	
-	  public virtual User User { get; set; }
-	
-	}
-	
-	```
+User.cs
+```C#
+using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-	BlogContext.cs
+namespace SampleCodeFirst.Models;
+
+public partial class User
+{
+  public Guid Id { get; set; }
+
+  [Required]
+  [MaxLength(15)]
+  public string UserName { get; set; }
+
+  public ICollection<Article> Articles { get; set; }
+}
+```
+
+Article.cs
+```C#
+using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace SampleCodeFirst.Models;
+
+public partial class Article
+{
+
+  [Key]
+  public int Id { get; set; }
+
+  public string Title { get; set; }
+
+  public string? Content { get; set; }
+
+  public int Read { get; set; }
+
+  public DateTime PostTime { get; set; }
+
+  public Guid UserId { get; set; }
+
+  public User User { get; set; }
+
+}
+```
+	
+2. 建立`DBContext`
 ```C#
 	using System;
 	using System.Collections.Generic;
