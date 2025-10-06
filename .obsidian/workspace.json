@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entity Framework (EF) Core/CodeFirst.md",
+                "file": "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CodeFirst"
-            }
-          },
-          {
-            "id": "3178cfeddf9b00d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "值轉換器.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "值轉換器"
+              "title": "CodeFirst - 關聯性設定"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "值轉換器.md",
+                "file": "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -119,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "值轉換器 的反向連結"
+              "title": "CodeFirst - 關聯性設定 的反向連結"
             }
           },
           {
@@ -181,20 +166,21 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "3178cfeddf9b00d4",
+  "active": "e88ba40b0585c672",
   "lastOpenFiles": [
     "Entity Framework (EF) Core/CodeFirst.md",
-    "值轉換器.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
-    "支援欄位.md",
-    "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 主鍵(PrimaryKey)設定.md",
-    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 設計.md",
-    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
-    "Entity Framework (EF) Core/CodeFirst(二)(推薦).md",
-    "Shadow(陰影)屬性.md",
     "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+    "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
+    "設定屬性值轉換器.md",
+    "CodeFirst - 移轉(Migrations).md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 設計.md",
+    "Entity Framework (EF) Core/CodeFirst(二)(推薦).md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 主鍵(PrimaryKey)設定.md",
+    "支援欄位.md",
+    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
+    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
+    "Shadow(陰影)屬性.md",
     "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
     "Entity Framework (EF) Core/CodeFirst(一).md",
     "Entity Framework (EF) Core/CodeFirst - 自動產生日期時間值.md",
@@ -208,7 +194,6 @@
     "ASP.NET Core/模型繫結.md",
     "ASP.NET Core/監控檔案的變化.md",
     "ASP.NET Core/自訂模型繫結.md",
-    "ASP.NET Core/自訂Session驗證.md",
     "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",

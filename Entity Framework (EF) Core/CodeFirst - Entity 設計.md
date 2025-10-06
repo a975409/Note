@@ -1,6 +1,7 @@
 [實體類型 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-tw/ef/core/modeling/entity-types?WT.mc_id=DOP-MVP-37580&tabs=fluent-api#view-mapping)
 [System.ComponentModel.DataAnnotations 命名空間 | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.componentmodel.dataannotations?view=net-5.0)
-
+[無主鍵實體類型](https://learn.microsoft.com/zh-tw/ef/core/modeling/keyless-entity-types?tabs=data-annotations)
+[空間數據](https://learn.microsoft.com/zh-tw/ef/core/modeling/spatial)
 # EF Core 提供三種設定 Model 方式：
 
 > Fluent API 的優先權最高，可覆寫慣例及資料註解設定。
@@ -90,7 +91,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 }
 ```
 
-##### 如果要將該`Entity`排除移轉，但仍要保留至`Entity`：
+#### 指定`Entity`排除移轉：
 ```C#
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
