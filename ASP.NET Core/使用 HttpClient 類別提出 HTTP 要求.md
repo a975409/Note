@@ -1,5 +1,6 @@
 [建立 HttpClient 物件](https://learn.microsoft.com/zh-tw/dotnet/fundamentals/networking/http/httpclient#create-an-httpclient-object)
 [發出HTTP請求](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/http-requests?view=aspnetcore-9.0&preserve-view=true#basic-usage)
+[[建立下載檔案的API]]
 
 Program.cs
 ```C#

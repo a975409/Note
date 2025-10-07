@@ -27,14 +27,23 @@ xhr.onreadystatechange=function(){
 }
 
 //開啟連線
-xhr.open('GET','api網址',true)
+xhr.open('GET','api網址',true);
+
+//設定Request的Content-Type
+xhr.setRequestHeader('Content-Type', 'application/json');
+
+//設定Response的資料型態
+xhr.responseType = "blob"
 
 //呼叫API
-xhr.send(null)
+xhr.send();
 ```
+
+[`XMLHttpRequest.responseType`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType)
 
 > api網址所附帶的參數，需經由`encodeURIComponent`編碼處理
 
+[XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest)
 [XMLHttpRequest.open](https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/open#%E8%AA%9E%E6%B3%95)
 [XMLHttpRequest.send](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/send)
 [XMLHttpRequest.readyState](https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/readyState)
@@ -63,10 +72,8 @@ xhr.addEventListener('error',function(){
 xhr.open('GET','api網址',true)
 
 //呼叫API
-xhr.send(null)
+xhr.send()
 ```
-
-
 
 `Content-type`設定方式如下：
 ```javascript

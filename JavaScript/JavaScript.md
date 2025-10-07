@@ -28,3 +28,4 @@ https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
 [[AJAX - XMLHttpRequest 事件]]
 [[AJAX - XMLHttpRequest 上傳檔案]]
 [[在瀏覽器中使用JavaScript module(模組)]]
+[[存取 HTMLElement的資料集屬性(data-)]]

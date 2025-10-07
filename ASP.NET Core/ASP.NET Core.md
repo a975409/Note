@@ -36,18 +36,20 @@
 [[開放靜態目錄存取的功能]]
 [[在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更]]
 [[使用AutoMapper一行指令自動匹配DTO欄位資料]]
-[[ASP.NET Core/檔案上傳]]
 [[CICD]]
 [[FileProviders]]
 [[gRPC]]
 [[PagedList分頁套件]]
 [[使用 HttpClient 類別提出 HTTP 要求]]
+[[ASP.NET Core/檔案上傳]]
+[[建立下載檔案的API]]
 
 #### 安全性
 [[跨網站指令碼(XSS)]]
 [[ASP.NET Core/跨網站偽造要求 (XSRF or CSRF)]]
 [[使用User Secret安全存放開發應用程式密鑰]]
-[在 ASP.NET Core 中啟用跨原始來源要求 (CORS) | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0)[[其他注入類型防範]]
+[在 ASP.NET Core 中啟用跨原始來源要求 (CORS) | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0)
+[[其他注入類型防範]]
 [[設定HTTPS]]
 [[Data Protection API 保護敏感資料]]
 #### MSDN

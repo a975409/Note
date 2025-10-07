@@ -58,7 +58,8 @@ app.UseEndpoints(endpoints =>
 1. 屬性路由有兩種設定方式，分別是 Route 和 HTTP Method
 2. Controller上方需標記為[ApiController, Route("[api/controller]")]
 	- Controller標記為[ApiController]，才能繫結[[FromBody]]來源參數
-	- Action也要設定屬性路由(`Route`或`HttpMethod`)
+	- 所有Action都要設定屬性路由(`Route`或`HttpMethod`)，否則會無法進入指定Action
+	- 如果Action有設定屬性路由(`Route`或`HttpMethod`)，那Controller也要標記為[Route("[api/controller]")]，否則一樣也會無法進入指定Action
 
 ### 一、Route：可針對controller、action自定義路由原則，可設定多個路由原則
 ```C#

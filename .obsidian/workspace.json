@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5cc9321d226f8d44",
+        "id": "f395a875164e41ca",
         "type": "tabs",
         "children": [
           {
-            "id": "e88ba40b0585c672",
+            "id": "904e673e94c35989",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
+                "file": "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CodeFirst - 關聯性設定"
+              "title": "使用 HttpClient 類別提出 HTTP 要求"
+            }
+          },
+          {
+            "id": "c91cefe0f1bad01f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ASP.NET Core/建立下載檔案的API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "建立下載檔案的API"
             }
           }
         ]
@@ -78,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 421.5
+    "width": 241.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
+                "file": "ASP.NET Core/使用 HttpClient 類別提出 HTTP 要求.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "CodeFirst - 關聯性設定 的反向連結"
+              "title": "使用 HttpClient 類別提出 HTTP 要求 的反向連結"
             }
           },
           {
@@ -166,34 +180,34 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "e88ba40b0585c672",
+  "active": "904e673e94c35989",
   "lastOpenFiles": [
-    "Entity Framework (EF) Core/CodeFirst.md",
-    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
-    "Entity Framework (EF) Core/CodeFirst - 關聯性設定.md",
-    "設定屬性值轉換器.md",
-    "CodeFirst - 移轉(Migrations).md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 設計.md",
-    "Entity Framework (EF) Core/CodeFirst(二)(推薦).md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 主鍵(PrimaryKey)設定.md",
-    "支援欄位.md",
-    "Entity Framework (EF) Core/CodeFirst - 屬性值 DatabaseGenerated 設定.md",
-    "Entity Framework (EF) Core/解決刪除資料時無法刪除底下子資料的問題.md",
-    "Shadow(陰影)屬性.md",
-    "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
-    "Entity Framework (EF) Core/CodeFirst(一).md",
-    "Entity Framework (EF) Core/CodeFirst - 自動產生日期時間值.md",
-    "ASP.NET Core/Cookie驗證(適用MVC).md",
-    "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/檔案上傳.md",
+    "ASP.NET Core/建立下載檔案的API.md",
+    "ASP.NET Core/建立上傳檔案的API.md",
+    "ASP.NET Core/Middleware.md",
+    "ASP.NET Core/Use.md",
+    "ASP.NET Core/引用DI注入服務.md",
+    "ASP.NET Core/在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更.md",
     "ASP.NET Core/路由.md",
     "ASP.NET Core/Web API 專案路由設定.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
+    "ASP.NET Core/MVC專案路由設定.md",
+    "ASP.NET Core/ASP.NET Core 應用程式的執行流程.md",
+    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
+    "JavaScript/JavaScript.md",
+    "JavaScript/存取 HTMLElement的資料集屬性(data-).md",
+    "ASP.NET Core/記錄http request、response 擴充方法範例.md",
+    "ASP.NET Core/設定 JSON 伺服器.md",
+    "ASP.NET Core/設定HSTS標頭.md",
+    "ASP.NET Core/設定HTTPS.md",
     "ASP.NET Core/Model Binding 模型繫結.md",
-    "ASP.NET Core/樹狀層級結構.md",
-    "ASP.NET Core/模型驗證.md",
-    "ASP.NET Core/模型繫結.md",
-    "ASP.NET Core/監控檔案的變化.md",
-    "ASP.NET Core/自訂模型繫結.md",
+    "ASP.NET Core/Web API.md",
+    "Entity Framework (EF) Core/設定屬性值轉換器.md",
+    "ASP.NET Core/Filters 篩選條件.md",
+    "ASP.NET Core/FromBody.md",
+    "JavaScript/AJAX - XMLHttpRequest 事件.md",
     "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",
