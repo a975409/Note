@@ -1,4 +1,5 @@
 [XMLHttpRequest](https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest)
+[[建立下載檔案的API]]
 
 範例如下：
 ```html
