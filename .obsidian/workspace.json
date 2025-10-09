@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Entity Framework (EF) Core/支援欄位.md",
+                "file": "JavaScript/AJAX - XMLHttpRequest.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "支援欄位"
+              "title": "AJAX - XMLHttpRequest"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Entity Framework (EF) Core/支援欄位.md",
+                "file": "JavaScript/AJAX - XMLHttpRequest.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "支援欄位 的反向連結"
+              "title": "AJAX - XMLHttpRequest 的反向連結"
             }
           },
           {
@@ -166,15 +166,25 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "4e1973547c031b6b",
+  "active": "7d77d32b5f468efd",
   "lastOpenFiles": [
+    "JavaScript/JavaScript.md",
+    "JavaScript/object物件.md",
+    "JavaScript/function.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
+    "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
+    "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
+    "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/Middleware.md",
+    "ASP.NET Core/Use.md",
+    "ASP.NET Core/引用DI注入服務.md",
+    "Entity Framework (EF) Core/支援欄位.md",
+    "未命名.md",
     "ASP.NET Core/建立下載檔案的API.md",
     "JavaScript/Loading遮罩套件.md",
-    "JavaScript/AJAX - XMLHttpRequest.md",
-    "ASP.NET Core/ASP.NET Core.md",
     "ASP.NET Core/檔案上傳.md",
     "ASP.NET Core/建立上傳檔案的API.md",
-    "JavaScript/JavaScript.md",
     "Entity Framework (EF) Core/設定屬性值轉換器.md",
     "Entity Framework (EF) Core/CodeFirst.md",
     "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
@@ -184,16 +194,6 @@
     "JavaScript/原型繼承.md",
     "JavaScript/輕鬆理解JS 原型、原型鏈.md",
     "JavaScript/Document DOM操作.md",
-    "JavaScript/function.md",
-    "JavaScript/this 是指當下的執行者是誰.md",
-    "JavaScript/window 瀏覽器操作.md",
-    "JavaScript/object物件.md",
-    "JavaScript/存取 HTMLElement的資料集屬性(data-).md",
-    "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
-    "ASP.NET Core/路由.md",
-    "ASP.NET Core/Web API 專案路由設定.md",
-    "ASP.NET Core/Web API.md",
-    "ASP.NET Core/驗證與授權.md",
     "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",

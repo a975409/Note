@@ -4,6 +4,10 @@
 
 此時會出現以下`PowerShell`畫面，當程式碼有修改時，會自動帶入變更並執行編譯
 
+[在 Visual Studio 中搭配 ASP.NET Core 使用 LibMan | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-9.0#uninstall-library-files)
+[筆記 - ASP.NET Core 使用 LibMan CLI | sqz777 der 技術小本本 - 點部落](https://dotblogs.com.tw/Im_sqz777/2020/09/03/222746)
+[使用 LibMan CLI 下載安裝 jQuery、Vue.js、Font-Awesome 程式庫-黑暗執行緒](https://blog.darkthread.net/blog/libman-cli/)
+
 [[ASP.NET Core 應用程式的執行流程]]
 [[ASP.NET Core 應用程式專案架構]]
 [[Middleware]]
