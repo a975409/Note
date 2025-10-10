@@ -9,7 +9,7 @@
 [如何用 JavaScript 讀取 Cookie](https://www.shubo.io/cookies/#%E5%A6%82%E4%BD%95%E7%94%A8-javascript-%E8%AE%80%E5%8F%96-cookie)
 [解決 Vue Js 使用 jQuery DatePicker 時，抓不到日期 value 問題](https://dotblogs.com.tw/marsxie/2017/07/19/190143)
 [Using custom elements - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#examples)
-[圖片懶加載Lazy Loading範例應用][開箱16:圖片懶加載Lazy Loading範例應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10332085)
+[圖片懶加載Lazy Loading範例應用](https://ithelp.ithome.com.tw/articles/10332085)
 
 https://yucj.gitbooks.io/ecmascript-6/content/docs/module.html
 https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
