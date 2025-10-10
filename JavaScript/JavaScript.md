@@ -11,9 +11,6 @@
 [Using custom elements - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#examples)
 [圖片懶加載Lazy Loading範例應用](https://ithelp.ithome.com.tw/articles/10332085)
 
-https://yucj.gitbooks.io/ecmascript-6/content/docs/module.html
-https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
-
 個人筆記：
 [[function]]
 [[object物件]]
