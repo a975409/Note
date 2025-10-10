@@ -13,12 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/AJAX - XMLHttpRequest.md",
+                "file": "JavaScript/自定義元素( Web Component ).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AJAX - XMLHttpRequest"
+              "title": "自定義元素( Web Component )"
+            }
+          },
+          {
+            "id": "d7ba8da9c0d186a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/使用模板(template)和插槽(Slot).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "使用模板(template)和插槽(Slot)"
+            }
+          },
+          {
+            "id": "0a3e3f7fc7094d24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/JavaScript.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "JavaScript"
             }
           }
         ]
@@ -94,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/AJAX - XMLHttpRequest.md",
+                "file": "JavaScript/自定義元素( Web Component ).md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +132,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "AJAX - XMLHttpRequest 的反向連結"
+              "title": "自定義元素( Web Component ) 的反向連結"
             }
           },
           {
@@ -169,9 +197,16 @@
   "active": "7d77d32b5f468efd",
   "lastOpenFiles": [
     "JavaScript/JavaScript.md",
+    "JavaScript/使用影子 DOM.md",
+    "區塊盒子(block boxes).md",
+    "JavaScript/使用模板(template)和插槽(Slot).md",
+    "JavaScript/自定義元素( Web Component ).md",
+    "Entity Framework (EF) Core/Shadow(陰影)屬性.md",
+    "Web Components.md",
+    "ASP.NET Core/建立下載檔案的API.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
     "JavaScript/object物件.md",
     "JavaScript/function.md",
-    "JavaScript/AJAX - XMLHttpRequest.md",
     "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
     "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
     "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
@@ -180,8 +215,6 @@
     "ASP.NET Core/Use.md",
     "ASP.NET Core/引用DI注入服務.md",
     "Entity Framework (EF) Core/支援欄位.md",
-    "未命名.md",
-    "ASP.NET Core/建立下載檔案的API.md",
     "JavaScript/Loading遮罩套件.md",
     "ASP.NET Core/檔案上傳.md",
     "ASP.NET Core/建立上傳檔案的API.md",
@@ -189,11 +222,6 @@
     "Entity Framework (EF) Core/CodeFirst.md",
     "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
     "Entity Framework (EF) Core/CodeFirst - 移轉(Migrations).md",
-    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
-    "JavaScript/AJAX - XMLHttpRequest 事件.md",
-    "JavaScript/原型繼承.md",
-    "JavaScript/輕鬆理解JS 原型、原型鏈.md",
-    "JavaScript/Document DOM操作.md",
     "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",

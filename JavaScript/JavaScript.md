@@ -10,7 +10,7 @@
 [解決 Vue Js 使用 jQuery DatePicker 時，抓不到日期 value 問題](https://dotblogs.com.tw/marsxie/2017/07/19/190143)
 [Using custom elements - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#examples)
 [圖片懶加載Lazy Loading範例應用][開箱16:圖片懶加載Lazy Loading範例應用 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10332085)
-[Web Component 學習筆記 | Johnny Wang Blog](https://johnnywang1994.github.io/book/articles/js/web-component.html)
+
 https://yucj.gitbooks.io/ecmascript-6/content/docs/module.html
 https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
 
@@ -29,3 +29,4 @@ https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
 [[AJAX - XMLHttpRequest 上傳檔案]]
 [[在瀏覽器中使用JavaScript module(模組)]]
 [[存取 HTMLElement的資料集屬性(data-)]]
+[[自定義元素( Web Component )]]
