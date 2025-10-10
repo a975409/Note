@@ -30,3 +30,5 @@ https://yucj.gitbooks.io/ecmascript-6/content/docs/module-loader.html
 [[在瀏覽器中使用JavaScript module(模組)]]
 [[存取 HTMLElement的資料集屬性(data-)]]
 [[自定義元素( Web Component )]]
+[[ES6模組（module）]]
+[[嚴格模式]]
