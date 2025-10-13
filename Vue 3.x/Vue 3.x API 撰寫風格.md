@@ -62,27 +62,25 @@
 
   const app = createApp({
 	setup() {
-	  // 變數，需設定為響應式狀態
-	  const count = ref(0);
+		// 變數，需設定為響應式狀態
+		const count = ref(0);
+		
+		// 定義函數
+		function increment() {
+			count.value++;
+		}
 
-	  // 定義函數
-	  function increment() {
-        count.value++;
-      }
-
-	  //開放外部存取的變數和函數
-	  return {
-		count,
-		increment,
-	  };
+		// 生命週期鉤子
+		onMounted() {
+		  console.log(`The initial count is ${count.value}.`);
+		},	
+	
+		//開放外部存取的變數和函數
+		return {
+			count,
+			increment,
+		};
 	},
-
-	// 生命週期鉤子
-	mounted() {
-	  //可透過this存取變數和函數
-	  console.log(`The initial count is ${this.count.value}.`);
-	},
-  });
   
   app.mount("#app");
 </script>

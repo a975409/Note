@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -168,9 +169,14 @@
   },
   "active": "3852cd46bfe2c4e9",
   "lastOpenFiles": [
-    "Vue 3.x/Vue 3.x API 撰寫風格.md",
-    "Vue 3.x/Vue 3.x.md",
     "Vue 3.x/引用 Vue 套件的方式.md",
+    "Vue 3.x/Vue 3.x.md",
+    "Vue 3.x/Vue 3.x API 撰寫風格.md",
+    "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
+    "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/檔案上傳.md",
+    "ASP.NET Core/建立上傳檔案的API.md",
     "JavaScript/ES6模組（module）- import.md",
     "JavaScript/ES6模組（module）- 瀏覽器載入.md",
     "JavaScript/使用模板(template)和插槽(Slot).md",
@@ -190,11 +196,6 @@
     "JavaScript/存取 HTMLElement的資料集屬性(data-).md",
     "ASP.NET Core/部分類別(2).md",
     "JavaScript/Loading遮罩套件.md",
-    "區塊盒子(block boxes).md",
-    "Entity Framework (EF) Core/Shadow(陰影)屬性.md",
-    "Web Components.md",
-    "ASP.NET Core/建立下載檔案的API.md",
-    "JavaScript/AJAX - XMLHttpRequest.md",
     "未命名.base",
     "Entity Framework (EF) Core",
     "新增 文字文件.txt",
