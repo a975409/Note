@@ -71,16 +71,17 @@
 		}
 
 		// 生命週期鉤子
-		onMounted() {
-		  console.log(`The initial count is ${count.value}.`);
-		},	
+		onMounted(()=>{
+			console.log(`The initial count is ${count.value}.`);
+		});
 	
 		//開放外部存取的變數和函數
 		return {
 			count,
 			increment,
 		};
-	},
+	}
+  });
   
   app.mount("#app");
 </script>

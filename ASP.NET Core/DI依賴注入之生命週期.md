@@ -21,7 +21,35 @@ public void ConfigureServices(IServiceCollection services)
 [筆記 - 不可不知的 ASP.NET Core 依賴注入-黑暗執行緒 (darkthread.net)](https://blog.darkthread.net/blog/aspnet-core-di-notes/)
 
 > AddDbContext() 會註冊成 Scoped 生命週期(每個 Request 過程共用同一個 Instance)
+> 在 ASP.NET Core 中，`AddHostedService<T>()` 會將背景服務註冊為 **Singleton（單例）**。
 
 ```C#
 public void ConfigureServices(IServiceCollection services) { services.AddDbContext<BloggingContext>(options => options.UseSqlite("Data Source=blog.db")); }
 ```
+
+`Singleton 服務`要如何引用 `Scoped服務`：
+
+透過 `IServiceProvider.CreateScope()` 在 Singleton 內部建立一個新的 scope，再從 scope 解析 Scoped 服務。
+```C#
+public class MySingletonService
+{
+    private readonly IServiceProvider _serviceProvider;
+
+    public MySingletonService(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+    }
+
+    public void DoWork()
+    {
+        using (var scope = _serviceProvider.CreateScope())
+        {
+            var scopedService = scope.ServiceProvider.GetRequiredService<MyScopedService>();
+            // 使用 scopedService
+        }
+    }
+}
+```
+
+> - `MyScopedService` 所依賴的其他 Scoped 服務也會在同一個 scope 範圍內被解析並共享同一個實例。
+> 只要 `scope` 被正確 dispose（例如用 `using` 包裹 `scope`），scope 會負責釋放所有 Scoped 服務。
