@@ -1,4 +1,9 @@
 
+`dotnet ef` 可以安裝為全域或本機工具。 大部分開發人員偏好使用下列命令安裝 `dotnet ef` 為全域工具：
+```C#
+dotnet tool install --global dotnet-ef
+```
+
 [[資料庫存取環境建置]]
 [[DBFirst]]
 [[CodeFirst]]

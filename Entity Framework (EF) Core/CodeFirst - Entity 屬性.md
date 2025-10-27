@@ -4,6 +4,7 @@
 [設定索引器屬性](https://learn.microsoft.com/zh-tw/ef/core/modeling/shadow-properties#configuring-indexer-properties)
 [屬性包實體類型](https://learn.microsoft.com/zh-tw/ef/core/modeling/shadow-properties#property-bag-entity-types)
 [欄位自動跳號設定](https://learn.microsoft.com/zh-tw/ef/core/modeling/sequences)
+[SQL Server 資料類型對應 - ADO.NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-data-type-mappings)
 
 [[CodeFirst - Entity 主鍵(PrimaryKey)設定]]
 [[CodeFirst - 屬性值 DatabaseGenerated 設定]]

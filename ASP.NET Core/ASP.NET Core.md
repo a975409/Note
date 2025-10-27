@@ -44,7 +44,7 @@
 [[FileProviders]]
 [[gRPC]]
 [[PagedList分頁套件]]
-[[使用 HttpClient 類別提出 HTTP 要求]]
+[[使用 HttpClient 類別發出 HTTP 要求]]
 [[ASP.NET Core/檔案上傳]]
 [[建立下載檔案的API]]
 

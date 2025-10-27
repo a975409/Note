@@ -1,4 +1,6 @@
-1. 下載NuGet套件 AutoMapper.Extensions.Microsoft.DependencyInjection (for core版本)
+1. 下載NuGet套件 
+	AutoMapper
+	AutoMapper.Extensions.Microsoft.DependencyInjection (該套件已停止維護，直接用AutoMapper)
     
 2. 在Startup.cs裡面新增以下指令(.net 5.0)：
     ```csharp
@@ -8,10 +10,10 @@
     }
     ```
 
-.net 6.0以上要這樣設定：
+.net 6.0以上要這樣設定(僅安裝最新版的AutoMapper套件)：
 ```C#
 //找到所有profile
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(cfg => { }, AppDomain.CurrentDomain.GetAssemblies());
 ```
     
 3. 建立Profiles資料夾
