@@ -58,7 +58,7 @@
 </div>
 
 <script type="module">
-  import { createApp, ref } from 'vue'
+  import { createApp, ref,onMounted } from 'vue'
 
   const app = createApp({
 	setup() {

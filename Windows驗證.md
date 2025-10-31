@@ -40,51 +40,46 @@ app.Run();
 
 Program.cs 調整如下：
 ```C#
-var builder = WebApplication.CreateBuilder(args);
+//驗證方案名稱
+string cookiesOrNegotiate = "WindowsOrCookie";
 
-// 加入 Cookie 驗證
+//設定預設要採用的驗證方案，以及新增cookie驗證 和 Windows驗證
 builder.Services.AddAuthentication(options =>
 {
-    // 預設使用 Policy Scheme 來決定驗證方案
-    options.DefaultScheme = "WindowsOrCookie";
-    options.DefaultChallengeScheme = "WindowsOrCookie";
-})
-.AddCookie("Cookies", options =>
+    options.DefaultScheme = cookiesOrNegotiate;
+    options.DefaultChallengeScheme = cookiesOrNegotiate;
+}).AddCookie(options =>
 {
     options.LoginPath = "/Account/Login"; // Cookie 驗證登入頁面
-})
-.AddNegotiate("Windows"); // Windows 驗證
 
-// Policy Scheme 根據請求決定使用 Windows 或 Cookie
+}).AddNegotiate();
+
+//新增驗證方案並自訂驗證規則
 builder.Services.AddAuthentication()
-    .AddPolicyScheme("WindowsOrCookie", "Windows or Cookie Authentication", options =>
+    .AddPolicyScheme(cookiesOrNegotiate, cookiesOrNegotiate, options =>
     {
+	    //該驗證方案根據 Http Request 決定採用 Windows 或 Cookie驗證
         options.ForwardDefaultSelector = context =>
         {
-            // 這邊判斷條件，例如有 Authorization header 就用 Windows，否則用 Cookie
-            var authHeader = context.Request.Headers["Authorization"].ToString();
-            if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Negotiate"))
+		    //可在此區塊內自訂要採用哪種驗證方案的規則
+        
+            if (context.Request.Cookies.ContainsKey(CookieAuthenticationDefaults.CookiePrefix + CookieAuthenticationDefaults.AuthenticationScheme))
             {
-                return NegotiateDefaults.AuthenticationScheme;
+                return CookieAuthenticationDefaults.AuthenticationScheme;
             }
-            return CookieAuthenticationDefaults.AuthenticationScheme;
+
+            // 這些靜態檔案/資源/Hub → 不要用 Negotiate
+            var path = context.Request.Path;
+            if (path.StartsWithSegments("/lib") ||
+                path.StartsWithSegments("/js") ||
+                path.StartsWithSegments("/.well-known") ||
+                (path.Value?.EndsWith(".map", StringComparison.OrdinalIgnoreCase) ?? false))
+            {
+                return CookieAuthenticationDefaults.AuthenticationScheme;
+            }
+            
+            return NegotiateDefaults.AuthenticationScheme;
         };
     });
-
-builder.Services.AddAuthorization();
-
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
-app.UseStaticFiles();
-app.UseRouting();
-
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapDefaultControllerRoute();
-
-app.Run();
 
 ```

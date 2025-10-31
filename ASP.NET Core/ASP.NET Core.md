@@ -63,6 +63,7 @@
 [ASP.NET 核心內建標籤協助程式](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-9.0)
 [System.Net.Http](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.http?view=net-8.0)
 [HttpRequest 類別](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-8.0)
+[ASP.NET Core 中的區域 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/areas?view=aspnetcore-9.0#add-mvc-area-with-visual-studio)
 
 排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)

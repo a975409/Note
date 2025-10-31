@@ -59,7 +59,7 @@ services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 
 RequestGetXSRFTokenMiddleware.cs 設定在那些路徑下，才能取得XSRF-TOKEN：
 ```C#
-//防止跨網站偽造要求 (XSRF/CSRF) 攻擊，進到功能的Create或Detail才會取得token
+//防止跨網站偽造要求 (XSRF/CSRF) 攻擊，進到HTML頁面才會取得最新token
 //參考網址：https://ithelp.ithome.com.tw/articles/10248847
 public class RequestGetXSRFTokenMiddleware
 {
@@ -73,29 +73,34 @@ public class RequestGetXSRFTokenMiddleware
     }
 
     public async Task InvokeAsync(HttpContext context)
+{
+    context.Response.OnStarting(() =>
     {
-        if (context.Request.RouteValues.TryGetValue("controller", out object controller) && context.Request.RouteValues.TryGetValue("action", out object action))
+        try
         {
-            string controllerName = controller.ToString();
-            string actionName = action.ToString();
-
-            if ((controllerName.Length == 6 && int.TryParse(controllerName.Substring(2, 4), out int temp) && (actionName == "Create" || actionName == "Detail")) ||
-                (controllerName == "Auth" && actionName == "Login" && !AuthHepler.CheckLogin(context)) ||
-                (controllerName == "AC0011" && actionName == "Index") ||
-                (controllerName == "AC0054" && (actionName == "AccountRcvWindowOpenCreate" || actionName == "AccountPayWindowOpenCreate")))
+            if (context.Response.Headers.TryGetValue("Content-Type", out var contentType))
             {
-                var tokens = _antiforgery.GetAndStoreTokens(context);
-                context.Response.Cookies.Append("XSRF-TOKEN", tokens.RequestToken,
-                    new CookieOptions()
+                if (contentType.ToString().Contains("text/html", StringComparison.OrdinalIgnoreCase))
+                {
+                    var tokens = _antiforgery.GetAndStoreTokens(context);
+                    context.Response.Cookies.Append("XSRF-TOKEN", tokens.RequestToken, new CookieOptions
                     {
                         HttpOnly = false,
-                        //MaxAge = TimeSpan.FromMinutes(UserAuthenticationOptions.ExpiresMinute)
+                        //Secure = context.Request.IsHttps
                     });
+                }
             }
         }
+        catch
+        {
+            // 忽略錯誤，避免阻塞 Response
+        }
 
-        await _next(context);
-    }
+        return Task.CompletedTask;
+    });
+
+    await _next(context);
+}
 }
 
 public static class RequestGetXSRFTokenMiddlewareExtensions
