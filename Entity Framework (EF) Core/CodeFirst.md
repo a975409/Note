@@ -9,6 +9,7 @@
 ### [[CodeFirst - 移轉(Migrations)]]
 
 [索引與條件約束](https://learn.microsoft.com/zh-tw/ef/core/modeling/indexes?tabs=data-annotations)
+[[叢級索引與主鍵(PK)分開設定]]
 [[設定屬性值轉換器]]
 
 ### 實際案例

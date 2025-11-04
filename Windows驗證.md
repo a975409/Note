@@ -38,48 +38,59 @@ app.Run();
 
 如果要再加上多重驗證，例如cookie驗證：
 
-Program.cs 調整如下：
+新增一個 WindowsOrCookieScheme.cs：
 ```C#
-//驗證方案名稱
-string cookiesOrNegotiate = "WindowsOrCookie";
-
-//設定預設要採用的驗證方案，以及新增cookie驗證 和 Windows驗證
-builder.Services.AddAuthentication(options =>
+public static class WindowsOrCookieScheme
 {
-    options.DefaultScheme = cookiesOrNegotiate;
-    options.DefaultChallengeScheme = cookiesOrNegotiate;
-}).AddCookie(options =>
-{
-    options.LoginPath = "/Account/Login"; // Cookie 驗證登入頁面
+    public static string CookieAuthKey = CookieAuthenticationDefaults.CookiePrefix + CookieAuthenticationDefaults.AuthenticationScheme;
 
-}).AddNegotiate();
-
-//新增驗證方案並自訂驗證規則
-builder.Services.AddAuthentication()
-    .AddPolicyScheme(cookiesOrNegotiate, cookiesOrNegotiate, options =>
+    /// <summary>
+    /// 新增cookie 和 Windows驗證的混合驗證方案
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddWindowsOrCookieScheme(this IServiceCollection services)
     {
-	    //該驗證方案根據 Http Request 決定採用 Windows 或 Cookie驗證
-        options.ForwardDefaultSelector = context =>
+        services.AddScoped<UsetIdentityService>();
+        services.AddScoped<CookieAndWindowsAuthService>();
+        services.AddHttpContextAccessor();
+
+        //驗證方案名稱
+        string cookiesOrNegotiate = "WindowsOrCookie";
+
+        //設定預設要採用的驗證方案，以及新增cookie驗證 和 Windows驗證
+        services.AddAuthentication(options =>
         {
-		    //可在此區塊內自訂要採用哪種驗證方案的規則
-        
-            if (context.Request.Cookies.ContainsKey(CookieAuthenticationDefaults.CookiePrefix + CookieAuthenticationDefaults.AuthenticationScheme))
-            {
-                return CookieAuthenticationDefaults.AuthenticationScheme;
-            }
+            options.DefaultScheme = cookiesOrNegotiate;
+            options.DefaultChallengeScheme = cookiesOrNegotiate;
+        }).AddCookie(options =>
+        {
+            options.LoginPath = "/Account/Login"; // Cookie 驗證登入頁面
+            options.LogoutPath = "/Account/Login"; // Cookie 驗證登入頁面
+        }).AddNegotiate();
 
-            // 這些靜態檔案/資源/Hub → 不要用 Negotiate
-            var path = context.Request.Path;
-            if (path.StartsWithSegments("/lib") ||
-                path.StartsWithSegments("/js") ||
-                path.StartsWithSegments("/.well-known") ||
-                (path.Value?.EndsWith(".map", StringComparison.OrdinalIgnoreCase) ?? false))
+        //新增驗證方案並自訂驗證規則
+        services.AddAuthentication()
+            .AddPolicyScheme(cookiesOrNegotiate, cookiesOrNegotiate, options =>
             {
-                return CookieAuthenticationDefaults.AuthenticationScheme;
-            }
-            
-            return NegotiateDefaults.AuthenticationScheme;
-        };
-    });
+                //該驗證方案根據 Http Request 決定採用 Windows 或 Cookie驗證
+                options.ForwardDefaultSelector = context =>
+                {
+                    if (context.Request.Cookies.ContainsKey(CookieAuthKey))
+                    {
+                        return CookieAuthenticationDefaults.AuthenticationScheme;
+                    }
 
+                    return NegotiateDefaults.AuthenticationScheme;
+                };
+            });
+
+        services.AddAuthorization(options =>
+        {
+            options.FallbackPolicy = options.DefaultPolicy;
+        });
+
+        return services;
+    }
+}
 ```

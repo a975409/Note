@@ -1,4 +1,4 @@
-> 依慣例，當 Primary Key 為 short、int、long 或 Guid 時預設為新增時自動給值
+> 依慣例，當 Primary Key 為 short、int、long 時預設為新增時自動給值
 
 [欄位自動跳號設定](https://learn.microsoft.com/zh-tw/ef/core/modeling/sequences)
 
@@ -26,7 +26,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 ```
 
 > 適用[[CodeFirst - Entity 主鍵(PrimaryKey)設定]]，指定`GUID`屬性設為主鍵時也會自動產生
->指定 [ValueGeneratedOnAdd](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.entityframeworkcore.metadata.builders.propertybuilder.valuegeneratedonadd) 在 `DateTime` 屬性上將不會有任何作用
+>指定 [ValueGeneratedOnAdd](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.entityframeworkcore.metadata.builders.propertybuilder.valuegeneratedonadd) 在 `Guid`、`DateTime` 屬性上將不會有任何作用
 
 [DatabaseGenerated(DatabaseGeneratedOption.Computed)] 則是新增及更新時自動給值。
  - Data Annotation(資料註解)：
