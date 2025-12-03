@@ -41,7 +41,7 @@
 [[在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更]]
 [[使用AutoMapper一行指令自動匹配DTO欄位資料]]
 [[CICD]]
-[[FileProviders]]
+[[FileProviders 檔案提供者]]
 [[gRPC]]
 [[PagedList分頁套件]]
 [[使用 HttpClient 類別發出 HTTP 要求]]

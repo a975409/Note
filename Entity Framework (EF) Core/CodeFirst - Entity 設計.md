@@ -73,7 +73,7 @@ public class AuditEntry
 }
 ```
 
-#### 排除`Entity`的設定方式
+#### 從資料庫對應中排除`Entity`的設定方式
 1. Data Annotation(資料註解)：
 ```C#
 [NotMapped]//=>加上這段即可

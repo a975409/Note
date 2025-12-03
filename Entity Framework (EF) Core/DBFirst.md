@@ -20,7 +20,7 @@ dotnet-ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated
 
 第二種：
 ```C#
-Scaffold-DbContext "Server=伺服器位置;Database=資料庫;Trusted_Connection=True;User ID=帳號;Password=密碼" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force -context 資料庫名稱
+Scaffold-DbContext "Server=伺服器位置;Database=資料庫;Trusted_Connection=True;User ID=帳號;Password=密碼" Microsoft.EntityFrameworkCore.SqlServer --context-dir Data --output-dir Models --context 資料庫名稱
 
 ```
 

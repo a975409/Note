@@ -12,7 +12,7 @@
 [[Shadow(陰影)屬性]]
 [[支援欄位]]
 
-#### 排除屬性的設定方式
+#### 從資料庫對應中排除屬性的設定方式
 1. Data Annotation(資料註解)：
 ```C#
 public class Blog
