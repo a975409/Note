@@ -47,7 +47,7 @@
 [[使用 HttpClient 類別發出 HTTP 要求]]
 [[ASP.NET Core/檔案上傳]]
 [[建立下載檔案的API]]
-
+[[在controller的action內，如何呼叫cache取得資料]]
 #### 安全性
 [[跨網站指令碼(XSS)]]
 [[ASP.NET Core/跨網站偽造要求 (XSRF or CSRF)]]
@@ -66,7 +66,7 @@
 [ASP.NET Core 中的區域 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/areas?view=aspnetcore-9.0#add-mvc-area-with-visual-studio)
 [在 .NET 和 ASP.NET Core 中的日誌紀錄 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/logging/?view=aspnetcore-9.0)
 
-排程
+#### 排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)
 [在 ASP.NET Core 網站執行定時排程-黑暗執行緒](https://blog.darkthread.net/blog/aspnet-core-background-task/)
 [背景服務執行計時工作 - 使用 BackgroundService 與 PeriodicTimer](https://www.dotblogs.com.tw/mrkt/2024/10/12/094028)

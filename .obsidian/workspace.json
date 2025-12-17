@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "aac24135bbd9fde3",
+        "id": "84cd53b67b86803f",
         "type": "tabs",
         "children": [
           {
-            "id": "9fd46f15ffdc8be1",
+            "id": "5517b767630d2459",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows驗證.md",
+                "file": "ASP.NET Core/ASP.NET Core.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows驗證"
+              "title": "ASP.NET Core"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows驗證.md",
+                "file": "ASP.NET Core/ASP.NET Core.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Windows驗證 的反向連結"
+              "title": "ASP.NET Core 的反向連結"
             }
           },
           {
@@ -166,34 +166,34 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "9fd46f15ffdc8be1",
+  "active": "5517b767630d2459",
   "lastOpenFiles": [
-    "ASP.NET Core/驗證與授權.md",
-    "JavaScript/非同步 Promise.md",
-    "JavaScript/JavaScript.md",
-    "JavaScript/object物件.md",
-    "ASP.NET Core/自訂Session驗證.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/ViewData、ViewBag、TempData.md",
-    "ASP.NET Core/Logging 日誌記錄.md",
+    "ASP.NET Core/在controller的action內，如何呼叫cache取得資料.md",
+    "ASP.NET Core/在開發模式下，直接更改前端程式碼儲存後，按下重新整理就可以套用變更.md",
+    "ASP.NET Core/在Action或View上取得Route的資料.md",
+    "ASP.NET Core/在Controller內使用DI有以下三種作法.md",
+    "ASP.NET Core/自訂例外事件處理 Exception Handler.md",
+    "ASP.NET Core/使用 HttpClient 類別發出 HTTP 要求.md",
     "JavaScript/自定義元素( Web Component ).md",
     "JavaScript/使用模板(template)和插槽(Slot).md",
-    "JavaScript/存取 HTMLElement的資料集屬性(data-).md",
+    "JavaScript/使用影子 DOM.md",
+    "ASP.NET Core/伺服器端(ASP.NET Core)與用戶端(WinForm)互相通訊.md",
+    "ASP.NET Core/SignalR.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/使用User Secret安全存放開發應用程式密鑰.md",
+    "ASP.NET Core/例外事件處理.md",
+    "ASP.NET Core/自訂Middleware處理例外狀況.md",
+    "ASP.NET Core/跨網站指令碼(XSS).md",
+    "ASP.NET Core/使用HtmlSanitizer防止XSS攻击.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "JavaScript/非同步 Promise.md",
     "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
     "Entity Framework (EF) Core/CodeFirst.md",
-    "Entity Framework (EF) Core/CodeFirst(二)(推薦).md",
     "Entity Framework (EF) Core/CodeFirst(一).md",
-    "ASP.NET Core/新增初始資料.md",
-    "Entity Framework (EF) Core/CodeFirst - 移轉(Migrations).md",
-    "Entity Framework (EF) Core/CodeFirst - 自動產生日期時間值.md",
-    "ASP.NET Core/Cookie驗證(適用MVC).md",
-    "ASP.NET Core/選項.md",
-    "ASP.NET Core/組態.md",
-    "ASP.NET Core/Web API.md",
-    "ASP.NET Core/Web API 專案路由設定.md",
-    "ASP.NET Core/Model Validation 模型驗證.md",
-    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
-    "Entity Framework (EF) Core/DBFirst.md",
+    "Windows驗證.md",
+    "JavaScript/JavaScript.md",
+    "JavaScript/object物件.md",
     "Vue 3.x",
     "未命名.base",
     "Entity Framework (EF) Core",
