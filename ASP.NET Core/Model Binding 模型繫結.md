@@ -4,9 +4,10 @@
 
 
 ![[Pasted image 20241103161208.png]]
-
+[4-4.ASP.NET Core Web API 入門教學 - From之常用來源標籤功能用法介紹 | 凱哥寫程式's Blog | TalllKai](https://blog.talllkai.com/ASPNETCore/2021/04/28/FromWhere)
 [[FromBody]]
 [[FromFrom]]
+[[FromBody vs FromFrom]]
 #### JsonIgnore屬性：
 >忽略序列化屬性，主要用在反向導覽屬性上，用來解決`JSON`序列化循環參考的問題
 ```C#

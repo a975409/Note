@@ -26,7 +26,7 @@ foo();
 import { foo } from 'my_module';
 ```
 
-5. 假設要載入模組內指定為`export`的參數，則可使用`*`符號，並且要使用`as`關鍵字重新命名：
+5. 假設要載入模組內所有指定為`export`的參數，則可使用`*`符號，並且要使用`as`關鍵字重新命名：
 ``` javascript
 // circle.js模組
 export function area(radius) {

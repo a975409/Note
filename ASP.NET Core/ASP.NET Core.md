@@ -20,7 +20,7 @@
 [[URL重寫 與 URL重新導向]]
 [[Model Validation 模型驗證]]
 [[Model Binding 模型繫結]]
-[[FromBody vs FromFrom]]
+
 [[Filters 篩選條件]]
 [[例外事件處理]]
 [[Logging 日誌記錄]]
