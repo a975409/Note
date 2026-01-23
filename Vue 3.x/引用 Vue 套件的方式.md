@@ -5,7 +5,7 @@
 
 ### 使用 ES 模塊構建版本
 
-先使用[導入映射表 (Import Maps)](https://caniuse.com/import-maps) 告訴瀏覽器如何導入`vue`：
+使用[導入映射表 (Import Maps)](https://caniuse.com/import-maps) 告訴瀏覽器如何導入`vue`：
 
 ```html
 <script type="importmap"> 
@@ -49,7 +49,8 @@
 </script>
 ```
 
- `ES 模塊構建版本` vs `全局構建版本`引用`vue`方式：
+### 使用全局構建版本：
+
 ```html
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 

@@ -24,7 +24,7 @@ public WebAPIService(IHttpClientFactory httpClientFactory)
 ```
 
 傳遞資料的方式：
-1. HttpPost，資料格式：FormData(multipart/form-data)
+1. HttpPost 上傳檔案，資料格式：FormData(multipart/form-data)
 ```C#
 private async Task<HttpResponseMessage> WebAPIAsync(string url, Dictionary<string, string> formValues, IEnumerable<IFormFile> files = null)
 {
@@ -83,7 +83,7 @@ public async Task<FileAPIData> CallWebAPIReturnFileAPIDataAsync(Dictionary<strin
 }
 ```
 
-2. HttpGet
+2. HttpGet 下載PDF文件
 ```C#
 public async Task<IActionResult> ExportPDF(string url)
 {
