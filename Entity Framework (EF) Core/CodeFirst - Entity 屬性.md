@@ -13,6 +13,7 @@
 [[支援欄位]]
 
 #### 從資料庫對應中排除屬性的設定方式
+[資料註解特性 NotMapped](https://blog.csdn.net/haojy826/article/details/109217068)
 1. Data Annotation(資料註解)：
 ```C#
 public class Blog

@@ -29,3 +29,20 @@
 [[自定義元素( Web Component )]]
 [[ES6模組（module）]]
 [[嚴格模式]]
+
+e.preventDefault()：觸發事件時，停止觸發物件的預設操作，常用在"提交表單"的事件，例如：
+```javascript
+<form className="create-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="輸入待辦事項"
+        value={content}
+        onChange={(e) => {
+          setContent(e.target.value);
+        }}
+      ></input>
+
+      <button type="submit">加入</button>
+
+    </form>
+```
