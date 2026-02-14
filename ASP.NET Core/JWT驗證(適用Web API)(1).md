@@ -7,8 +7,8 @@ JWT原理說明：[[JWT(JSON Web Token) — 原理介紹]]
 ```JSON
 {
   "JwtSettings": {
-    "Issuer": "JwtAuthDemo",
-    "Audience": "my",
+    "Issuer": "JwtAuthDemo",//JWT簽發者
+    "Audience": "my",//接收JWT的一方
     "SignKey": "01234567890123456789012345678901"
   }
 }
@@ -72,7 +72,7 @@ public class JwtHelpers
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Issuer = issuer,
-            //Audience = audience, // Sometimes you don't have to define Audience.
+            Audience = audience, // Sometimes you don't have to define Audience.
             //NotBefore = DateTime.Now, // Default is DateTime.Now
             //IssuedAt = DateTime.Now, // Default is DateTime.Now
             Subject = userClaimsIdentity,

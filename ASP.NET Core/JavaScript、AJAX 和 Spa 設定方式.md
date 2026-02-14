@@ -1,3 +1,9 @@
+# 共同設定方式
+Program.cs
+```C#
+//設定request header存放的token名稱
+services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+```
 
 # 第一種設定方式(推薦)
 
@@ -50,12 +56,6 @@
 
 > 前端呼叫後端API的套件axios，他有預設cookie='XSRF-TOKEN'、Request Header='X-XSRF-TOKEN'，所以不用在前端另外設定cookie和Header
 > 參考網址：https://israynotarray.com/nodejs/20210527/2874571028/
-
-Program.cs
-```C#
-//設定request header存放的token名稱
-services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
-```
 
 RequestGetXSRFTokenMiddleware.cs 設定在那些路徑下，才能取得XSRF-TOKEN：
 ```C#

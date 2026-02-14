@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "148f80bbb6a08d08",
+        "id": "861bcce0bb13261c",
         "type": "tabs",
         "children": [
           {
-            "id": "039b95da7ddcf03d",
+            "id": "2612859ef30edc63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vue 3.x/Vue 3.x.md",
+                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vue 3.x"
+              "title": "JWT驗證(適用Web API)(1)"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 241.5
   },
   "right": {
     "id": "47d7d8c82bb20ecf",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vue 3.x/Vue 3.x.md",
+                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Vue 3.x 的反向連結"
+              "title": "JWT驗證(適用Web API)(1) 的反向連結"
             }
           },
           {
@@ -166,39 +166,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "039b95da7ddcf03d",
+  "active": "2612859ef30edc63",
   "lastOpenFiles": [
-    "Vue 3.x/Vue 3.x API 撰寫風格.md",
-    "Vue 3.x/Vue 3.x.md",
-    "Vue 3.x/引用 Vue 套件的方式.md",
-    "JavaScript/存取 HTMLElement的資料集屬性(data-).md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/組態.md",
-    "ASP.NET Core/DI依賴注入之生命週期.md",
-    "ASP.NET Core/MVC(ASP.NET Core).md",
-    "ASP.NET Core/在Controller內使用DI有以下三種作法.md",
-    "ASP.NET Core/Model Validation 模型驗證.md",
-    "ASP.NET Core/使用 HttpClient 類別發出 HTTP 要求.md",
-    "ASP.NET Core/Filters 篩選條件.md",
-    "Dapper/Dapper.md",
-    "Dapper/防止SQL Injection的參數化設定方式.md",
-    "主控台應用程式（Console App）/使用IConfiguration 讀取參數設定.md",
-    "ASP.NET Core/Windows驗證.md",
-    "Windows And Cookie 混合驗證.md",
-    "使用DI注入.md",
-    "主控台應用程式（Console App）",
-    "CSharp/CSharp的using 與 try catch的關係.md",
-    "CSharp/CSharp.md",
-    "ASP.NET Core/Middleware 中介軟體.md",
-    "ASP.NET Core/Use.md",
-    "ASP.NET Core/引用DI注入服務.md",
+    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
+    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+    "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Authorize 和 AllowAnonymous 設定方式.md",
+    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
+    "JavaScript/AJAX - XMLHttpRequest.md",
     "ASP.NET Core/建立下載檔案的API.md",
-    "ASP.NET Core/路由.md",
-    "ASP.NET Core/在Action或View上取得Route的資料.md",
-    "Untitled.png",
-    "Untitled 3.png",
-    "Untitled 4.png",
-    "Untitled 5.png",
+    "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
+    "ASP.NET Core/建立上傳檔案的API.md",
+    "ASP.NET Core/檔案上傳.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "ASP.NET Core/(Cookie 驗證)ValidatePrincipal 事件.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
+    "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
+    "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
+    "Entity Framework (EF) Core/叢級索引與主鍵(PK)分開設定.md",
+    "Entity Framework (EF) Core/CodeFirst.md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 設計.md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
+    "Entity Framework (EF) Core/CodeFirst - Entity 主鍵(PrimaryKey)設定.md",
+    "ASP.NET Core/Web API.md",
+    "ASP.NET Core/Web API 專案路由設定.md",
+    "Dapper/防止SQL Injection的參數化設定方式.md",
+    "ASP.NET Core/自訂Session驗證.md",
+    "主控台應用程式（Console App）",
     "未命名.base",
     "Vue 3.x",
     "Entity Framework (EF) Core",
@@ -213,7 +209,11 @@
     "Pasted image 20250915153945.png",
     "Pasted image 20250912111226.png",
     "CSharp",
+    "Pasted image 20250904111432.png",
     "設計模式",
+    "Pasted image 20250629220134.png",
+    "Pasted image 20250524102145.png",
+    "Pasted image 20250524102056.png",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

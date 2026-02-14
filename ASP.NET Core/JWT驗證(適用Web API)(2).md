@@ -6,8 +6,8 @@
 ```json
 "JWT": {
     "KEY": "ASDZXASDHAUISDHASDOHAHSDUAHDS",
-    "Issuer": "todo.com",
-    "Audience": "my"
+    "Issuer": "todo.com", //JWT簽發者
+    "Audience": "my" //接收JWT的一方
 }
 ```
 

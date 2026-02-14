@@ -113,6 +113,7 @@ var RegisterApp = new Vue({
 			//https://www.dotblogs.com.tw/kinanson/2017/06/07/092521
 			this.form.picfile = e.target.files[0];
 
+			//預覽顯示要上傳的檔案(通常是圖片)
 			let objUrl = URL.createObjectURL(e.target.files[0]);
 			document.getElementById('userAvatarImg').src = objUrl;
 		}
