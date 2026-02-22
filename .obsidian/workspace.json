@@ -8,20 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2612859ef30edc63",
+            "id": "04a2688c49456d4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+                "file": "React/React Hook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JWT驗證(適用Web API)(1)"
+              "title": "React Hook"
+            }
+          },
+          {
+            "id": "73d91c71de11673c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React/useEffect.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "useEffect"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+                "file": "React/useEffect.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +119,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "JWT驗證(適用Web API)(1) 的反向連結"
+              "title": "useEffect 的反向連結"
             }
           },
           {
@@ -166,34 +181,35 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "2612859ef30edc63",
+  "active": "73d91c71de11673c",
   "lastOpenFiles": [
-    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
-    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
-    "ASP.NET Core/JWT(JSON Web Token) — 原理介紹.md",
-    "ASP.NET Core/驗證與授權.md",
-    "ASP.NET Core/Authorize 和 AllowAnonymous 設定方式.md",
-    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
-    "JavaScript/AJAX - XMLHttpRequest.md",
-    "ASP.NET Core/建立下載檔案的API.md",
-    "JavaScript/在瀏覽器中使用JavaScript module(模組).md",
-    "ASP.NET Core/建立上傳檔案的API.md",
-    "ASP.NET Core/檔案上傳.md",
-    "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/Cookie驗證(適用MVC).md",
-    "ASP.NET Core/(Cookie 驗證)ValidatePrincipal 事件.md",
-    "ASP.NET Core/MVC(ASP.NET Core).md",
-    "ASP.NET Core/跨網站偽造要求 (XSRF or CSRF).md",
-    "ASP.NET Core/JavaScript、AJAX 和 Spa 設定方式.md",
+    "React/useRef.md",
+    "React/useEffect.md",
+    "React/React Hook.md",
+    "React/React.md",
+    "React/useState.md",
+    "React/useState 更新陣列.md",
+    "React/useState 更新object.md",
+    "React/useContext.md",
+    "React/useReducer.md",
+    "JavaScript/JavaScript.md",
+    "CSS/CSS.md",
+    "React",
+    "JavaScript/自定義元素( Web Component ).md",
+    "JavaScript/使用模板(template)和插槽(Slot).md",
     "Entity Framework (EF) Core/叢級索引與主鍵(PK)分開設定.md",
     "Entity Framework (EF) Core/CodeFirst.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 設計.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
-    "Entity Framework (EF) Core/CodeFirst - Entity 主鍵(PrimaryKey)設定.md",
-    "ASP.NET Core/Web API.md",
-    "ASP.NET Core/Web API 專案路由設定.md",
-    "Dapper/防止SQL Injection的參數化設定方式.md",
-    "ASP.NET Core/自訂Session驗證.md",
+    "Entity Framework (EF) Core/Entity Framework (EF) Core.md",
+    "ASP.NET Core/ASP.NET Core.md",
+    "ASP.NET Core/驗證與授權.md",
+    "ASP.NET Core/Cookie驗證(適用MVC).md",
+    "ASP.NET Core/cookie 和 session.md",
+    "ASP.NET Core/Middleware 中介軟體.md",
+    "ASP.NET Core/Middleware 3種定義格式.md",
+    "ASP.NET Core/Map.md",
+    "ASP.NET Core/Run.md",
+    "ASP.NET Core/Use.md",
+    "ASP.NET Core/Model Binding 模型繫結.md",
     "主控台應用程式（Console App）",
     "未命名.base",
     "Vue 3.x",
@@ -210,7 +226,6 @@
     "Pasted image 20250912111226.png",
     "CSharp",
     "Pasted image 20250904111432.png",
-    "設計模式",
     "Pasted image 20250629220134.png",
     "Pasted image 20250524102145.png",
     "Pasted image 20250524102056.png",

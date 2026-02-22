@@ -4,10 +4,19 @@
 [1.新增cookie驗證](https://learn.microsoft.com/zh-tw/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0#add-cookie-authentication)
 可在 [AddCookie](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.extensions.dependencyinjection.cookieextensions.addcookie) 方法中設定 [CookieAuthenticationOptions](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions)：
 ```C#
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => { 
-options.ExpireTimeSpan = TimeSpan.FromMinutes(20); 
-options.SlidingExpiration = true; 
-options.AccessDeniedPath = "/Forbidden/"; });
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => 
+{ 
+	options.LoginPath = "/Account/Login"; // Cookie 驗證登入頁面
+	options.LogoutPath = "/Account/Login"; // Cookie 驗證登入頁面
+	options.AccessDeniedPath = "/Account/Login";
+	options.EventsType = typeof(CustomCookieAuthenticationEvents);
+	
+	//是否啟用滑動過期自動延長期限
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+	
+	//是否啟用滑動過期（使用者活動時自動延長過期時間），如果設為true，則AuthenticationProperties.AllowRefresh也要設為true
+	options.SlidingExpiration = true;
+});
 ```
 
 [2.建立cookie驗證(登入)](https://learn.microsoft.com/zh-tw/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0#create-an-authentication-cookie)
@@ -22,19 +31,20 @@ AuthenticationProperties：
 var authProperties = new AuthenticationProperties
 {
     //取得或設定驗證票證的簽發時間。
-    IssuedUtc = DateTime.Now.ToLocalTime(),
-
-    // 是否允許 Cookie 被刷新（延長有效期）
-    //AllowRefresh = <bool>,
-
-    // 是否持久化 Cookie，設 true 讓使用者關閉瀏覽器後仍保持登入
-    IsPersistent = true,
-
-    //Cookie 的過期時間，IsPersistent = true的狀況下才需要設定
-    ExpiresUtc = DateTime.Now.ToLocalTime().AddHours(8),
-
-    // 登入後要導向的頁面，可視需求設定
-    //RedirectUri = <string>
+	//IssuedUtc = DateTime.Now.ToLocalTime(),
+	
+	// 是否允許 Cookie 被刷新（延長有效期），如果設為true，則CookieAuthenticationOptions.SlidingExpiration也要設為true
+	AllowRefresh = true,
+	
+	// 是否持久化 Cookie，設 true 讓使用者關閉瀏覽器後仍保持登入
+	IsPersistent = true,
+	
+	//Cookie 的過期時間，IsPersistent = true的狀況下才需要設定
+	//可覆蓋CookieAuthenticationOptions.ExpireTimeSpan的設定
+	//ExpiresUtc = DateTime.Now.ToLocalTime().AddSeconds(5),
+	
+	// 登入後要導向的頁面，可視需求設定
+	//RedirectUri = <string>
 };
 ```
 
