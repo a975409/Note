@@ -9,8 +9,14 @@
 | 可变 —— 你可以在渲染过程之外修改和更新 `current` 的值。                  | “不可变” —— 你必须使用 state 设置函数来修改 state 变量，从而排队重新渲染。                                               |
 | 你不应在渲染期间读取（或写入） `current` 值。                         | 你可以随时读取 state。但是，每次渲染都有自己不变的 state [快照](https://zh-hans.react.dev/learn/state-as-a-snapshot)。 |
 
+| useMemo | useCallback |
+| ------- | ----------- |
+| 回傳變數值   | 回傳function  |
+
 [[useState]]
 [[useReducer]]
 [[useContext]]
 [[useRef]]
 [[useEffect]]
+[[useMemo]]
+[[useCallback]]
