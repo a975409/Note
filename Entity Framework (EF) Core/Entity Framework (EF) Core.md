@@ -17,6 +17,7 @@ dotnet tool install --global dotnet-ef
 [積極式載入](https://learn.microsoft.com/zh-tw/ef/core/querying/related-data/eager#eager-loading)
 [追蹤與 No-Tracking 查詢](https://learn.microsoft.com/zh-tw/ef/core/querying/tracking)
 [認識 Entity Framework Core 載入關聯資料的三種方法 | The Will Will Web](https://blog.miniasp.com/post/2022/04/21/Loading-Related-Data-in-EF-Core)
+[[不預先載入資料，直接指定PK值，並指定部分欄位更新資料]]
 
 AddDbContext() 會註冊成 Scoped 生命週期(每個 Request 過程共用同一個 Instance)：
 ```C#
