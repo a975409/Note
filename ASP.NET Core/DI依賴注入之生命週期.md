@@ -53,3 +53,29 @@ public class MySingletonService
 
 > - `MyScopedService` 所依賴的其他 Scoped 服務也會在同一個 scope 範圍內被解析並共享同一個實例。
 > 只要 `scope` 被正確 dispose（例如用 `using` 包裹 `scope`），scope 會負責釋放所有 Scoped 服務。
+
+假設建構函數有輸入參數，例如：
+```C#
+public class UserService
+{
+    private readonly DataBaseHandler dbHandler;
+
+    public UserService(string dbPath) 
+    {
+        dbHandler = new DataBaseHandler(dbPath);
+    }
+}
+```
+
+那註冊的方式是：
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+    string dbPath = "your_database_path_here"; // 設定資料庫路徑
+    
+    //以下任選其一
+    services.AddSingleton<UserService>(new UserService(dbPath));
+    services.AddScoped<UserService>(provider => new UserService(dbPath));
+    services.AddTransient<UserService>(provider => new UserService(dbPath));
+}
+```
