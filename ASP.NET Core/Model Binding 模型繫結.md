@@ -27,3 +27,6 @@ public partial class User
     public virtual Role Role { get; set; }
 }
 ```
+
+>[JsonIgnore] 適用於資料來源為[FromBody]
+>[BindNever] 適用於資料來源為[FromFrom]

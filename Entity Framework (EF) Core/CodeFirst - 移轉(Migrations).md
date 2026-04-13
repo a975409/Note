@@ -56,6 +56,27 @@ dotnet ef migrations list --context BlogContext
 dotnet ef migrations remove --context BlogContext
 ```
 
+## 假設從git取得新的版本，然後有新的遷移紀錄時
+```markdown
+git pull
+    ↓
+確認有新的 Migration 檔案（Migrations 資料夾）
+    ↓
+執行 dotnet ef database update
+    ↓
+✅ 本機資料庫自動套用新的變更
+```
+
+所以只要執行`更新資料庫`的指令，就會將新的遷移檔案更新到資料庫內：
+```.NET CLI
+dotnet ef database update
+```
+
+EF Core 會自動：
+1. 讀取 `__EFMigrationsHistory`，知道本機目前套用到哪一個版本
+2. 找出**尚未套用**的新 Migration
+3. **依序執行**所有差異的 Migration
+
 ## 重設所有遷移
 1. 備份資料庫(建議)。
 2. 在您的資料庫中，從移轉歷程記錄數據表中刪除所有數據列（例如 SQL Server 上的 `DELETE FROM [__EFMigrationsHistory]`）。
