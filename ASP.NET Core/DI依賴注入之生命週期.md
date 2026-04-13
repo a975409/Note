@@ -79,3 +79,18 @@ public void ConfigureServices(IServiceCollection services)
     services.AddTransient<UserService>(provider => new UserService(dbPath));
 }
 ```
+
+如何一次性註冊所有的Service：
+```C#
+public static void AddAllServices(this IServiceCollection services, Assembly assembly)
+ {
+	 //t.Name 為 class名稱
+     var serviceTypes = assembly.GetTypes()
+         .Where(t => t.IsClass && !t.IsAbstract && t.Name.EndsWith("Service"));
+
+     foreach (var type in serviceTypes)
+     {
+         services.AddScoped(type); 
+     }
+}
+```

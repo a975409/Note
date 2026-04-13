@@ -242,6 +242,10 @@ public class Customer
 }
 ```
 
+在 .NET 6 以後，當專案啟用了 `<Nullable>enable</Nullable>` 時：
+- **非可空的 `string`（即 `string` 而非 `string?`）** 會被視為「必填欄位」，模型驗證器會自動加上 **`[Required]`** 的隱式驗證規則。
+- 雖然您設定了 `RepairOperator = ""`，但空字串 `""` 在 `[Required]` 驗證下是**不合法的**，因為 `[Required]` 預設不接受空字串。
+
 #### 設定該屬性為必填
 1. Data Annotation(資料註解)：
 ```C#
