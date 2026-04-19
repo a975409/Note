@@ -58,7 +58,7 @@ export default function ContactList({
 
 ## 透過`children`取得子組件
 
-父組件(TaskProvider.jsx)：
+父組件(TaskProvider.jsx)，請忽略context：
 ```jsx
 import { DispatchContext, TasksContext } from "./TaskContext";
 
@@ -75,7 +75,7 @@ function TaskProvider({ children }) {
 export default TaskProvider;
 ```
 
-子組件：
+TaskProvider 帶入子組件：
 ```jsx
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
