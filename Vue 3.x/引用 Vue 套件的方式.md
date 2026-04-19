@@ -6,7 +6,6 @@
 ### 使用 ES 模塊構建版本
 
 使用[導入映射表 (Import Maps)](https://caniuse.com/import-maps) 告訴瀏覽器如何導入`vue`：
-
 ```html
 <script type="importmap"> 
 { "imports": { "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js" } } 
@@ -48,6 +47,8 @@
   app.mount("#app");
 </script>
 ```
+
+> <script type="importmap"></script>  這段不能放在其他<script></script>標籤的下方，必須要為最先出現的第一段
 
 ### 使用全局構建版本：
 

@@ -12,15 +12,18 @@
 [圖片懶加載Lazy Loading範例應用](https://ithelp.ithome.com.tw/articles/10332085)
 
 個人筆記：
+[[物件 or 陣列的解構賦值]]
+[[展開語法（spread syntax）]]
+[[其餘語法（rest syntax）]]
 [[function]]
 [[object物件]]
+[[非同步 Promise]]
 [[(ES6)Class繼承]]
 [[原型繼承]]
 [[輕鬆理解JS 原型、原型鏈]]
 [[this 是指當下的執行者是誰]]
 [[window 瀏覽器操作]]
 [[Document DOM操作]]
-[[非同步 Promise]]
 [[AJAX - XMLHttpRequest]]
 [[AJAX - XMLHttpRequest 事件]]
 [[AJAX - XMLHttpRequest 上傳檔案]]
