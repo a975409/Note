@@ -3,3 +3,7 @@
 [瀏覽器完全載入DOM後的事件，包含樣式表、圖片等等](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/load_event)
 [另開視窗](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open)
 
+取得Domain網址：
+```javascript
+ window.location.origin
+```
