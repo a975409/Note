@@ -96,3 +96,31 @@ function App() {
 
 export default App;
 ```
+
+#### 進階寫法：讓函式執行後回傳另一個函式（可跳過）
+```jsx
+// handleClick('increment') 執行的時候實際上是回傳一個 type 為 increment 的函式
+const handleClick = (type) => {
+  return function () {
+    if (type === 'increment') {
+      setCount(count + 1);
+    }
+    if (type === 'decrement') {
+      setCount(count - 1);
+    }
+  };
+};
+
+return ( 
+<div className="container"> 
+	<div className="chevron chevron-up" 
+		onClick={handleClick('increment')} 
+		style={{ visibility: count >= 10 && 'hidden', }} />
+		 
+		 {/* ... */}
+		 
+	<div className="chevron chevron-down" 
+		onClick={handleClick('decrement')} 
+		style={{ visibility: count <= 0 && 'hidden', }} /> 
+</div> );
+```

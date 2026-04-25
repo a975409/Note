@@ -16,6 +16,7 @@
 [[展開語法（spread syntax）]]
 [[其餘語法（rest syntax）]]
 [[function]]
+[[Js Array]]
 [[object物件]]
 [[非同步 Promise]]
 [[(ES6)Class繼承]]
@@ -78,29 +79,32 @@ export default function Toolbar() {
   );
 }
 ```
-# Array
-1. 複製陣列：
+### 說進階不進階：&& 和 || 是什麼
+ 
+ `a || b`：當 `a` 為 false（為假）時就用 `b`，當 `a` 為 true（為真）時就直接用 `a`
 ```javascript
-const squares = Array(9).fill(null);
-const nextSquares = squares.slice();
-nextSquares[i] = "X";
+// || 就是前面為假時去拿後面的那個
+
+const a = 0 || 'iPhone';           // 因為 0 被轉型後為 false，所以 a 會是 'iPhone'
+
+const b = 26900 || 24900;          // 因為 26900 會轉型為 true，所以 b 會是 26900
+
+const c = true || '不會輪到我';     // 因為 true 為真，所以 c 是 true
+
+const d = false || '會輪到我'；     // 因為 false 為假，所以 d 是 '會輪到我'
+
 ```
 
- 2. 建立指定陣列元素數量的空陣列：
- ```javascript
- const squares = Array(9).fill(null);
- ```
+ `a && b`：當 `a` 為 true（為真）時，就拿後面的 `b`，否則拿 `a`
+ ```javascript
+ // && 就是前面為真時去拿後面的那個
 
-3. 延展或合併陣列元素：
-```javascript
-//...history代表為展開陣列元素
-[...history, nextSquares]
-```
+const a = 0 && 'iPhone';          // 因為 0 被轉型後為 false，所以 a 會是 0
 
-物件(object)展開語法：
-```javascript
-setPerson({
-  ...person, // 复制上一个 person 中的所有字段
-  firstName: e.target.value // 但是覆盖 firstName 字段 
-});
-```
+const b = 26900 && 24900;          // 因為 26900 轉型為 true，所以 b 會是 24900
+
+const c = true && '不會輪到我';     // 因為 true 為真，所以 c 是'不會輪到我'
+
+const d = false && '會輪到我'；     // 因為 false 為假，所以 d 是 false
+
+ ```
