@@ -6,27 +6,27 @@ POST https://evt.hyjr.com.tw/data.aspx/NewReferralApi
 
 | 欄位名稱               | 資料型態   | 說明                                                                                                 |
 | ------------------ | ------ | -------------------------------------------------------------------------------------------------- |
-| turnDate           | string | 轉診日期，格式如 YYYY-MM-DD                                                                                |
-| turnHospital       | int    | 轉診醫院                                                                                               |
-| fromHospital       | int    | 轉出醫院代碼                                                                                             |
+| turnDate           | string | 轉診日期，格式：YYYY/MM/DD HH:mm:ss<br>'/' 替換為' - ' 也可                                                     |
+| turnHospital       | int    | 轉⼊醫院代碼 <br><br>4= ⻑庚醫院                                                                             |
+| fromHospital       | int    | 轉出醫院代碼 <br><br>1= 屏東榮總<br>2= 屏東基督教醫院<br>3= 阮綜合醫院                                                   |
 | name               | string | 病患姓名                                                                                               |
 | cId                | string | 身分證字號                                                                                              |
 | type               | int    | 轉診類型，1=腦中風、2=毒物                                                                                    |
-| birthday           | string | 出生日期，格式如 YYYY-MM-DD                                                                                |
+| birthday           | string | 出生日期，格式： YYYY-MM-DD 或 YYYY/MM/DD                                                                   |
 | sex                | int    | 性別（0=女，1=男）                                                                                        |
 | CGC_E              | string | 意識CGS-E：1~4                                                                                        |
 | CGC_V              | string | 意識CGS-V：1~5、E、T、A                                                                                  |
 | CGC_M              | string | 意識CGS-M：1~6                                                                                        |
 | stressH            | int    | 血壓High                                                                                             |
 | stressL            | int    | 血壓Low                                                                                              |
-| onsetDate          | string | 發病時間                                                                                               |
-| onsetDate_un       | int    | 1=不確定發病日期                                                                                          |
-| lastDate           | string | 最後正常時間                                                                                             |
+| onsetDate          | string | 發病時間，格式：YYYY/MM/DD HH:mm:ss<br>'/' 替換為' - ' 也可                                                     |
+| onsetDate_un       | int    | 1=不確定發病時間                                                                                          |
+| lastDate           | string | 最後正常時間，格式：YYYY/MM/DD HH:mm:ss<br>'/' 替換為' - ' 也可                                                   |
 | lastDate_un        | int    | 1=不確定最後正常時間                                                                                        |
 | NIHSS              | int    | NIHSS分數：1~42                                                                                       |
 | before_mRS         | int    | 未發病前mRS分數：1~6                                                                                      |
 | is_rtPA            | int    | 是否施打r-tPA，0=是、1=否                                                                                  |
-| rtPA_date          | string | 施打r-tPA時間                                                                                          |
+| rtPA_date          | string | 施打r-tPA時間，格式：YYYY/MM/DD HH:mm:ss<br>'/' 替換為' - ' 也可                                                |
 | poisonType         | int    | 毒物型態，1=藥物、2=生物、3=環境                                                                                |
 | is_Decontamination | int    | 是否除汙（0=否，1=是）                                                                                      |
 | fa1                | string | 影像學圖片1，檔案需轉為base64                                                                                 |
@@ -43,6 +43,8 @@ POST https://evt.hyjr.com.tw/data.aspx/NewReferralApi
 | face               | int    | 微笑測試，0=無、1=臉部不對稱、2=口角歪斜                                                                            |
 | arm                | int    | 舉手測試，0=無、1=一邊手臂垂落不對稱                                                                               |
 | speech             | int    | 語言測試，0=無、1=口吃、2=說話不清、3=無法說話                                                                        |
+
+<br><br><br><br><br><br><br>
  Request 範例：
 ```json
 {
@@ -85,6 +87,7 @@ POST https://evt.hyjr.com.tw/data.aspx/NewReferralApi
     "speech": "0"
 }
 ```
+<br><br><br><br>
 ## 3. Response 結果 (200 OK)
 
 新增資料成功：

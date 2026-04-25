@@ -1,3 +1,7 @@
+需安裝的套件：
+```C#
+dotnet add package Microsoft.Extensions.DependencyInjection
+```
 
 生命週期：
 ```C#

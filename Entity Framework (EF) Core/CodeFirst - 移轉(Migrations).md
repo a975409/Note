@@ -56,6 +56,12 @@ dotnet ef migrations list --context BlogContext
 dotnet ef migrations remove --context BlogContext
 ```
 
+## 透過 EF Core Power Tools 反向工程產生了完整的 EF Model
+因為來源端資料庫已經有所有的資料表了，所以需建立空的初始遷移 (Empty Initial Migration) 來對應現有資料庫：
+```
+dotnet ef migrations add InitialCreate --context EVTContext --ignore-changes
+```
+
 ## 假設從git取得新的版本，然後有新的遷移紀錄時
 ```markdown
 git pull
