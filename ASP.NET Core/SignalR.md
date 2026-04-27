@@ -5,7 +5,7 @@
 
 [[伺服器端(ASP.NET Core)與用戶端(WinForm)互相通訊]]
 [[群組概念與使用]]
-
+[[SignalR 加入群組]]
 ## 注意事項
 
 ### ⚠️ Hub 的生命週期是 Transient
