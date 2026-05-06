@@ -12,3 +12,8 @@ SQL Server 重啟服務：
 - 啟用SQL Server服務：
 	net start MSSQLSERVER
 
+
+確認資料庫版本：
+```sql
+SELECT @@VERSION;
+```

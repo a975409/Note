@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "51407fe594637647",
+        "id": "47b93a633e54a372",
         "type": "tabs",
         "children": [
           {
-            "id": "22e7756a60445112",
+            "id": "7eb9b0415635cb7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+                "file": "ASP.NET Core/SignalR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JWT驗證(適用Web API)(1)"
+              "title": "SignalR"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+                "file": "ASP.NET Core/SignalR.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "JWT驗證(適用Web API)(1) 的反向連結"
+              "title": "SignalR 的反向連結"
             }
           },
           {
@@ -166,35 +166,36 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "22e7756a60445112",
+  "active": "7eb9b0415635cb7e",
   "lastOpenFiles": [
-    "未命名.base",
-    "SQL Server/SQL Server.md",
-    "SQL Server",
-    "Entity Framework (EF) Core/SQL連線字串.md",
-    "API 文件：NewReferral.md",
-    "ASP.NET Core/驗證與授權.md",
-    "ASP.NET Core/JWT驗證(適用Web API)(2).md",
-    "ASP.NET Core/自訂Session驗證.md",
-    "ASP.NET Core/建立下載檔案的API.md",
+    "ASP.NET Core/Model Binding 模型繫結.md",
     "ASP.NET Core/ASP.NET Core.md",
-    "ASP.NET Core/路由.md",
-    "ASP.NET Core/Web API 專案路由設定.md",
-    "上傳大型檔案(需用MultipartReader).md",
-    "ASP.NET Core/上傳多個檔案(.NET 8).md",
-    "ASP.NET/PagedList分頁套件.md",
-    "開發影片串流的API.md",
-    "ASP.NET Core/檔案上傳.md",
-    "ASP.NET Core/上傳單一檔案.md",
-    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
-    "ASP.NET Core/SignalR.md",
-    "ASP.NET Core/群組概念與使用.md",
-    "ASP.NET Core/取得登入者資訊.md",
-    "ASP.NET Core/Model Validation 模型驗證.md",
-    "ASP.NET Core/DI依賴注入之生命週期.md",
-    "Entity Framework (EF) Core/CodeFirst - 自動產生日期時間值.md",
+    "Entity Framework (EF) Core/CodeFirst - 移轉(Migrations).md",
+    "Entity Framework (EF) Core/EF Core 防止使用者同時更新同一筆資料.md",
+    "Entity Framework (EF) Core/CodeFirst(二)(推薦).md",
+    "SQL Server/SQL Server.md",
+    "Entity Framework (EF) Core/CodeFirst.md",
     "Entity Framework (EF) Core/CodeFirst - Entity 屬性.md",
-    "Entity Framework (EF) Core/CodeFirst(一).md",
+    "Entity Framework (EF) Core/叢級索引與主鍵(PK)分開設定.md",
+    "IIS/IIS 初始設定.md",
+    "IIS/ASP.NET Core專案設定執行開發專案，指向實際的IIS站台.md",
+    "ASP.NET Core/MVC(ASP.NET Core).md",
+    "ASP.NET Core/ASP.NET Core 應用程式專案架構.md",
+    "ASP.NET Core/ASP.NET Core 應用程式的執行流程.md",
+    "IIS/IIS 針對應用程式集區設定站台資料夾的存取權限.md",
+    "ASP.NET Core/記憶體快取.md",
+    "ASP.NET Core/Cache 快取.md",
+    "ASP.NET Core/Response 快取.md",
+    "ASP.NET Core/使用XML註解.md",
+    "ASP.NET Core/Swagger(OpenAPI).md",
+    "ASP.NET Core/Swagger OpenAPI.md",
+    "ASP.NET Core/Swagger和OpenAPI.md",
+    "ASP.NET Core/SignalR.md",
+    "ASP.NET Core/SignalR 加入群組.md",
+    "JavaScript/非同步 Promise.md",
+    "ASP.NET Core/JWT驗證(適用Web API)(1).md",
+    "未命名.base",
+    "SQL Server",
     "React",
     "主控台應用程式（Console App）",
     "Vue 3.x",
