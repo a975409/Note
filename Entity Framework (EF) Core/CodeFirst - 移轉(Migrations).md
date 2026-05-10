@@ -54,6 +54,12 @@ dotnet ef migrations list --context BlogContext
 
 //移除最新一筆的遷移(Pending)
 dotnet ef migrations remove --context BlogContext
+
+//將所有遷移導出為單一 SQL 檔案
+dotnet ef migrations script -o ./MySqlProj/Migrations/Update.sql --idempotent
+
+//**產生純 Schema 腳本**（不含 Migration 歷史記錄與邏輯）：
+dotnet ef dbcontext script -o ../sqlServer_DbProj/Schema.sql
 ```
 
 ## 透過 EF Core Power Tools 反向工程產生了完整的 EF Model
