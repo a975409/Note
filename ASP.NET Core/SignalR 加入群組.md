@@ -29,7 +29,7 @@ public class AmbulanceHub : Hub
 //建立連線
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
-//接收訊息
+//接收群組訊息
 connection.on("ReceivAmbulanceGPS", function (result, message) {
     console.log("從中樞接收訊息: " + result + " / " + message);
 });
@@ -37,7 +37,7 @@ connection.on("ReceivAmbulanceGPS", function (result, message) {
 //開始連線
 connection.start();
 
-//加入群組（病患頁面載入時呼叫）
+//加入群組後，才能接收群組訊息
 connection.invoke("JoinReferralGroup", parseInt(pid));
 
 ```

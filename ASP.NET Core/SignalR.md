@@ -53,18 +53,18 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
 document.getElementById("sendButton").disabled = true;
 
+// ★ 必須在 start() 之前先綁定 on，才不會漏接訊息
+connection.on("ReceiveMessage", function (user, message) {
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = `${user} says ${message}`;
+});
+
 //啟動連線
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
 }).catch(function (err) {
     return console.error(err.toString());
-});
-
-//新增處理常式至連線物件，可從中樞接收訊息
-connection.on("ReceiveMessage", function (user, message) {
-    var li = document.createElement("li");
-    document.getElementById("messagesList").appendChild(li);
-    li.textContent = `${user} says ${message}`;
 });
 
 //新增提交按鈕的點擊事件，觸發後會將訊息傳送至中樞。
