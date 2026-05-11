@@ -47,3 +47,5 @@ clear
 ```shell
 claude
 ```
+
+![[Pasted image 20260511234552.png]]
