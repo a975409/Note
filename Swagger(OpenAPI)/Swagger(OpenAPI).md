@@ -2,8 +2,10 @@
 
 `[ProducesResponseType]` 用來表示已知類型和 HTTP 狀態碼要由動作傳回。
 
+[[Swagger 初始設定(APS.NET Core)]]
 [[使用XML註解]]
-[使用 Swagger 來自動產生可互動的 API 文件](https://igouist.github.io/post/2021/05/newbie-4-swagger/)
+[[使用 Redoc 產生靜態 HTML]]
 
-msdn文件：
+參考文件：
+[使用 Swagger 來自動產生可互動的 API 文件](https://igouist.github.io/post/2021/05/newbie-4-swagger/)
 https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/openapi/aspnetcore-openapi?view=aspnetcore-8.0&tabs=visual-studio%2Cminimal-apis
