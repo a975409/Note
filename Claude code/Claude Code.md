@@ -2,6 +2,8 @@
 [CLAUDE.md 實戰技巧整理：10 個讓 Claude Code 更聰明的進階設定](https://haosquare.com/claude-code-claude-md-advanced-tips/)
 [AI Templates](https://www.aitmpl.com/)
 [Claude Code Skills：讓 AI 變身專業工匠](https://kaochenlong.com/claude-code-skills)
+https://israynotarray.com/ai/20260128/374686091/#%E5%89%8D%E8%A8%80
+https://israynotarray.com/ai/20260409/1057131696/
 
 ## Skills 跟其他機制有什麼不同？
 
@@ -14,6 +16,7 @@
 | Custom Commands | 使用者輸入 `/command`（也可引導 Claude 代為呼叫） | 專案或個人層級   | Prompt 範本     | 使用者觸發時載入                     | 否（單一 prompt 檔） | 固定格式的重複操作、使用者明確知道要做什麼的情境    |
 | MCP             | 工具呼叫                               | 啟動時載入     | 外部服務連接        | 按需呼叫                         | 是（server 端）    | 連接外部 API、資料庫、檔案系統           |
 | Subagents       | Claude 自動委派或手動啟動                   | 任務期間      | 獨立 AI 實例      | 需要時建立                        | 是              | 需要獨立 context、平行處理、專門化任務     |
+
 
 ### 環境架設
 1. 安裝node.js、git
