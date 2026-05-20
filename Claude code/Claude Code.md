@@ -62,7 +62,7 @@ clear
 claude
 ```
 
-![[Pasted image 20260511234552.png]]
+![[Pasted image 20260520223428.png]]
 
 [讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
 
