@@ -57,7 +57,7 @@
 [[其他注入類型防範]]
 [[設定HTTPS]]
 [[Data Protection API 保護敏感資料]]
-#### MSDN
+#### 外部連結
 [Controller 類別 (適用於Web應用程式)](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.mvc.controller?view=aspnetcore-8.0#methods)
 [ControllerBase 類別  (適用於Web API)](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-8.0#methods)
 [HttpStatusCode 列舉 (System.Net) | Microsoft Learn](https://learn.microsoft.com/zh-tw/dotnet/api/system.net.httpstatuscode?view=net-5.0)
@@ -66,7 +66,7 @@
 [HttpRequest 類別](https://learn.microsoft.com/zh-tw/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-8.0)
 [ASP.NET Core 中的區域 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/areas?view=aspnetcore-9.0#add-mvc-area-with-visual-studio)
 [在 .NET 和 ASP.NET Core 中的日誌紀錄 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/logging/?view=aspnetcore-9.0)
-
+[C#/.NET/.NET Core优秀项目和框架精选](https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectPicks.md)
 #### 排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)
 [在 ASP.NET Core 網站執行定時排程-黑暗執行緒](https://blog.darkthread.net/blog/aspnet-core-background-task/)
