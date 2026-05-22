@@ -11,6 +11,6 @@
 [索引與條件約束](https://learn.microsoft.com/zh-tw/ef/core/modeling/indexes?tabs=data-annotations)
 [[叢級索引與主鍵(PK)分開設定]]
 [[設定屬性值轉換器]]
-
+[[設定Guid為PK值(僅適用於SQL Server)]]
 ### 實際案例
 [[解決刪除資料時無法刪除底下子資料的問題]]
