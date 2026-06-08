@@ -6,6 +6,8 @@
 https://israynotarray.com/ai/20260128/374686091/#%E5%89%8D%E8%A8%80
 https://israynotarray.com/ai/20260409/1057131696/
  [【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
+ [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
+[dotnet-skills](https://github.com/managedcode/dotnet-skills)
 ### Skills 跟其他機制有什麼不同？
 
 如果你用過 Claude Code 一段時間，應該會發現有好幾種方法可以「客製化」Claude 的行為。Skills 跟其他機制有什麼差別？什麼時候該用哪一種？我整理一個比較表：
@@ -76,12 +78,11 @@ plugin
 
 [讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
 
-
-### Skills清單
-[Csharp Pro](https://www.aitmpl.com/component/skill/development/csharp-pro)
-[Dotnet Backend](https://www.aitmpl.com/component/skill/development/dotnet-backend)
+### 必裝Skills清單
+[gstack](https://github.com/garrytan/gstack)
+[gsd-core](https://github.com/open-gsd/gsd-core/tree/next/docs/zh-CN)
+[superpowers](https://github.com/obra/superpowers)
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
-
-[[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
 [官方dotnet-skills](https://github.com/dotnet/skills)
-[dotnet-skills](https://github.com/managedcode/dotnet-skills)
+
+[[gsd-core]]
