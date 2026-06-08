@@ -41,7 +41,13 @@ npm install -g @anthropic-ai/claude-code
 
 ### 常用指令(git bash)
 
-1. 查看當前目錄：
+1. 啟用claude code
+```shell
+# GSD 設計為自動化運行，建議加上此參數
+claude --dangerously-skip-permissions
+```
+
+2. 查看當前目錄：
 ```bash
 pwd
 ```
