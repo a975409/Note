@@ -2,7 +2,9 @@
 說明文件：
 [gsd-core](https://github.com/open-gsd/gsd-core/tree/next/docs/zh-CN)
 [你的 AI 助理變笨了嗎？這套 GSD 實戰框架，教你如何精準控制 AI 產出神級程式碼！](https://www.youtube.com/watch?v=IECtPdCNlf4)
-[[適用於Claude code Pro方案的設定檔]]
+[[適用於Claude code Pro方案的所有專案設定檔(gsd-config)]]
+[[適用於Claude code Pro方案的單一專案設定檔(gsd-settings)]]
+
 ## 完整工作流總覽
 1. new-project：問答->研究->需求->路線圖，適用於第一次建置開發專案
 2. 依據路線圖所列的每一項需求進行階段開發，每一階段開發的流程如下：

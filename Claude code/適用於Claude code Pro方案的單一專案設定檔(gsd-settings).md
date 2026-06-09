@@ -1,14 +1,14 @@
 
 ## Token 消耗估算（官方配置優化後）
 
-|操作|並行模式|序列模式|節省|
-|---|---|---|---|
-|`/gsd-plan-phase`|~80,000|~25,000|69%|
-|`/gsd-execute-phase`|~120,000|~40,000|67%|
-|Research（4 agents）|~40,000|~10,000|75%|
-|Discuss|~30,000|~15,000|50%|
+| 操作                   | 並行模式     | 序列模式    | 節省  |
+| -------------------- | -------- | ------- | --- |
+| `/gsd-plan-phase`    | ~80,000  | ~25,000 | 69% |
+| `/gsd-execute-phase` | ~120,000 | ~40,000 | 67% |
+| Research（4 agents）   | ~40,000  | ~10,000 | 75% |
+| Discuss              | ~30,000  | ~15,000 | 50% |
 
-### gsd:settings
+### gsd-settings
 ```shell
 ❯ gsd:settings
 
@@ -69,6 +69,9 @@ Code Review 開啟，繼續詢問深度。
 ```
 
 ### .planning/config.json（官方參數 - Claude Pro 優化版）
+
+> 直接複製貼上即可
+
 ```json
 {
   "model_profile": "adaptive",
@@ -342,37 +345,7 @@ $CITE_1
 
 ## Features 設定
 
-| 參數 | 類型 | 預設值 | 說明 | Claude Pro 建議 |
-|------|------|--------|------|-----------------|
+| 參數                          | 類型      | 預設值     | 說明                  | Claude Pro 建議 |
+| --------------------------- | ------- | ------- | ------------------- | ------------- |
 | `features.thinking_partner` | boolean | `false` | 啟用 Thinking Partner | ⚠️ 高 token 消耗 |
-| `features.global_learnings` | boolean | `false` | 全域學習機制 | ⚠️ 額外開銷 |
-
-$CITE_1
-
----
-
-## Learnings 設定
-
-| 參數 | 類型 | 預設值 | 說明 |
-|------|------|--------|------|
-| `learnings.max_inject` | integer | `10` | 最大注入學習數量 |
-
-$CITE_1
-
----
-
-## 其他設定
-
-| 參數 | 類型 | 預設值 | 說明 |
-|------|------|--------|------|
-| `ship.pr_body_sections` | array | `[]` | PR 描述區段 |
-| `hooks.context_warnings` | boolean | `true` | Context 警告 |
-| `hooks.workflow_guard` | boolean | `false` | 工作流保護 |
-| `statusline.context_position` | enum | `end` | `start`, `end` |
-| `review.default_reviewers` | string/null | `null` | 預設審查者 |
-| `review.models` | object | `{}` | 審查模型設定 |
-| `intel.enabled` | boolean | `false` | 啟用 Intel 功能 |
-| `claude_md_path` | string | `./CLAUDE.md` | CLAUDE.md 路徑 |
-| `agent_skills` | object | `{}` | Agent 技能設定 |
-
-$CITE_1
+| `features.global_learnings` | boolean | `false` | 全域學習機制              | ⚠️ 額外開銷       |
