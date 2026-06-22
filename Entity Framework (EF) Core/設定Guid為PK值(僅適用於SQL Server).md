@@ -29,3 +29,8 @@ public partial class EVTContext : DbContext
     }
 }
 ```
+
+.NET 9 以上版本支援產生循序性的Guid值：
+```C#
+Guid.CreateVersion7()
+```
