@@ -6,6 +6,7 @@
 [你的 Claude Code Context 是不是都被吃光了？AGENTS.md 與 Context 管控全攻略](https://israynotarray.com/ai/20260409/1057131696/)
 [讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
 [[三種 CLAUDE.md 記憶類型]]
+[[gstack 使用說明]]
 [[gstack 結合 superpowers 開發專案]]
 
 ## 套件下載(skills、Hook、Agent)
@@ -15,7 +16,6 @@
 [dotnet-skills](https://github.com/managedcode/dotnet-skills)
 
 ## skill下載清單
-[gstack](https://github.com/garrytan/gstack)
 [[gsd-core]]
 [superpowers](https://github.com/obra/superpowers)
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
