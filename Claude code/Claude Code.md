@@ -1,14 +1,27 @@
-[[三種 CLAUDE.md 記憶類型]]
+## 參考連結
 [CLAUDE.md 實戰技巧整理：10 個讓 Claude Code 更聰明的進階設定](https://haosquare.com/claude-code-claude-md-advanced-tips/)
-[AI Templates](https://www.aitmpl.com/)
 [Claude Code Skills：讓 AI 變身專業工匠](https://kaochenlong.com/claude-code-skills)
 [Claude Code 利用 Event-Driven Hooks 打造自動化開發大腦](https://ganhua.wang/claude-code-event-driven-hooks)
-https://israynotarray.com/ai/20260128/374686091/#%E5%89%8D%E8%A8%80
-https://israynotarray.com/ai/20260409/1057131696/
+[Claude Code 教學｜從安裝、設定到第一個任務的完整實作筆記（2026 版）](https://israynotarray.com/ai/20260128/374686091/#%E5%89%8D%E8%A8%80)
+[你的 Claude Code Context 是不是都被吃光了？AGENTS.md 與 Context 管控全攻略](https://israynotarray.com/ai/20260409/1057131696/)
+[讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
+[[三種 CLAUDE.md 記憶類型]]
+[[gstack 結合 superpowers 開發專案]]
+
+## 套件下載(skills、Hook、Agent)
+[AI Templates](https://www.aitmpl.com/)
  [【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
  [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
 [dotnet-skills](https://github.com/managedcode/dotnet-skills)
-### Skills 跟其他機制有什麼不同？
+
+## skill下載清單
+[gstack](https://github.com/garrytan/gstack)
+[[gsd-core]]
+[superpowers](https://github.com/obra/superpowers)
+[Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
+[官方dotnet-skills](https://github.com/dotnet/skills)
+
+## Skills 跟其他機制有什麼不同？
 
 如果你用過 Claude Code 一段時間，應該會發現有好幾種方法可以「客製化」Claude 的行為。Skills 跟其他機制有什麼差別？什麼時候該用哪一種？我整理一個比較表：
 
@@ -28,7 +41,6 @@ npm install -g @anthropic-ai/claude-code
 
 2. 確認是否安裝成功(顯示版本)：
 ![[Pasted image 20260511225427.png|447]]
-
 
 3. 安裝vs code套件：
 ![[Pasted image 20260511230911.png]]
@@ -76,19 +88,10 @@ claude
 ```bash
 plugin
 ```
+
 執行後會出現以下畫面：
 ![[Pasted image 20260521214455.png]]
 
 
 ![[Pasted image 20260520223428.png]]
 
-[讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
-
-### 必裝Skills清單
-[gstack](https://github.com/garrytan/gstack)
-[gsd-core](https://github.com/open-gsd/gsd-core/tree/next/docs/zh-CN)
-[superpowers](https://github.com/obra/superpowers)
-[Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
-[官方dotnet-skills](https://github.com/dotnet/skills)
-
-[[gsd-core]]
