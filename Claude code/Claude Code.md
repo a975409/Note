@@ -21,6 +21,9 @@
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
 [官方dotnet-skills](https://github.com/dotnet/skills)
 
+## MCP下載清單
+[codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)
+
 ## Skills 跟其他機制有什麼不同？
 
 如果你用過 Claude Code 一段時間，應該會發現有好幾種方法可以「客製化」Claude 的行為。Skills 跟其他機制有什麼差別？什麼時候該用哪一種？我整理一個比較表：
