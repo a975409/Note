@@ -8,6 +8,8 @@
 [[三種 CLAUDE.md 記憶類型]]
 [[gstack 使用說明]]
 [[gstack 結合 superpowers 開發專案]]
+[[codebase-memory-mcp 和 CodeGraph 搭配使用]]
+[[CLAUDE.md 的通用規範]]
 
 ## 套件下載(skills、Hook、Agent)
 [AI Templates](https://www.aitmpl.com/)
@@ -90,6 +92,11 @@ claude
 6. 安裝外部套件：
 ```bash
 plugin
+```
+
+7. 產生CLAUDE.md檔案：
+```shell
+init
 ```
 
 執行後會出現以下畫面：
