@@ -1,15 +1,22 @@
 [gstack 的 Build 是空的，Superpowers 怎麼補上這個缺口](https://heymaibao.com/gstack-superpowers-build-gap/)
 [Obra/superpowers 使用指南：用 Skill 做 Coding + Planning](https://university.tenten.co/t/obra-superpowers-skill-coding-planning/2275)
+[gstack 完整解析：YC 總裁如何每天利用 AI 撰寫 10,000 行程式碼](https://youmind.com/zh-TW/blog/gstack-garry-tan-claude-code-workflow-guide)
+[gstack：全流程 AI 代理團隊的自動化實踐 (完整技能解析)](https://vocus.cc/user/@aibasil)
 
 把 gstack 的規劃和審查接上 Superpowers 的構建，完整流程是這樣：
 1. **gstack /office-hours** → 定義問題，產出設計文件。你說要做日曆 app，它可能會說你其實在做 AI 行政助理
 2. **gstack /plan-ceo-review** → 質疑方向，確認範圍。四種模式：擴展、選擇性擴展、維持範圍、縮減
 3. **gstack /plan-eng-review** → 鎖定技術架構，畫資料流圖，列邊界情況
-4. **Superpowers/writing-plans** → 格式橋接，把 gstack 設計文件轉成實作計畫
-5. **Superpowers/subagent-driven-development** → 子代理逐任務實作 + 雙重審查
-6. **gstack /review** → 結構性程式碼審查
-7. **gstack /qa** → 開真實瀏覽器做 QA 測試
-8. **gstack /ship** → 跑測試、審計覆蓋率、建 PR
+4. gstack /design-consultation → 從零開始建立完整的設計系統，最終會產生`DESIGN.md`
+5. gstack /design-html → 參照`DESIGN.md`所規範的樣式和業務需求，產生已定案的html靜態畫面(尚未串接API)，此畫面是要提供給人工確認的
+6. gstack /plan-design-review → 對每個設計維度進行 0-10 分的評分，解釋 10 分的標準，然後調整方案以達到該標準。
+7. **Superpowers/writing-plans** → 格式橋接，把 gstack 設計文件轉成`Superpowers`實作計畫，這樣`subagent-driven-development**`才能依據計畫執行
+8. **Superpowers/subagent-driven-development** → 子代理逐任務實作 + 雙重審查
+9. **gstack /review** → 結構性程式碼審查
+10. **gstack /qa** → 開真實瀏覽器做 QA 測試
+11. **gstack /ship** → 跑測試、審計覆蓋率、建 PR
+
+>這些不是一堆零散的工具。這些角色按照**思考 → 規劃 → 建立 → 審查 → 測試 → 發布 → 反思**的順序串聯起來，每個階段的輸出都會自動饋送到下一個階段。`/office-hours` 生成的設計文件由 `/plan-ceo-review` 閱讀；`/plan-eng-review` 編寫的測試計畫由 `/qa` 執行；`/review` 發現的錯誤由 `/ship` 驗證是否已修復。
 
 ## superpowers整體工作流程
 
