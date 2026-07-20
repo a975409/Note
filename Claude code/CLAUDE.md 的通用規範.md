@@ -17,4 +17,16 @@
 3. 如果需要架構統計、圖查詢、ADR、跨模組關係分析，再使用 codebase-memory-mcp。
 4. 若兩個工具結果不一致，以目前代碼檔案內容為準，並重新同步索引。
 5. 不要在 CodeGraph 已經回傳足夠上下文時重複全倉庫 grep。
+   
+## Required workflow
+1. Use brainstorming before creating or modifying features.
+2. Write specs to:
+   `docs/superpowers/specs/`
+3. Write implementation plans to:
+   `docs/superpowers/plans/`
+4. Use an isolated worktree before implementation.
+5. Use TDD for feature work and bug fixes.
+6. Do not claim completion without running verification commands.
+7. Prefer small, focused files.
+8. Follow existing project structure and naming conventions.
 ```

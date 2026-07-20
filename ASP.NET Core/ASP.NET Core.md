@@ -8,6 +8,7 @@
 [筆記 - ASP.NET Core 使用 LibMan CLI | sqz777 der 技術小本本 - 點部落](https://dotblogs.com.tw/Im_sqz777/2020/09/03/222746)
 [使用 LibMan CLI 下載安裝 jQuery、Vue.js、Font-Awesome 程式庫-黑暗執行緒](https://blog.darkthread.net/blog/libman-cli/)
 
+[[透過命令列執行發布檔(Web主程式)]]
 [[VS Code 執行 ASP.NET Core 專案]]
 [[ASP.NET Core 應用程式的執行流程]]
 [[ASP.NET Core 應用程式專案架構]]
