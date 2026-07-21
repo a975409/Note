@@ -20,7 +20,40 @@ Hub 每次連線都會被**重新建立**，因此：
 
 ## 基本使用方式
 
-1. 後端建立 SignalR 中樞：
+1. (後端)初始設定：
+```C#
+using SignalRChat.Hubs;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorPages();
+
+//要加這段
+builder.Services.AddSignalR();
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapRazorPages();
+
+//設定Signal路由，讓前端依據此路徑進行連線
+app.MapHub<ChatHub>("/chatHub");
+
+app.Run();
+```
+
+2. (後端)建立 SignalR 中樞：
 ```C#
 using Microsoft.AspNetCore.SignalR;
 
@@ -28,9 +61,10 @@ namespace SignalRChat.Hubs
 {
     public class ChatHub : Hub
     {
+	    //由前端呼叫
         public async Task SendMessage(string user, string message)
         {
-	        //回傳訊息至用戶端
+	        //設定前端接收事件
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
     }
@@ -53,7 +87,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
 document.getElementById("sendButton").disabled = true;
 
-// ★ 必須在 start() 之前先綁定 on，才不會漏接訊息
+// ★ 必須在 start() 之前先綁定接收事件，才不會漏接訊息
 connection.on("ReceiveMessage", function (user, message) {
     var li = document.createElement("li");
     document.getElementById("messagesList").appendChild(li);
