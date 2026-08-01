@@ -3,3 +3,5 @@
 [在非同步情境下使用 ConcurrentDictionary](https://ronsun.github.io/content/20240622-concurrent-dictionary.html)
 [System.Collections.Concurrent 命名空間](https://learn.microsoft.com/zh-tw/dotnet/api/system.collections.concurrent?view=net-8.0)
 `TimeSpan`等於兩個`Datetime`相減後所取得的時間差
+
+[[將要執行的工作排入背景佇列的設定方式]]

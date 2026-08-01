@@ -27,7 +27,7 @@ builder.Services.AddSwaggerGen(options => {
     if (File.Exists(domainXmlPath))
         options.IncludeXmlComments(domainXmlPath);
 
-    // ✅ 額外載入 EVT.Domain 的 XML 註解
+    // ✅ 額外載入 EVT.Infrastructure 的 XML 註解
     var infrastructureXmlFile = "EVT.Infrastructure.xml";
     var infrastructureXmlPath = Path.Combine(AppContext.BaseDirectory, infrastructureXmlFile);
     if (File.Exists(infrastructureXmlPath))
