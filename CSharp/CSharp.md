@@ -5,3 +5,5 @@
 `TimeSpan`等於兩個`Datetime`相減後所取得的時間差
 
 [[將要執行的工作排入背景佇列的設定方式]]
+[C# 隨口聊一下 Mutex、SemaphoreSlim 與 lock](https://coding-afternoon.com/blogs/csharp-net--%E9%9A%A8%E5%8F%A3%E8%81%8A%E4%B8%80%E4%B8%8B-mutexsemaphoreslim-%E8%88%87-lock/)
+
