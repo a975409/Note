@@ -104,3 +104,10 @@ dotnet ef migrations add InitialCreate
 ```.NET CLI
 dotnet ef database update
 ```
+
+## 已將遷移檔套用至資料庫，然後要進行退版時
+```
+dotnet ef migrations script <目前套用的Migration名稱> <想退回到的Migration名稱> -o rollback.sql --context 指定的DbContext
+```
+
+
