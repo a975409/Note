@@ -1,4 +1,7 @@
-檔案驗證[UploadFileValid]： ※主要驗證邏輯處理為IsValid，是由繼承ValidationAttribute後override 而來的 ※fileSignature 設定檔案格式簽章驗證格式，直接照抄就好 ※IsValidFileExtension依據副檔名 & 檔案內容參考fileSignature，驗證該檔案是否符合規範，直接照抄就好
+檔案驗證[UploadFileValid]： 
+※主要驗證邏輯處理為IsValid，是由繼承ValidationAttribute後override 而來的 
+※fileSignature 設定檔案格式簽章驗證格式，直接照抄就好 
+※IsValidFileExtension依據副檔名 & 檔案內容參考fileSignature，驗證該檔案是否符合規範，直接照抄就好
 
 ```csharp
 using System.ComponentModel.DataAnnotations;

@@ -46,10 +46,7 @@
 [[gRPC]]
 [[PagedList分頁套件]]
 [[使用 HttpClient 類別發出 HTTP 要求]]
-[[ASP.NET Core/檔案上傳]]
-[[建立下載檔案的API]]
 [[在controller的action內，如何呼叫cache取得資料]]
-[[開發影片串流的API]]
 #### 安全性
 [[跨網站指令碼(XSS)]]
 [[ASP.NET Core/跨網站偽造要求 (XSRF or CSRF)]]
