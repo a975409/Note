@@ -8,3 +8,7 @@ RESTful API：
 [MinimalAPI](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0)
 [[Web API 專案路由設定]]
 [[Swagger(OpenAPI)]]
+[[預設 BadRequest 回應(模型驗證失敗)]]
+[[檔案上傳API]]
+[[下載檔案API]]
+[[影片串流API]]
