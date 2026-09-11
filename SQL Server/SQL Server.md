@@ -16,3 +16,4 @@ SELECT @@VERSION;
 [[SQL Server 1433 Port 衝突完整解決總結(Docker使用Hyper-V)]]
 [[SQL Server 1433 Port 衝突完整解決總結(Docker使用WSL2)]]
 [[何謂MARS]]
+[[「孤兒使用者」（Orphaned User）]]
