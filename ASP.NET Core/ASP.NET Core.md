@@ -65,6 +65,8 @@
 [ASP.NET Core 中的區域 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/areas?view=aspnetcore-9.0#add-mvc-area-with-visual-studio)
 [在 .NET 和 ASP.NET Core 中的日誌紀錄 | Microsoft Learn](https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/logging/?view=aspnetcore-9.0)
 [C#/.NET/.NET Core优秀项目和框架精选](https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectPicks.md)
+[認識 ASP.NET Core 7.0 的啟動設定檔 (Launch Profile)](https://blog.miniasp.com/post/2023/03/03/Understanding-ASP-NET-Core-7-Launch-Profile)
+
 #### 排程
 [NETCore ASP.NET Core 中的排程利器 - Coravel](https://marcus116.blogspot.com/2019/09/task-schedule-library-coravel-in-netcore-aspnetcore.html)
 [在 ASP.NET Core 網站執行定時排程-黑暗執行緒](https://blog.darkthread.net/blog/aspnet-core-background-task/)

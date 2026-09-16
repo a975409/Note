@@ -12,3 +12,4 @@ RESTful API：
 [[檔案上傳API]]
 [[下載檔案API]]
 [[影片串流API]]
+[定義 RESTful Web API 方法](https://learn.microsoft.com/zh-tw/azure/architecture/best-practices/api-design#define-restful-web-api-methods)

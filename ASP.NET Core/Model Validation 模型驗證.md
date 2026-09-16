@@ -29,6 +29,16 @@ public class Person
 }
 ```
 
+關掉「non-nullable 參考型別自動視為必填」的隱含行為，避免 body 反序列化失敗時，冒出「The dto field is required.」這類未在地化的英文訊息(Program.cs)
+```C#
+builder.Services.AddControllers(options =>
+{
+    // 專案慣例是在每個 DTO 欄位明確標註 [Required(ErrorMessage = "中文訊息")]。
+    // 關掉「non-nullable 參考型別自動視為必填」的隱含行為，避免 body 反序列化失敗時
+    // 冒出「The dto field is required.」這類未在地化的英文訊息。
+    options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
+})
+```
 #### Remote屬性：
 >Remote屬性會實作用戶端驗證，該驗證需要呼叫伺服器上的方法來判斷欄位輸入是否有效。 例如，應用程式可能需要驗證使用者名稱是否已經在使用中。
 
