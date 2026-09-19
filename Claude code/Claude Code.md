@@ -10,18 +10,18 @@
 [[gstack 結合 superpowers 開發專案]]
 [[codebase-memory-mcp 和 CodeGraph 搭配使用]]
 [[CLAUDE.md 的通用規範]]
-
-## 套件下載(skills、Hook、Agent)
-[AI Templates](https://www.aitmpl.com/)
- [【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
+[【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
  [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
-[dotnet-skills](https://github.com/managedcode/dotnet-skills)
 
-## skill下載清單
-[[gsd-core]]
+## 必備skill下載清單
 [superpowers](https://github.com/obra/superpowers)
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
 [官方dotnet-skills](https://github.com/dotnet/skills)
+
+## 其他套件下載(skills、Hook、Agent)
+[AI Templates](https://www.aitmpl.com/)
+[dotnet-skills](https://github.com/managedcode/dotnet-skills)
+[[gsd-core]]
 
 ## MCP下載清單
 [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)

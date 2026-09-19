@@ -9,7 +9,9 @@
 
 > 依照慣例，EF Core會為`ForeignKey`建立索引
 
-### 基本一對多：
+### 基本一對多()：
+[[EF Core 一對多刪除行為說明]]
+
 1. 慣例設定方式：
 ```C#
 //主表
@@ -35,6 +37,9 @@ public class Post
     public Blog Blog { get; set; } //主表導覽屬性
 }
 ```
+
+>上述子表的 BlogId 不為null，那預設的刪除行為：DeleteBehavior.Cascade，代表刪除主表時，會連子表一起刪除；反之 BlogId 為null，預設的刪除行為：DeleteBehavior.ClientSetNull，刪除主表時，子表不會被刪除，但 `BlogId` 會被設為 `null`
+
 
 2. Fluent API 設定方式：
 ```C#
