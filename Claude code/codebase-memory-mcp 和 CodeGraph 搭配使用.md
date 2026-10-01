@@ -96,8 +96,11 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/DeusData/codebase-memor
 给项目建立索引：
 
 ```bash
-codebase-memory-mcp cli index_repository '{"repo_path": "/path/to/repo"}'
+codebase-memory-mcp cli index_repository "{\`"repo_path\`":\`"C:/Users/kentsai/source/repos/DisasterGit\`"}"
 ```
+
+> repo_path 要設定專案路徑
+
 
 开启自动索引：
 

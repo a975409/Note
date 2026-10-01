@@ -1,32 +1,40 @@
 
 ```Markdown
-## gstack 文件同步原則
-**任何 gstack skill（/plan-eng-review、/plan-ceo-review、/context-save 等）產出或更新的規劃文件，都必須同步複製一份到本專案資料夾 `docs/gstack/` 下。**
+# Project Instructions & Workflow Guidelines
 
-原因：gstack 預設將產出物存在 `~/.gstack/projects/*/`，換機器或換工作目錄後無法取得。將文件歸檔在專案資料夾內，確保任何環境都能讀到最新版本。
+## 1. Codebase Tools & Exploration Guidelines (程式碼檢索與工具規範)
 
-規則：
-- gstack 每次產出新文件 → 立即複製到 `docs/gstack/`（或對應子目錄）
-- 現有文件被 gstack 更新 → 同步覆寫專案內的對應檔案
-- 文件命名：與 gstack 產出的原始名稱保持一致，去除 session hash（例如 `phase1-test-plan.md`，而非 `a9754-master-eng-review-test-plan-20260619-193202.md`）
-- 每次同步後，在本檔（CLAUDE.md）的文件清單中新增或更新對應條目
+在探索、理解與修改程式碼時，嚴格遵守以下工具調用優先順序：
 
-## 程式碼庫探索規則(必須遵守)
-1. 日常理解程式碼、定位實作、追蹤呼叫鏈時，優先使用 CodeGraph。
-2. 修改程式碼前，先用 CodeGraph 取得相關原始碼和影響範圍。
-3. 如果需要架構統計、圖查詢、ADR、跨模組關係分析，再使用 codebase-memory-mcp。
-4. 若兩個工具結果不一致，以目前代碼檔案內容為準，並重新同步索引。
-5. 不要在 CodeGraph 已經回傳足夠上下文時重複全倉庫 grep。
-   
-## Required workflow
-1. Use brainstorming before creating or modifying features.
-2. Write specs to:
-   `docs/superpowers/specs/`
-3. Write implementation plans to:
-   `docs/superpowers/plans/`
-4. Use an isolated worktree before implementation.
-5. Use TDD for feature work and bug fixes.
-6. Do not claim completion without running verification commands.
-7. Prefer small, focused files.
-8. Follow existing project structure and naming conventions.
+1. **日常代碼導航與追蹤**：日常理解程式碼、定位實作、追蹤呼叫鏈時，**優先使用 CodeGraph**。
+2. **改動前影響評估**：修改程式碼前，先使用 CodeGraph 取得相關原始碼與影響範圍。
+3. **架構級查詢與跨模組分析**：若需要架構統計、圖查詢、ADR（架構決策記錄）、跨模組關係分析，再使用 **codebase-memory-mcp**。
+4. **真實性優先與索引同步**：若兩個工具結果不一致，以**目前專案檔案的實際內容為準**，並適時重新同步/更新索引。
+5. **避免無效搜尋**：不要在 CodeGraph 已經回傳足夠上下文時重複進行全倉庫搜尋（如全局 grep/ripgrep）。
+6. **環境隔離**：尊重當前工作目錄的獨立索引，避免跨專案索引混雜。
+
+---
+
+## 2. Plan-to-Execution Workflow (計畫模式與 Superpowers 整合規範)
+
+對於較複雜的功能需求、大型重構或架構變更，必須嚴格遵守以下兩階段流程：
+
+### Phase 1: Planning Mode (規劃階段)
+使用者切換至「計畫模式（Plan Mode）」時，必須結合上述 CodeGraph 探索結果，產出結構化的實作規格書：
+- **影響範圍**：列出所有預計新增、修改、刪除的檔案與模組相依性（以 CodeGraph 分析為依據）。
+- **步驟拆解 (Step-by-Step Tasks)**：將開發流程拆分成具體、可獨立驗證的微任務（Step 1, Step 2...），不可含糊概括。
+- **驗證方式**：每個步驟必須定義其對應的驗證標準（單元測試、編譯檢查或功能驗證）。
+- **嚴格唯讀**：在此模式下**嚴禁直接修改原始碼**，計畫產出後等待使用者確認。
+
+### Phase 2: Superpowers Execution (執行階段)
+使用者確認計畫無誤並切回執行模式後，**自動全面採用 Superpowers 規範執行**：
+- **依據藍圖施工**：以 Phase 1 確認的任務步驟為唯一基準，不可偏離已敲定的架構。
+- **TDD 與步進式推進 (One step at a time)**：
+  - 嚴禁一次性修改所有檔案。
+  - 遵循 TDD 原則：先確認/撰寫測試，再進行功能實作。
+  - 每完成一個小步驟，必須立即執行本地檢查（編譯、測試或 lint），驗證通過後才推進到下一步。
+- **遇阻暫停（No Silent Deviations）**：
+  - 實作中若發現原計畫未考慮到的技術瓶頸或架構衝突，**立即停下回報並與使用者討論更新計畫**，嚴禁擅自修改已定案的架構。
+- **進度回報**：每個關鍵步驟驗證通過後，主動進行簡要狀態回報。
+
 ```

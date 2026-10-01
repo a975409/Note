@@ -11,12 +11,14 @@
 [[codebase-memory-mcp 和 CodeGraph 搭配使用]]
 [[CLAUDE.md 的通用規範]]
 [【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
- [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
+[[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
+[[計畫模式搭配Superpowers]]
 
 ## 必備skill下載清單
 [superpowers](https://github.com/obra/superpowers)
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
 [官方dotnet-skills](https://github.com/dotnet/skills)
+[Claude-Mem 操作手冊](https://skills.tenten.co/docs/claude-mem-tutorial)
 
 ## 其他套件下載(skills、Hook、Agent)
 [AI Templates](https://www.aitmpl.com/)
@@ -25,6 +27,7 @@
 
 ## MCP下載清單
 [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)
+[playwright-mcp](https://github.com/microsoft/playwright-mcp)
 
 ## Skills 跟其他機制有什麼不同？
 
