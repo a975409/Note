@@ -13,6 +13,7 @@
 [【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
 [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
 [[計畫模式搭配Superpowers]]
+[[Claude Code 串接 Chrome  瀏覽器]]
 
 ## 必備skill下載清單
 [superpowers](https://github.com/obra/superpowers)
