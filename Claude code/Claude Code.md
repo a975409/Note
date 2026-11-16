@@ -20,6 +20,8 @@
 [Frontend Design](https://www.aitmpl.com/component/skill/creative-design/frontend-design)
 [官方dotnet-skills](https://github.com/dotnet/skills)
 [Claude-Mem 操作手冊](https://skills.tenten.co/docs/claude-mem-tutorial)
+[prismantis](https://github.com/NahumLitvin/prismantis)
+
 
 ## 其他套件下載(skills、Hook、Agent)
 [AI Templates](https://www.aitmpl.com/)
@@ -101,6 +103,11 @@ plugin
 7. 產生CLAUDE.md檔案：
 ```shell
 init
+```
+
+8. 在本專案下，再額外加入其他專案資料夾
+```shell
+claude --add-dir ..\Haikou.Web
 ```
 
 執行後會出現以下畫面：
