@@ -22,7 +22,6 @@
 [Claude-Mem 操作手冊](https://skills.tenten.co/docs/claude-mem-tutorial)
 [prismantis](https://github.com/NahumLitvin/prismantis)
 
-
 ## 其他套件下載(skills、Hook、Agent)
 [AI Templates](https://www.aitmpl.com/)
 [dotnet-skills](https://github.com/managedcode/dotnet-skills)
@@ -100,9 +99,9 @@ claude
 plugin
 ```
 
-7. 產生CLAUDE.md檔案：
+7. 驗證目前CLAUDE.md、skills的內容，對於目前的模型來說是否有多餘的地方需要移除或修正：
 ```shell
-init
+/doctor prompt-audit
 ```
 
 8. 在本專案下，再額外加入其他專案資料夾
