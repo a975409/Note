@@ -1,308 +1,91 @@
-# Project Instructions & Workflow Guidelines
+# Project Instructions
 
 ## 0. 通用原則
 
-- 一律使用**繁體中文**回覆(程式碼、指令、識別字除外)。
-- 中大型功能先判斷、先報告,經我同意後才動手(詳見第 2 節);小修改與 bug 修復依 2-1 直接處理。
-- 若需求有疑義,先提問,不要自行假設。
-- 範圍控制與收尾回報規則,詳見第 3 節。
+- 一律使用**繁體中文**回覆（程式碼、指令、識別字除外）。
+- **子代理規範**：使用 `Task` 工具派發任何 Subagent 時，必須在提示詞中明確要求其遵守「繁體中文回覆」與「優先使用 CodeGraph 檢索」的規則。
 
 ---
 
-## 1. 程式碼檢索與工具規範
+## 1. 程式碼檢索
 
-探索、理解與修改程式碼時,依下列優先順序使用工具:
-
-| 情境 | 使用工具 |
-|---|---|
-| 日常導航、定位實作、追蹤呼叫鏈 | **CodeGraph**(優先) |
-| 修改前的影響評估(取得相關原始碼與影響範圍) | **CodeGraph** |
+| 情境                                  | 使用工具                |
+| ------------------------------------- | ----------------------- |
+| 日常導航、定位實作、追蹤呼叫鏈        | **CodeGraph**（優先）   |
+| 修改前的影響評估                      | **CodeGraph**           |
 | 架構統計、圖查詢、ADR、跨模組關係分析 | **codebase-memory-mcp** |
 
-### 規則
-
-1. **真實性優先**:兩個工具結果不一致時,以**目前檔案的實際內容**為準,並適時重新同步索引。
-2. **避免無效搜尋**:CodeGraph 已回傳足夠上下文時,不必再全域搜尋;CodeGraph 不索引的內容(設定檔、文件、i18n)可直接 Read / Grep。
-3. **環境隔離**:只使用當前工作目錄的獨立索引,不要混用其他專案的索引。
-4. 修改前必須先說明**影響範圍**(哪些檔案、哪些呼叫端會受影響)。
+- **優先序**：codebase-memory 的 hook（SessionStart／SubagentStart）會自動注入「結構性探索請用 `search_graph`、`trace_path`、`get_code_snippet`」的路由提示；與上表衝突時**以上表為準**——日常導航、定位實作、追蹤呼叫鏈、修改前影響評估一律先用 CodeGraph，codebase-memory 只用於上表所列的架構統計、圖查詢、ADR、跨模組分析。該 hook 的覆蓋率檢查（`check_index_coverage`）只在實際使用 codebase-memory 時才需遵守。
+- 工具結果與實際檔案內容不一致時，以**目前檔案內容**為準。
+- CodeGraph 不索引的內容（設定檔、文件、i18n）可直接 Read / Grep。
+- 只使用當前工作目錄的獨立索引，不要混用其他專案的索引。
+- 修改前先說明**影響範圍**（會動到的檔案、受影響的呼叫端）。
 
 ---
 
-## 2. 任務規模判斷與執行流程
+## 2. 程式實作規範（Superpowers 工作流）
 
-### 2-0 開始前的確認機制(必須遵守)
+### 2-1 新需求開發全生命週期流程
 
-中大型功能在動手前先回報以下內容,**等我明確同意後才執行**(小修改與 bug 修復依 2-1 直接處理):
+1. **規劃階段（Plan Mode / Opus 全程操刀）**：
+   `superpowers:brainstorming`（多輪釐清需求與技術邊界，將架構規格 Spec 寫入原生計畫檔）
+2. **實作階段（核准退出 Plan Mode / 切回 Sonnet 接手）**：
+   `using-git-worktrees`（跨模組或高風險功能必用；小型單檔可跳過） → **落地 Spec 規格檔** → `superpowers:writing-plans`（由 Sonnet 拆解 2-5 分鐘 TDD 微任務） → `subagent-driven-development` → `verification-before-completion`（**涉及 UI 必依 2-7 實際跑畫面驗證**） → `finishing-a-development-branch`
 
-1. **任務規模判斷**:小修改 / bug 修復,或中大型功能。
-2. **需求明確度判斷**:明確 / 不明確(中大型功能必填)。
-3. **判斷理由**:一到兩句話。
-4. **預計採用的方案**:走情境 A 或情境 B、會用到哪些 skills。
-5. **預計影響範圍**:可能修改的模組或檔案。
+### 2-2 問題修正流程
 
-> 若我認為判斷不正確,會直接告訴你,請依我的修正重新判斷。
+`systematic-debugging` → `test-driven-development`（先寫重現測試再修復） → `verification-before-completion`（**涉及 UI 必依 2-7 實際跑畫面驗證**）
 
-### 2-1 小修改或 bug 修復
+### 2-3 模型分配與子代理路由（Max 方案額度最佳化）
 
-- **直接修改程式碼**,不需要走 Superpowers 流程。
-- 本條優先於 `using-superpowers` 的「1% 機率就必須呼叫 skill」規則。
-- 修改前仍須依第 1 節評估影響範圍。
-- 修改後簡述改了什麼、如何驗證。
+派發 Subagent 時，**必須**明確傳入 `model` 參數，禁止無條件繼承主對話模型：
 
-### 2-2 中大型功能:情境判斷
+- **實作型 Subagent（Implementer）**：一律指定 `model: "sonnet"`，嚴格依計畫與 TDD 實作。
+- **任務審查（Task Reviewer，規格合規＋程式碼品質合併為單一子代理，一次交回兩個判決）**：一般改動指定 `model: "sonnet"`；僅在涉及架構變更、並發控制、安全性或核心演算法時，才指定 `model: "opus"`。複審（範圍限定於修正 diff）與整支分支審查同樣套用此條件。
+- **卡關排錯升級（Escalation）**：當某個實作 Subagent 在修復迴圈中連續失敗超過 3 次時，改派 `model: "opus"` 接手診斷。
+- **本節為準**：模型選擇一律以本節為準；`superpowers:subagent-driven-development` 等技能內的模型建議（例如「最終審查用最強模型」「複審用中階模型」）只當參考，與本節衝突時以本節為準，**不得**把技能的建議當成選模型的理由；不因「最終審查」「複審」等名稱就自動升 `opus`。
+- **回報依據**：派發每個 Subagent 前先對照本節判斷模型，回報時說明依據是哪一條（例如「並發控制」）。
 
-先判斷**需求是否明確**,再決定走情境 A 或情境 B。
+### 2-4 日常操作與模式切換規範（OpusPlan 節奏）
 
-| 目前模式 | 需求明確度 | 採用流程 |
-|---|---|---|
-| Plan Mode | 明確 | **情境 A** |
-| Plan Mode | **不明確** | **情境 B** |
-| 非 Plan Mode | 明確 | **情境 A**(略過 Plan Mode 探索) |
-| 非 Plan Mode | 不明確或只有模糊想法 | **情境 B** |
+1. **規劃期（Opus 全程操刀）**：開發新功能前，按 `Shift + Tab` 開啟 **Plan Mode**，依 Hook 指示執行 `superpowers:brainstorming` 釐清需求與現有架構；定案後將包含「背景目標、架構決策、影響檔案、驗收標準」的完整 **設計規格書（Spec）** 寫入原生計畫檔（`~/.claude/plans/`），隨後等待使用者核准並退出 Plan Mode（**嚴禁在 Plan Mode 內呼叫 writing-plans**）。
+2. **實作期交接（Sonnet 接手，主進程轉為調度指揮官）**：計畫核准並退出 Plan Mode 後，**主進程嚴禁直接手動調用 Edit/Write 工具修改業務程式碼**，必須依序執行：
+   - **隔離環境**：若需使用 Worktree，優先呼叫 `superpowers:using-git-worktrees` 建立並切入乾淨的工作區。
+   - **落地 Spec 規格**：在目標工作區下，將剛核准的原生計畫檔備份至 `docs/superpowers/specs/YYYY-MM-DD-<功能簡稱>-spec.md`。
+   - **Spec 審閱簡報**：Spec 落地後，呼叫 `spec-plan-html-review` 產出視覺化審閱簡報（見 2-5）。
+   - **⛔ Spec 確認關卡**：Spec（md＋HTML）產出後**必須停下**，回報 md 與 HTML 的完整路徑，等使用者明確回覆同意後，才可進入 `writing-plans`；未獲同意前不得往下做任何事（見 2-6）。
+   - **微任務拆解（Writing Plans）**：呼叫 `superpowers:writing-plans`，依據該 Spec 拆解出嚴格遵守 TDD 的 2–5 分鐘微任務實作計畫，存為 `docs/superpowers/plans/YYYY-MM-DD-<功能簡稱>-plan.md`。\r\n   - **Plan 審閱簡報**：Plan 存檔後，再呼叫 `spec-plan-html-review` 產出該 Plan 的簡報（見 2-5），並向使用者回報兩份簡報的完整路徑。
+   - **⛔ Plan 確認關卡**：Plan（md＋HTML）產出後**必須停下**，等使用者明確回覆同意後，才可呼叫 `subagent-driven-development` 開工；未獲同意前不得開始實作（見 2-6）。
+   - **正式開工**：呼叫 `superpowers:subagent-driven-development` 派發 Sonnet Subagent 嚴格依該微任務計畫檔執行編碼、TDD 與雙重審查。
+3. **升級時機**：僅在架構級審查或子代理連續排錯失敗 3 次以上時，才臨時派發或切換至 `opus` 模型。
 
-> 核心原則:**需求不明確,一律走情境 B**,不論目前是否在 Plan Mode。
+### 2-5 Spec／Plan 審閱簡報（`spec-plan-html-review`）
 
-#### 「需求明確」的判斷基準
+- **觸發時機**：`docs/superpowers/specs/*.md` 或 `plans/*.md` 新寫成或有實質修改後；使用者要求某份文件的視覺化／HTML 版時。
+- **做法**：由 skill 指示讀取文件、整理成 `brief.json`，再以腳本渲染成 HTML，輸出於 `docs/superpowers/html/briefs/`。Spec 以「需求×端對照、角色×功能矩陣、前後流程」為主；Plan 以「影響範圍圖、階段切分、風險」為主。
+- **原則**：`.md` 仍是唯一來源，subagent 與 `writing-plans` 只讀 `.md`；簡報只給人審閱，不手改 HTML，修改後回到 `.md` 與 `brief.json` 重新渲染。
+- **版控**：`docs/superpowers/html/` 是產物，不主動 commit；是否忽略由使用者決定。
 
-符合以下全部條件才算明確:
+### 2-6 Spec／Plan 確認關卡（強制停下）
 
-- 目標功能與預期結果已具體說明。
-- 範圍與邊界清楚(做什麼、不做什麼)。
-- 沒有需要我決策的多種技術路線。
-- 驗收方式可以明確描述。
+- **Spec 產出後必須停下**：Spec（md 與 HTML 簡報）完成後，回報完整路徑並請使用者確認，**等使用者明確同意**才可進入 Plan 階段。
+- **Plan 產出後必須停下**：Plan（md 與 HTML 簡報）完成後同樣回報路徑並請使用者確認，**等使用者明確同意**才可進入實作（派發 Subagent、寫任何程式碼）。
+- **不得自行視為同意**：沉默、先前的整體授權（如「核准計畫」、「跑到完成」）都不等於對這份 Spec／Plan 文件的同意；使用者要求修改時，改完 md 並重新渲染 HTML，再次停下等待確認。
+- **本節優先**：與 `brainstorming`、`writing-plans` 等技能中「自動銜接下一步」或 auto-memory 的「核准後一路執行到完成」衝突時，以本節為準；同意之後的實作階段才適用一路執行的偏好。
 
-只要有任一項不符合,視為**需求不明確**。
+### 2-7 UI / 畫面調整驗證規範（嚴禁腦補完工）
 
-#### 情境 A:需求明確
-
-1. 若目前在 Plan Mode,以**唯讀**方式探索程式碼並提出方向。
-2. 我核准計畫並退出 Plan Mode 後,依序執行:
-
-```text
-using-git-worktrees
-→ writing-plans
-→ subagent-driven-development
-→ verification-before-completion
-→ finishing-a-development-branch
-```
-
-#### 情境 B:需求不明確或只有模糊想法
-
-依序執行:
-
-```text
-brainstorming
-→ using-git-worktrees
-→ writing-plans
-→ subagent-driven-development
-→ verification-before-completion
-→ finishing-a-development-branch
-```
-
-### 2-3 Plan Mode 中發現需求不明確(重要)
-
-當目前處於 Plan Mode,但我提出的需求不明確時:
-
-1. **立即回報**:說明需求哪些部分不明確,並建議改走**情境 B**。
-2. **不要硬在 Plan Mode 產出計畫**,避免計畫建立在錯誤假設上。
-3. 因 Plan Mode 為唯讀,而 `brainstorming` 需要寫入設計文件,請**提示我退出 Plan Mode**,退出後再從 `brainstorming` 開始。
-4. 在 Plan Mode 內可先做的事:以唯讀方式探索程式碼、向我提出釐清問題。
-
-### 2-4 流程注意事項
-
-- Plan Mode 為唯讀,**需要寫檔或建立 worktree 的 skill,必須在退出 Plan Mode 後才能執行**。
-- 若執行情境 A 的途中發現需求其實不明確,應**暫停並回報**,改走情境 B 從 `brainstorming` 開始。
-- 若執行中發現任務規模與原判斷不符,應**暫停並重新回報**,待我同意後再繼續。
-
-### 2-5 實作階段的 Skill 選擇
-
-- **預設使用 `subagent-driven-development`**:每個任務派給全新 subagent,逐任務兩階段審查。
-- **以下情況改用 `executing-plans`**:
-  1. 環境不支援 subagent。
-  2. 任務數量少或規模小,派工成本高於效益。
-  3. 任務之間高度耦合,需要同一上下文連貫處理。
-- 改用 `executing-plans` 前,**須先回報原因並經我同意**。
-- 兩者擇一,不要同一份計畫混用。
-
-### 2-6. 程式碼設計原則
-- 實作與審查遵循 SOLID 原則;Code quality 審查時明確檢查,違反時列為審查問題。
-- 不為了套用原則而過度設計;與 YAGNI 衝突時,**先回報由我決定**。
-
-### 2-7. UI 開發規範
-- 新增或修改 UI 時，先用 `ui-skills-root` 選出要載入的 UI skill
-- 完成頁面後，必須使用 web-design-guidelines 自我審查
-- 完成後用瀏覽器工具在 375 / 768 / 1280 寬度截圖驗證，確認無破版再回報
-- 設計 token（間距、顏色、字級）使用 `yacht-dashboard/src/styles/global.css` 的 CSS 變數，不寫死數值
----
-
-## 3. 範圍控制與收尾回報
-
-### 3-1 範圍控制
-
-- **只做我明確要求的事**,不主動擴充範圍。
-- 發現額外問題、改進點、後續建議時,**不要直接動手**。
-
-### 3-2 完成邊界
-
-- `finishing-a-development-branch` 執行完畢(含我選擇的 merge / PR 等處理方式),
-  即視為**功能完成**。
-- **完成之前**發現的問題:
-  - **阻擋項**(不處理就無法達成原需求、測試失敗、明確 bug):立即回報,經我同意後處理。
-  - **其他**(重構、效能優化、風格調整、風險提醒等):
-    追加到本 session 的 inbox 檔(位置見 3-5、格式見 3-6),不處理。
-- **完成之後**提出的**所有**待辦事項、注意事項、後續建議:
-  **一律**追加到本 session 的 inbox 檔(位置見 3-5、格式見 3-6,需標註優先級與原因),**不得直接處理**。
-- **例外**:完成之後若發現**原需求的驗收標準未達成**(屬於 bug,而非改進建議),
-  請**立即回報**,由我決定是否重開任務,**不要**自行判斷、也不要直接記入 backlog 了事。
-- 除非我明確指示,**否則不處理 backlog 或 inbox 內的項目**。
-
-### 3-3 收尾回報格式
-
-功能完成後,結論包含以下兩段(驗證結果與失敗項目寫在「已完成」內):
-
-```text
-## 已完成
-## 已記入 backlog inbox 的項目(僅列標題與優先級,未處理)
-```
-
-- 禁止另外列出「建議後續處理」「還可以做的事」等清單。
-- `finishing-a-development-branch` 本身提供的 merge / PR / 保留 / 丟棄等選項,
-  屬於流程必要步驟,**不受此限**。
-- 小修改 / bug 修復依 2-1 簡述即可,新發現同樣只記入 inbox。
-
-### 3-4 多 agent / session 規則
-
-- 所有 agent 共用**同一份** plan,不要各自維護清單。
-- inbox **一律寫入主工作目錄**(定位方式見 3-5),
-  不要寫在各 worktree 分支內,避免分散、衝突或遺漏。
-- **任何 session / agent 都不得直接編輯 `docs/BACKLOG.md`**,
-  發現的項目只能寫入自己的 inbox 檔(見 3-6)。
-- subagent 發現的項目**回報給主 agent**,由主 agent 寫入該 session 的 inbox 檔,
-  subagent 不得直接寫檔。
-- 是否把項目升級為正式任務,**由我決定**。
-- 只有在我明確要求「整併 backlog」時,才可編輯 `docs/BACKLOG.md`(流程見 3-7)。
-
-### 3-5 主工作目錄定位
-
-寫入 inbox 或 BACKLOG 前,**必須先確認主工作目錄的絕對路徑**,不得假設目前工作目錄就是主目錄。
-
-- 用 PowerShell 取得路徑:
-
-  ```powershell
-  $main  = (git worktree list --porcelain | Select-Object -First 1) -replace '^worktree ', ''
-  $inbox = Join-Path $main 'docs\backlog-inbox'
-  $list  = Join-Path $main 'docs\BACKLOG.md'
-  ```
-
-- 取得路徑後,以**絕對路徑**搭配 Write / Edit / Read 工具讀寫檔案(規則見第 0 節)。
-- 每個 session 開始寫入前確認一次即可。
-- 失敗或結果不合理(不是 git 專案、bare repository 等)時,**不要猜測路徑**,請暫停並回報,由我指定。
-- 資料夾不存在時自行建立:`New-Item -ItemType Directory -Force -Path $inbox | Out-Null`
-
-### 3-6 Backlog Inbox 格式
-
-- 檔案位置:`<主工作目錄>/docs/backlog-inbox/`(主目錄定位見 3-5)。
-- 檔名:`YYYY-MM-DD-<分支名稱或任務簡稱>.md`,**一個 session 只使用一個檔案**,
-  檔案不存在時自行建立。
-- 只能在**自己的 inbox 檔**追加項目,不得編輯其他 session 的檔案。
-- 檔案已存在時,只在表格末尾追加列,**不要重複寫標題與表頭**。
-- **不要編 ID、不要檢查跨檔案重複**(整併時處理)。
-- 寫入前可用 Read 工具讀取 `docs/BACKLOG.md` 作為參考,若已有相同項目,就不要再新增。
-
-檔案格式:
-
-```markdown
-# Inbox:<分支名稱或任務簡稱>
-
-| 優先級 | 類型 | 項目 | 原因 | 日期 |
-|---|---|---|---|---|
-| P2 | 重構 | 簡述 | 為什麼值得做 | 2026-11-14 |
-```
-
-欄位規則:
-
-| 欄位 | 規則 |
-|---|---|
-| 優先級 | `P1` 高(影響正確性或安全)/ `P2` 中 / `P3` 低 |
-| 類型 | `重構` / `效能` / `風險` / `功能` / `風格` / `測試` / `文件` 擇一 |
-| 項目 | 一句話,不超過 30 字 |
-| 原因 | 一句話說明為什麼要做或不做的風險 |
-| 日期 | 使用 `YYYY-MM-DD` |
-
-### 3-7 Backlog 整併
-
-僅在我明確要求「整併 backlog」時執行:
-
-1. 依 3-5 定位主工作目錄,列出 `docs/backlog-inbox/` 下的檔案(不含 `archived/`;
-   列清單可用 Glob 或 `Get-ChildItem`),再以 Read 工具讀取各 inbox 檔與現有 `docs/BACKLOG.md`。
-2. 合併重複或相近項目,保留較高的優先級。
-3. 為新項目編 ID(格式 `B-001`,接續現有最大編號,不重複使用)。
-4. 整併前先列出「預計新增、合併、略過」的清單,**經我確認後才寫入**。
-5. 確認後,將結果追加到 `docs/BACKLOG.md`,新項目狀態一律為 `待處理`。
-   檔案不存在時依下列格式自行建立。
-6. 整併完成後,將已處理的 inbox 檔移到 `docs/backlog-inbox/archived/`(可用 `Move-Item`),**不要刪除**。
-
-`docs/BACKLOG.md` 格式:
-
-```markdown
-# Backlog
-
-| ID | 優先級 | 類型 | 項目 | 原因 | 來源任務 | 日期 | 狀態 |
-|---|---|---|---|---|---|---|---|
-| B-001 | P2 | 重構 | 簡述 | 為什麼值得做 | 任務名稱或分支 | 2026-11-14 | 待處理 |
-```
-
-欄位規則:
-
-| 欄位 | 規則 |
-|---|---|
-| ID | 格式 `B-001`,依序遞增,不重複使用 |
-| 來源任務 | 取自 inbox 檔名中的分支名稱或任務簡稱 |
-| 狀態 | `待處理` / `進行中` / `已完成` / `不處理`,**只有我能變更** |
-
-- 其餘欄位規則同 3-6。
-- 既有項目**不得刪除或修改**(狀態除外,狀態由我決定)。
+- **適用對象**：凡涉及 Web 網頁（HTML/CSS/JS/Vue/React 元件）、App（Flutter/React Native/原生畫面）、或任何使用者介面（UI/UX）的排版、樣式與互動流程修改。
+- **實際畫面走訪**：
+  - 程式碼修改完成**不等於完工**，嚴禁僅憑「建置成功」或「單元測試通過」即交付。
+  - 必須實際啟動專案／Dev Server／模擬器，透過工具（如 Playwright 截圖、瀏覽器 MCP、或真實執行畫面）**親眼確認渲染結果與視覺呈現**。
+  - 核心驗收點：版面是否跑版、元件樣式是否破圖、響應式斷點（RWD）表現、動態互動狀態（Hover/Active/Loading/Disabled）與錯誤訊息呈現。
+- **即時修正閉環（Fix-in-place）**：
+  - 畫面驗收時只要發現視覺瑕疵、跑版或互動異常，**必須當下直接修正**並再次執行畫面驗證。
+  - 直到實際畫面與互動行為完全符合預期，該任務才視為完成，方可向使用者回報或進入後續流程。
 
 ---
 
-## 4. SQL 資料表設計規範
+## 3. SQL 資料表設計規範
 
-### 4-1 主鍵(PK)
-
-- 型態一律為 **GUID**,由**資料庫自行產生**。
-- 範例(SQL Server):
-  ```sql
-  Id UNIQUEIDENTIFIER NOT NULL DEFAULT NEWSEQUENTIALID() PRIMARY KEY
-  ```
-- 其他資料庫請使用對應的等效機制(如 PostgreSQL 的 `gen_random_uuid()`)。
-
-### 4-2 必備欄位
-
-每張資料表都必須有:
-
-| 欄位 | 說明 | 預設值 |
-|---|---|---|
-| `createTime` | 建立時間(UTC) | 資料庫的 UTC 時間函式,例如 `SYSUTCDATETIME()` |
-| `updateTime` | 最後更新時間(UTC) | 同上,且每次更新時都要同步更新 |
-
-- `updateTime` 的更新方式(trigger 或應用層)須與專案既有做法一致,**不確定時先詢問**。
-
-### 4-3 日期時間規範
-
-- 所有日期時間型態欄位(`datetime`、`datetime2`、`datetimeoffset` 等)**一律存 UTC 時間**。
-- 預設值不可使用本地時間函式(如 `GETDATE()`),應使用 UTC 函式(如 `GETUTCDATE()` / `SYSUTCDATETIME()`)。
-- 時區轉換只在**顯示層**處理,不要寫入資料庫。
-
-### 4-4 索引與查詢效能
-
-- 撰寫 SQL 查詢時,若發現 **join 的資料表較多**或**查詢較耗時**,在可行範圍內**盡量建立索引**。
-- 建立索引時請說明:
-  - 索引欄位與理由
-  - 對應的查詢情境
-  - 可能對寫入效能的影響
-- 外鍵欄位與常用於 `WHERE` / `JOIN` / `ORDER BY` 的欄位,優先考慮建立索引。
-
-### 4-5 資料表變更
-
-- 新增或修改資料表時,須附上 **migration 腳本**。
-- 對既有資料表的破壞性變更(刪欄位、改型態),須**先回報並經我同意**。
+- 新增或修改資料表、欄位、索引、migration 前，先呼叫 `sql-table-design` skill。
