@@ -5,14 +5,12 @@
 [Claude Code 教學｜從安裝、設定到第一個任務的完整實作筆記（2026 版）](https://israynotarray.com/ai/20260128/374686091/#%E5%89%8D%E8%A8%80)
 [你的 Claude Code Context 是不是都被吃光了？AGENTS.md 與 Context 管控全攻略](https://israynotarray.com/ai/20260409/1057131696/)
 [讓 AI 助手透過 CLAUDE.md 理解開發流程](https://ithelp.ithome.com.tw/articles/10391730)
+[【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
 [[三種 CLAUDE.md 記憶類型]]
-[[gstack 使用說明]]
-[[gstack 結合 superpowers 開發專案]]
+[[superpowers整體工作流程]]
 [[codebase-memory-mcp 和 CodeGraph 搭配使用]]
 [[CLAUDE.md 的通用規範]]
-[【Claude Code】應加入 Agent 的 20 個 Skills｜skills.sh 活用指南](https://codelove.tw/@tony/post/am270q)
 [[dotNet 官方团队发布的 .NET Agent Skills，告别 AI 编程幻觉！]]
-[[計畫模式搭配Superpowers]]
 [[Claude Code 串接 Chrome  瀏覽器]]
 
 ## 必備skill下載清單
@@ -21,12 +19,11 @@
 [官方dotnet-skills](https://github.com/dotnet/skills)
 [Claude-Mem 操作手冊](https://skills.tenten.co/docs/claude-mem-tutorial)
 [prismantis](https://github.com/NahumLitvin/prismantis)
+[綠界金流](https://github.com/ECPay/ECPay-API-Skill)
+[台灣支付金流 Skills](https://github.com/paid-tw/skills)
 
 ## 其他套件下載(skills、Hook、Agent)
 [AI Templates](https://www.aitmpl.com/)
-[dotnet-skills](https://github.com/managedcode/dotnet-skills)
-[[gsd-core]]
-
 ## MCP下載清單
 [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)
 [playwright-mcp](https://github.com/microsoft/playwright-mcp)

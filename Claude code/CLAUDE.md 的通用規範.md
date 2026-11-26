@@ -54,7 +54,8 @@
    - **落地 Spec 規格**：在目標工作區下，將剛核准的原生計畫檔備份至 `docs/superpowers/specs/YYYY-MM-DD-<功能簡稱>-spec.md`。
    - **Spec 審閱簡報**：Spec 落地後，呼叫 `spec-plan-html-review` 產出視覺化審閱簡報（見 2-5）。
    - **⛔ Spec 確認關卡**：Spec（md＋HTML）產出後**必須停下**，回報 md 與 HTML 的完整路徑，等使用者明確回覆同意後，才可進入 `writing-plans`；未獲同意前不得往下做任何事（見 2-6）。
-   - **微任務拆解（Writing Plans）**：呼叫 `superpowers:writing-plans`，依據該 Spec 拆解出嚴格遵守 TDD 的 2–5 分鐘微任務實作計畫，存為 `docs/superpowers/plans/YYYY-MM-DD-<功能簡稱>-plan.md`。\r\n   - **Plan 審閱簡報**：Plan 存檔後，再呼叫 `spec-plan-html-review` 產出該 Plan 的簡報（見 2-5），並向使用者回報兩份簡報的完整路徑。
+   - **微任務拆解（Writing Plans）**：呼叫 `superpowers:writing-plans`，依據該 Spec 拆解出嚴格遵守 TDD 的 2–5 分鐘微任務實作計畫，存為 `docs/superpowers/plans/YYYY-MM-DD-<功能簡稱>-plan.md`。
+   - **Plan 審閱簡報**：Plan 存檔後，再呼叫 `spec-plan-html-review` 產出該 Plan 的簡報（見 2-5），並向使用者回報兩份簡報的完整路徑。
    - **⛔ Plan 確認關卡**：Plan（md＋HTML）產出後**必須停下**，等使用者明確回覆同意後，才可呼叫 `subagent-driven-development` 開工；未獲同意前不得開始實作（見 2-6）。
    - **正式開工**：呼叫 `superpowers:subagent-driven-development` 派發 Sonnet Subagent 嚴格依該微任務計畫檔執行編碼、TDD 與雙重審查。
 3. **升級時機**：僅在架構級審查或子代理連續排錯失敗 3 次以上時，才臨時派發或切換至 `opus` 模型。
